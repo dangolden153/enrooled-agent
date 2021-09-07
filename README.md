@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+npRequirements to run project
 
-## Getting Started
+##
 
-First, run the development server:
+install Redis databse
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Run `npm install` or `yarn install` in the root folder
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+copy .env.example to form .env
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+to start project
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### windows, linux and mac users run - `npm run dev`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+this should be run from the root folder
 
-## Learn More
+to start work, pull from dev, create a branch with name of page you are working on,
+when you are done, commit, switch to dev pull latest updates, switch back to your branch,
+merge mastdever into your branch, fix any merge conflicts, push and do a pull request to dev.
 
-To learn more about Next.js, take a look at the following resources:
+ensure to set the full path to the public folder on your .env file
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[https://developer.twitter.com/en/docs/authentication/guides/log-in-with-twitter]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[https://developer.twitter.com/en/docs/authentication/guides/log-in-with-twitter]
 
-## Deploy on Vercel
+#Google sigin integration
+[https://developers.google.com/identity/sign-in/web/backend-auth]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#Linkedin integration
+[https://www.linkedin.com/developers/]
+[https://www.linkedin.com/developers/apps/new]
+[https://docs.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/sign-in-with-linkedin]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+142.93.4.146
+
+641057205706
+
+18.215.146.240
+
+### TEST CARDS
+4000 0000 0000 9995 -declind
+4000 0000 0000 9995 -success
+4000 0025 0000 3155 -requires authentication
+
+
+
+ 
