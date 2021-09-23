@@ -1,0 +1,34 @@
+.btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 12rem;
+    height: 3rem;
+    margin-left: 13.5px;
+    margin-right: 13.5px;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+.btn-primary {
+    color: $primary-color;
+    background: white;
+    border-color: white;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn-outline {
+    color: white;
+    background: transparent;
+    border-color: white;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn-outline-primary {
+    color: white;
+    background: $primary-color;
+    border-color: white;
+    font-weight: bold;
+    outline: none;
+}
