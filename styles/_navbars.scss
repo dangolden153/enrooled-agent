@@ -1,0 +1,49 @@
+
+$primary-color: #0F1F73;
+
+.nav {
+    height: 6rem;
+    overflow-x: hidden;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.blue-nav {
+    background: $primary-color;
+    color: white;
+
+    h5 {
+        font-size: 0.9rem;
+        font-weight: bold;
+
+        svg {
+            margin-right: 5px;
+        }
+    }
+}
+
+.white-nav {
+    padding-left: 4%;
+    padding-right: 6%;
+    background: white;
+    color: $primary-color;
+
+    .navbar-toggler {
+        color: $primary-color;
+    }
+
+    .navbar-nav {
+        flex-direction: row !important;
+        margin-left: 17%;
+
+        .nav-link {
+            font-weight: bold;
+            color: #818181;
+        }
+
+        .nav-link.active {
+            color: $primary-color;
+        }
+    }
+}
