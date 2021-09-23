@@ -1,6 +1,10 @@
 .footer {
-    padding:0;
+    padding: 0;
     background: url('../public/footer.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
     .footer-inner {
         padding-left: 4%;
         padding-right: 5%;
@@ -22,8 +26,8 @@
         .footer-down {
             .socials {
                 color: white;
-                
-                .row{
+
+                .row {
                     width: 35%;
 
                     svg {
@@ -40,7 +44,7 @@
                     margin-bottom: 20px;
                     width: 15rem;
 
-                    &:hover{
+                    &:hover {
                         text-decoration: underline;
                     }
                 }
