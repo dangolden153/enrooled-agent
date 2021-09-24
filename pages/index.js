@@ -8,7 +8,7 @@ export default function Home() {
     <>
     <Header />
     <Homepage />
-    <p className="test"> I'm red</p>
+    {/* <p className="test"> I'm red</p> */}
     </>
   )
 }
