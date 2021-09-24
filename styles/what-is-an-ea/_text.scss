@@ -1,0 +1,39 @@
+.eaText{
+    margin-bottom: 5rem;
+    h1{
+        color:$primary-color;
+        font-size: 45px;
+    }
+    p{
+        color:$secondary-color;
+        padding: 0  18rem ;
+        font-size: 18px;
+       
+    }
+    ul li {
+        color:$secondary-color;
+        font-size: 18px;
+        text-align: left !important;
+    }
+    ul{
+        padding: 0  18rem ;
+        color: $primary-color;
+    }
+    
+
+}
+
+.borderBtm{
+    
+    margin-bottom: 5rem;
+    text-align: center;
+    
+    
+    div{
+        border-bottom: 1px solid $secondary-color;
+        // display: inline-block;
+        vertical-align: top;
+        margin: 0 30rem;
+        
+    }
+}
