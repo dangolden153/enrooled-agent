@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Banner = ({ search = false, background, children }) => {
 
     const BannerDiv = styled.div`
-        background-image: url('${background}');
+        background-image: url('${background.src}');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
