@@ -35,82 +35,13 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div
-        className={`${styles.topRated} d-flex flex-column w-100 align-items-center justify-content-center`}
-      >
-        <div className="col-12 d-flex flex-column align-items-center justify-content-center">
-          <h1>Top Rated Enrolled Agents</h1>
-          <span>Licensed and Verified Enrolled Agents</span>
-        </div>
-        <div
-          className={`${styles.cardList} d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center`}
-        >
-          {/* image, name, location, numStars, profileLink */}
-          <div className="col-4">
-            <Card
-              image={woman}
-              name="Andrew Smith"
-              location="PINELLAS PARK, Florida"
-              numStars="3"
-              profileLink="/profile-link"
-            />
-          </div>
-          <div className="col-4">
-            <Card
-              image={woman}
-              name="Andrew Smith"
-              location="PINELLAS PARK, Florida"
-              numStars="3"
-              profileLink="/profile-link"
-            />
-          </div>
-          <div className="col-4">
-            <Card
-              image={woman}
-              name="Andrew Smith"
-              location="PINELLAS PARK, Florida"
-              numStars="3"
-              profileLink="/profile-link"
-            />
-          </div>
-        </div>
-        <div
-          className={`${styles.cardList} d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center`}
-        >
-          {/* image, name, location, numStars, profileLink */}
-          <div className="col-4">
-            <Card
-              image={woman}
-              name="Andrew Smith"
-              location="PINELLAS PARK, Florida"
-              numStars="3"
-              profileLink="/profile-link"
-            />
-          </div>
-          <div className="col-4">
-            <Card
-              image={woman}
-              name="Andrew Smith"
-              location="PINELLAS PARK, Florida"
-              numStars="3"
-              profileLink="/profile-link"
-            />
-          </div>
-          <div className="col-4">
-            <Card
-              image={woman}
-              name="Andrew Smith"
-              location="PINELLAS PARK, Florida"
-              numStars="3"
-              profileLink="/profile-link"
-            />
-          </div>
-        </div>
+      <TopRated />
 
-        <button type="button" className="btn-common">
-          Find more local EA's <ChevronRight />
-        </button>
-      </div>
+      <CardList>
+        <Card>
+          <h1>Hello There!</h1>
+        </Card>
+      </CardList>
     </div>
   );
 }

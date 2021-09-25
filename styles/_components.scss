@@ -53,6 +53,25 @@
     display: none;
 }
 
+.top-rated {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background: #F7F8FF;
+    color: $primary-color;
+
+    span {
+        color: #777777;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .card-list {
+        padding-top: 3%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
 .card {
     background: white;
     padding-left: 5rem;
@@ -97,6 +116,10 @@
         margin-top: 1.5rem;
         margin-bottom: 1.5rem;
         width: 70%;
+
+        .card-star {
+            color: black;
+        }
     }
 
     .btn-card {
