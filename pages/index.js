@@ -1,15 +1,13 @@
 // import Image from 'next/image'
-import banner1 from "../public/images/banner1.png";
-import woman from "../public/images/card-woman.png";
-import man from "../public/images/card-man.png";
-import styles from "../styles/LandingPage.module.scss";
+import banner1 from '../public/images/banner1.png'
+import start1 from '../public/images/start-section1.png'
+import styles from '../styles/LandingPage.module.scss'
 import Banner from "../components/Banner";
 import TopRated from '../components/TopRated';
-import Card from '../components/Card';
-import CardList from '../components/CardList';
 import VideoCard from '../components/VideoCard';
 import { ChevronDown } from 'react-bootstrap-icons';
 import SearchSection from '../components/SearchSection';
+import StartSection from '../components/StartSection';
 
 export default function LandingPage() {
   return (
@@ -65,6 +63,8 @@ export default function LandingPage() {
       </div>
 
       <SearchSection />
+
+      <StartSection image={start1} />
     </div>
   );
 }

@@ -27,22 +27,26 @@
     }
 }
 
-.search-section {
+.section {
     padding-top: 12.5%;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 12.5%;
-    background: #F6F8FF;
+    background: white;
     color: $primary-color;
 
-    .search-heading {
+    .section-heading {
         width: 70%;
     }
 
-    .search-body {
+    .section-body {
         width: 75%;
         margin-top: 1.5rem;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: $secondary-color;
     }
+}
+
+.search-section {
+    background: #F6F8FF;
 }
