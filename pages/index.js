@@ -8,6 +8,7 @@ import VideoCard from '../components/VideoCard';
 import { ChevronDown } from 'react-bootstrap-icons';
 import SearchSection from '../components/SearchSection';
 import StartSection from '../components/StartSection';
+import MostRequested from '../components/MostRequested';
 
 export default function LandingPage() {
   return (
@@ -65,6 +66,8 @@ export default function LandingPage() {
       <SearchSection />
 
       <StartSection image={start1} />
+
+      <MostRequested />
     </div>
   );
 }

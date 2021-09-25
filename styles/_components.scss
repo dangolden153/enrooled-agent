@@ -49,4 +49,52 @@
 
 .search-section {
     background: #F6F8FF;
+
+    .search-btn {
+        font-size: 1rem;
+    }
+}
+
+.mr-cities {
+    .mr-header {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: white;
+        background: $primary-color;
+    }
+
+    .mr-cities-inner {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 15%;
+        padding-right: 15%;
+        background: rgba(1, 16, 91, 0.8);
+    }
+
+    .mr-footer {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        color: white;
+        background: $primary-color;
+
+        .btn {
+            width: 15rem;
+        }
+    }
+}
+
+.city-list {
+    width: max-content;
+     
+    a {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: start;
+
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
 }

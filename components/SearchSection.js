@@ -16,7 +16,7 @@ const SearchSection = () => {
                         go anytime, anywhere.
                     </h1>
                     <p className='section-body'> Search our online directory of licensed and Verified Enrolled Agents. See details of the Enrolled Agents and find the one that best suits your needs. Read reviews from clients served to in your community. All Enrolled Agents listed have been appraised to ensure accurate profile and licensure.</p>
-                    <button type="button" className='btn-common'>Search for your enrolled agent <ChevronRight /></button>
+                    <button type="button" className='btn-common search-btn'>Search for your enrolled agent <ChevronRight /></button>
                 </div>
             </div>
         </div>
