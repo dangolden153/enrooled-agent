@@ -9,6 +9,7 @@ import Card from '../components/Card';
 import CardList from '../components/CardList';
 import VideoCard from '../components/VideoCard';
 import { ChevronDown } from 'react-bootstrap-icons';
+import SearchSection from '../components/SearchSection';
 
 export default function LandingPage() {
   return (
@@ -62,6 +63,8 @@ export default function LandingPage() {
         </div>
         <button type="button" className='btn-common'>Load more videos <ChevronDown /></button>
       </div>
+
+      <SearchSection />
     </div>
   );
 }
