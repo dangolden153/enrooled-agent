@@ -13,8 +13,8 @@ const CardList = ({ children }) => {
     return (
         <>
             {
-                childGroups.map(group => (
-                    <div className="card-list d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center">
+                childGroups.map(( group, index) => (
+                    <div key={index} className="card-list d-flex flex-column flex-lg-row w-100 align-items-center justify-content-center">
                         {group.map((item, index) => (
                             <div key={index} className="col-4">
                                 {item}

@@ -4,8 +4,10 @@ import woman from "../public/images/card-woman.png";
 import man from "../public/images/card-man.png";
 import styles from "../styles/LandingPage.module.scss";
 import Banner from "../components/Banner";
-import Card from "../components/Card";
-import { ChevronRight } from "react-bootstrap-icons";
+import TopRated from '../components/TopRated';
+import Card from '../components/Card';
+import CardList from '../components/CardList';
+import VideoCard from '../components/VideoCard';
 
 export default function LandingPage() {
   return (
@@ -37,11 +39,27 @@ export default function LandingPage() {
 
       <TopRated />
 
-      <CardList>
-        <Card>
-          <h1>Hello There!</h1>
-        </Card>
-      </CardList>
+      <div className={`${styles.taxResources} d-flex flex-column align-items-center justify-content-center`}>
+        <h1>Tax Resources</h1>
+        {/* <video src=""></video> */}
+        <div className="d-flex flex-row w-100 justify-content-center">
+          <VideoCard big='true' />
+        </div>
+        <div className="d-flex flex-row w-100 justify-content-between">
+          <div className="col-3">
+            <VideoCard />
+          </div>
+          <div className="col-3">
+            <VideoCard />
+          </div>
+          <div className="col-3">
+            <VideoCard />
+          </div>
+          <div className="col-3">
+            <VideoCard />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

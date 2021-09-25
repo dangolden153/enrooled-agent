@@ -8,15 +8,15 @@ const TopRatedCard = ({ image, name, location, numStars, profileLink }) => {
     const getStars = (max, stars) => {
         let starList = [];
         for (let i = 0; i < stars; i++) {
-            starList.push(<StarFill className='card-star' />);
+            starList.push(<StarFill key={i} className='card-star' />);
         }
         for (let i = stars; i < max; i++) {
-            starList.push(<Star className='card-star' />);
+            starList.push(<Star key={i} className='card-star' />);
         }
         return starList;
     };
     return (
-        <Card>
+        <Card className='card-rounded card-top-rated'>
             <Image className='card-image rounded-circle' src={image} width='100' height='100' />
             <h2>{name}</h2>
             <span>{location}</span>

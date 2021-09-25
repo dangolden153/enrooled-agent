@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Card = ({ children }) => {
+const Card = ({ className='card-rounded', children }) => {
     return (
-        <div className='card d-flex flex-column align-items-center justify-content-center'>
+        <div className={`card ${className}`}>
             { children }
         </div>
     )
