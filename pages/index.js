@@ -8,6 +8,7 @@ import TopRated from '../components/TopRated';
 import Card from '../components/Card';
 import CardList from '../components/CardList';
 import VideoCard from '../components/VideoCard';
+import { ChevronDown } from 'react-bootstrap-icons';
 
 export default function LandingPage() {
   return (
@@ -59,6 +60,7 @@ export default function LandingPage() {
             <VideoCard />
           </div>
         </div>
+        <button type="button" className='btn-common'>Load more videos <ChevronDown /></button>
       </div>
     </div>
   );
