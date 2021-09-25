@@ -32,3 +32,22 @@
     font-weight: bold;
     outline: none;
 }
+
+.btn-card {
+    width: 75%;
+    color: white;
+    font-weight: bold;
+    background: black;
+}
+
+.btn-common {
+    margin-top: 6rem;
+    width: 22rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    height: 4.5rem;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: $primary-color;
+    color: $primary-color;
+}
