@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Login from '../auth/login/index'
 import './Home.module.scss'
 
 const index = () => {
@@ -23,7 +24,7 @@ const index = () => {
             <title>Enrolled Agent Lookup | Find Tax Preparer |  IRS Enrolled Agent Search</title>
         </Head>
             <div className={`container test-color`}>
-                <p>Homepage</p>
+                <Login />
             </div>
         </div>
     )

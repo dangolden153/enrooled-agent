@@ -7,7 +7,7 @@ import Banner from "../components/Banner";
 import Card from "../components/Card";
 import { ChevronRight } from "react-bootstrap-icons";
 
-export default function LandingPage() {
+export default function test() {
   return (
     <div className={`col-12 justify-content-between ${styles.landingPage}`}>
       <Banner search background={banner1}>

@@ -1,0 +1,41 @@
+@import 'colors';
+
+.landingPage {
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+
+    h6 {
+        font-weight: bold;
+    }
+
+    .stats {
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+        background: white;
+        color: $primary-color;
+    }
+
+    .topRated {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        background: #F7F8FF;
+        color: $primary-color;
+
+        span {
+            color: #777777;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .cardList {
+            padding-top: 3%;
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+    }
+}
