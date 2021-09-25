@@ -6,7 +6,7 @@ const TopHeader = () => {
             <div className={`container-fluid`}>
                 <div className={`row`}>
                     <div className={`col-sm-8`}>
-                    Test
+                    {/* Test */}
                     </div>
                      <div className={`col-sm-4`}>
                     </div>
