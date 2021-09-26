@@ -51,3 +51,17 @@
     border-color: $primary-color;
     color: $primary-color;
 }
+
+.btn-form {
+    background: $primary-color;
+    color: white;
+    font-weight: bold;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: max-content;
+    box-shadow: 0px 6px 18px 0px #00000040;
+
+    &:hover {
+        color: white;
+    }
+}

@@ -10,7 +10,7 @@
 
 .top-rated {
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 5%;
     background: #F7F8FF;
     color: $primary-color;
 
@@ -95,6 +95,63 @@
         &:hover {
             color: white;
             text-decoration: underline;
+        }
+    }
+}
+
+.request-callback {
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    h1 {
+        color: $primary-color;
+    }
+
+    h5 {
+        width: 30%;
+        color: black;
+        text-align: center;
+    }
+}
+
+.form-wrapper {
+    margin-top: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    .form-between {
+
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        input {
+            width: 40%;
+            height: 4.5rem;
+            padding: 2rem;
+            border-radius: 10px;
+            outline: none;
+            border-color: grey;
+            border-style: solid;
+        }
+
+        textarea {
+            width: 87%;
+            padding: 2rem;
+            border-width: 2px;
+            border-radius: 10px;
+            outline: none;
+            border-color: grey;
+            border-style: solid;
+        }
+
+        .form-btn-wrapper {
+            margin-top: 1.5rem;
+            padding-right: 5%;
         }
     }
 }

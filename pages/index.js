@@ -9,6 +9,7 @@ import { ChevronDown } from 'react-bootstrap-icons';
 import SearchSection from '../components/SearchSection';
 import StartSection from '../components/StartSection';
 import MostRequested from '../components/MostRequested';
+import RequestCallback from '../components/RequestCallback';
 
 export default function LandingPage() {
   return (
@@ -68,6 +69,17 @@ export default function LandingPage() {
       <StartSection image={start1} />
 
       <MostRequested />
+
+      <RequestCallback />
+
+      <div className={`${styles.mailingList} d-flex flex-column align-items-center justify-content-center`}>
+        <h1>Get the latest update</h1>
+        <h6>Subscribe to our mailing list.</h6>
+        <form className={`${styles.subscriberForm} d-flex flex-row w-100 justify-content-between`} action="" method="post">
+          <input type="email" name="email" placeholder="Email" />
+          <button type="submit" className='btn'>Subscribe</button>
+        </form>
+      </div>
     </div>
   );
 }
