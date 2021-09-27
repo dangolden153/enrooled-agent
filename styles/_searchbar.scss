@@ -27,6 +27,19 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .search-bar {
+        align-items: center !important;
+    }
+
+    input[type='text'] {
+        width: 90% !important;
+        margin-left: 25px;
+        height: 4rem;
+        outline: none;
+    }
+}
+
 .hide {
     display: none;
 }

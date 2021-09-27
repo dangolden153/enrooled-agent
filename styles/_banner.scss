@@ -12,10 +12,22 @@
 
     .banner-title {
         font-weight: bolder;
-        font-size: 5.5rem;
+        font-size: 4.5rem;
     }
 
     .banner-extra {
         font-size: large;
     }
+
+    @media only screen and (max-width: 500px) {
+        .banner-title {
+            font-size: 2rem;
+        }
+
+        .banner-extra {
+            font-size: 0.9rem;
+
+        }
+    }
+
 }
