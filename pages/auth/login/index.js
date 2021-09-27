@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { login } from "../../../src/redux/actions/auth/auth";
 // import Image from 'next/image'
 // import Google from '../../../public/auth/google-brands.svg'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,72 +20,102 @@ library.add(fab, faFacebook);
 library.add(fab, faTwitter);
 
 const Login = () => {
+  const inputField = {
+    email: "",
+    password: "",
+  };
+  const [form, setForm] = useState(inputField);
+  const loading = useSelector((state) => state.auth.initialState);
+  const [submitted, setSubmitted] = useState(false);
+  const dispatch = useDispatch();
+  const { email, password } = form;
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((form) => ({ ...form, [name]: value }));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+    if (email && password) {
+      dispatch(login(email, password));
+    }
+  };
   return (
     <div className={`container`}>
       <div className={styles.login}>
         <div className={styles.log}>
           <h1 className={styles.logtext}>Login</h1>
         </div>
-
-        <div className={styles.buttons}>
-          <div>
-            <form>
+        <form onSubmit={handleSubmit}>
+          <div className={styles.buttons}>
+            <div>
               <input
                 className={styles.email}
                 placeholder="Login with Email"
                 type="text"
                 autoComplete="email"
                 required
+                name="email"
+                value={email}
+                onChange={handleChange}
               />
-            </form>
-          </div>
-          <div>
-            <form>
+            </div>
+            <div>
               <input
                 className={styles.password}
                 placeholder="Password"
                 type="password"
                 required
+                name="password"
+                value={password}
+                onChange={handleChange}
               />
-            </form>
-          </div>
-        </div>
-
-        <div className={styles.reset}>
-          <div className={styles.passtext}>
-            <p>Can't remember my password</p>
-            <Link href="/Login">
-              <a id={styles.set}>Reset Password</a>
-            </Link>
+            </div>
           </div>
 
-          <div className={styles.btn}>
-            <button type="submit">Continue</button>
-          </div>
-        </div>
+          <div className={styles.reset}>
+            <div className={styles.passtext}>
+              <p>Can't remember my password</p>
+              <Link href="/Login">
+                <a id={styles.set}>Reset Password</a>
+              </Link>
+            </div>
 
-        <div className={styles.socials}>
-          <div className={styles.google}>
-            <button>
-              <FontAwesomeIcon icon={["fab", "google"]} id={styles.icon} />
-              Login with Google
-            </button>
-          </div>
-
-          <div className={styles.facebook}>
-            <button>
-              <FontAwesomeIcon icon={["fab", "facebook-f"]} id={styles.icon} />
-              Login with Facebook
-            </button>
+            <div className={styles.btn}>
+              
+              <button type="submit">
+                {loading && "Loading"}
+                Continue
+                </button>
+            </div>
           </div>
 
-          <div className={styles.twitter}>
-            <button>
-              <FontAwesomeIcon icon={["fab", "twitter"]} id={styles.icon} />{" "}
-              Login with Twitter
-            </button>
+          <div className={styles.socials}>
+            <div className={styles.google}>
+              <button>
+                <FontAwesomeIcon icon={["fab", "google"]} id={styles.icon} />
+                Login with Google
+              </button>
+            </div>
+
+            <div className={styles.facebook}>
+              <button>
+                <FontAwesomeIcon
+                  icon={["fab", "facebook-f"]}
+                  id={styles.icon}
+                />
+                Login with Facebook
+              </button>
+            </div>
+
+            <div className={styles.twitter}>
+              <button>
+                <FontAwesomeIcon icon={["fab", "twitter"]} id={styles.icon} />{" "}
+                Login with Twitter
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
