@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                     <hr />
                     <div className="row footer-down d-flex justify-content-between">
-                        <div className="col-4 socials">
+                        <div className="col-lg-4 socials">
                             <div className="row d-flex justify-content-between">
                                 <Facebook size='25' />
                                 <Twitter size='25' />

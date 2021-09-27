@@ -20,22 +20,56 @@
         color: $primary-color;
     }
 
-    .topRated {
-        padding-top: 3%;
-        padding-bottom: 3%;
-        background: #F7F8FF;
+    .taxResources {
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+        background: white;
+        color: $primary-color;
+    }
+
+    .mailingList {
+        padding-top: 5%;
+        padding-bottom: 2%;
+        padding-right: 20%;
+        padding-left: 20%;
+        background: #F6F8FF;
         color: $primary-color;
 
-        span {
-            color: #777777;
-            font-weight: bold;
-            font-size: 1.1rem;
+        .subscriberForm {
+            margin-top: 3%;
+            margin-bottom: 5%;
+
+            input[type='email'] {
+                width: 24rem;
+                padding-left: 1.5rem;
+                border-radius: 4px;
+                outline: none;
+                border-color: grey;
+                border-style: solid;
+            }
+
+            button {
+                border-radius: 4px;
+                box-shadow: 0px 10px 24px 0px #00000059;
+                width: 12rem;
+                background: $primary-color;
+                color: white;
+                font-weight: bold;
+            }
         }
 
-        .cardList {
-            padding-top: 3%;
-            padding-left: 15%;
-            padding-right: 15%;
+        @media only screen and (max-width: 768px) {
+
+            .subscriberForm {
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            h1 {
+                font-size: 2.3rem;
+                font-weight: bolder;
+            }
         }
     }
 }

@@ -1,0 +1,84 @@
+.card {
+    background: white;
+    width: 90%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transition: background 0.5s, color 0.5s, width 0.2s;
+}
+
+.card-rounded {
+    border-radius: 19px;
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-top-rated {
+        padding-left: 7rem;
+        padding-right: 7rem;
+
+        &:hover {
+            width: 105%;
+        }
+    }
+}
+
+.card-top-rated {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background: $primary-color;
+        cursor: pointer;
+        width: 95%;
+        height: 110%;
+        margin-right: 20%;
+
+        * {
+            color: white;
+        }
+
+        button {
+            background: white;
+            color: $primary-color;
+            font-weight: bolder;
+        }
+    }
+
+    h2 {
+        margin-top: 1rem;
+        color: black;
+        font-weight: bold;
+    }
+
+    span {
+        font-weight: normal !important;
+        font-size: 1rem;
+    }
+
+    .star-list {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        width: 70%;
+
+        .card-star {
+            color: black;
+        }
+    }
+}
+
+.card-video {
+    // width: 100%;
+    margin-top: 4rem;
+    // height: 100%;
+    // margin-bottom: 4rem;
+}

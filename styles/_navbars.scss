@@ -26,17 +26,32 @@
     background: white;
     color: $primary-color;
 
-    .navbar-toggler {
+    .navbar-toggler-icon {
         color: $primary-color;
     }
 
+    @media only screen and (max-width: 768px) {
+        .bar {
+            display: flex;
+            flex-wrap: inherit;
+            padding-right: var(--bs-gutter-x, 0.75rem);
+        }
+
+        .navbar-nav {
+            justify-content: flex-end;
+        }
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
     .navbar-nav {
-        flex-direction: row !important;
-        margin-left: 17%;
 
         .nav-link {
             font-weight: bold;
-            color: #818181;
+            color: $secondary-color;
+            margin-right: 2rem;
         }
 
         .nav-link.active {
