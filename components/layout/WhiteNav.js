@@ -2,20 +2,22 @@ import React from 'react'
 import Image from 'next/image'
 import NavLink from './NavLink'
 import logoImage from '../../public/logo.png'
+import { List } from 'react-bootstrap-icons'
 const WhiteNav = () => {
     return (
-        <div className='row nav white-nav navbar justify-content-between'>
-            <div className="col-4">
+        <div className='nav white-nav navbar justify-content-between'>
+            <div className="col-sm-12 col-md-12 col-lg-5 d-md-flex flex-row justify-content-between">
                 <a href="/" className="navbar-brand">
                     <Image src={logoImage} alt="pixs" width="290" height="38" className="" />
                 </a>
-            </div>
-            <div className="d-flex col-lg-3 justify-content-end">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+
+                <button className="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon">
+                        <List className='navbar-toggler-icon' size='30' />
+                    </span>
                 </button>
             </div>
-            <div className="col-5">
+            <div className="col-lg-5">
                 <div className="navbar-collapse" id='navbarContent'>
                     <ul className="navbar-nav justify-content-between">
                         <li className="nav-item">

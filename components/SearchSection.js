@@ -6,7 +6,7 @@ const SearchSection = () => {
     return (
         <div className='section search-section d-flex flex-column align-items-center justify-content-center'>
             <div className="d-flex flex-column flex-lg-row justify-content-between justify-content-md-center">
-                <div className="col-lg-6">
+                <div className="col-lg-6 d-flex justify-content-center justify-content-lg-start">
                     <Image src={_default} />
                 </div>
                 <div className="col-lg-6 text-center text-lg-start justify-content-center justify-content-lg-start">

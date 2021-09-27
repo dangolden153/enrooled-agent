@@ -26,8 +26,18 @@
     background: white;
     color: $primary-color;
 
-    .navbar-toggler {
+    .navbar-toggler-icon {
         color: $primary-color;
+    }
+
+    // @media only screen and (max-width: 768px) {
+    //     .navbar-toggler {
+    //         display: block;
+    //     }
+    // }
+
+    .navbar-collapse {
+        justify-content: flex-end;
     }
 
     .navbar-nav {
