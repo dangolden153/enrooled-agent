@@ -14,13 +14,8 @@ import RequestCallback from '../components/RequestCallback';
 export default function LandingPage() {
   return (
     <div className={`col-12 justify-content-between ${styles.landingPage}`}>
-      <Banner search background={banner1}>
-        <h1 className="banner-title">Find Your Next IRS Enrolled Agent</h1>
-        <h6 className="banner-extra">
-          Browse through our directory of over 60,000 professionals and engage
-          them for free
-        </h6>
-      </Banner>
+      import SearchSection from '../components/SearchSection';
+import MostRequested from '../components/MostRequested';
 
       <div className={`${styles.stats} d-flex flex-column flex-lg-row text-center align-items-center justify-content-between justify-content-lg-center`}>
         <div className="col-lg-4">
