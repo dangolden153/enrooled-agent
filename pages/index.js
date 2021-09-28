@@ -20,7 +20,7 @@ export default function LandingPage() {
           Browse through our directory of over 60,000 professionals and engage
           them for free
         </h6>
-      </Banner>ush
+      </Banner>
 
       <div className={`${styles.stats} d-flex flex-column flex-lg-row text-center align-items-center justify-content-between justify-content-lg-center`}>
         <div className="col-lg-4">
