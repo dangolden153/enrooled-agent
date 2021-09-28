@@ -1,6 +1,6 @@
 .nav {
     height: 6rem;
-    overflow-x: hidden;  
+    overflow-x: hidden;
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
@@ -56,6 +56,39 @@
 
         .nav-link.active {
             color: $primary-color;
+        }
+
+        .dropdown-menu {
+            // margin-top: 0.9rem;
+            outline: none;
+            border: none;
+        }
+
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu:hover {
+            display: block;
+        }
+
+        .dropdown-item {
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            transition: margin-left 1s;
+        }
+
+        .dropdown-item:hover {
+            margin-left: -5px;
+            background: $primary-color;
+            color: white;
+        }
+
+        .nav-dropdown-header {
+            margin-left: 1rem;
+            color: $primary-color;
+            font-weight: bold;
+            margin-bottom: 0.7rem;
         }
     }
 }
