@@ -15,8 +15,17 @@ const WhiteNav = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/">Find an Enrolled Agent</a>
+                    <li className="nav-item dropdown">
+                            <a className="nav-link active dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Find an Enrolled Agent
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a className="dropdown-item" href="/">What is an Enrolled Agent (EA)?</a></li>
+                                <li><a className="dropdown-item" href="/">Enrolled Agent Search</a></li>
+                                <li><a className="dropdown-item" href="/">Enrolled Agent by State</a></li>
+                                <li><a className="dropdown-item" href="/">All Enrolled Agents</a></li>
+                                <li><a className="dropdown-item" href="/">Verify an Enrolled Agent's License</a></li>
+                            </ul>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href='/'>Ask an EA</a>
@@ -24,8 +33,22 @@ const WhiteNav = () => {
                         <li className="nav-item">
                             <a className="nav-link" href='/'>News & Articles</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href='/'>Resources</a>
+                        <li className="nav-item dropdown">
+                            <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a className="nav-dropdown-header" href="/">View By Category</a></li>
+                                <li><a className="dropdown-item" href="/">Browse All Categories</a></li>
+                                <li><a className="nav-dropdown-header" href="/">Tools</a></li>
+                                <li><a className="dropdown-item" href="/">Tax Resources</a></li>
+                                <li><a className="dropdown-item" href="/">Tax Tips</a></li>
+                                <li><a className="dropdown-item" href="/">Tax & Business Newsletter</a></li>
+                                <li><a className="dropdown-item" href="/">Tax Planning Newsletter</a></li>
+                                <li><a className="dropdown-item" href="/">Update Newsletter</a></li>
+                                <li><a className="nav-dropdown-header" href="/">More</a></li>
+                                <li><a className="dropdown-item" href="/">Create Your Free EA Listing</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
