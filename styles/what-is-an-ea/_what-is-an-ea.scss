@@ -1,5 +1,4 @@
-$primary-color: #01105b;
-$secondary-color:#252525;
+@import 'text';
+@import 'banner';
+@import "../colors";
 
-@import './banner';
-@import './text'

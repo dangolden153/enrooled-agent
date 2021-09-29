@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 import Image from 'next/image'
-import _default from '../public/images/tax1.png'
+import _default from '../public/images/tax1.webp'
 
 const VideoCard = ({ big='false' }) => {
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import logoImage from '../../public/logo2.png'
+import logoImage from '../../public/logo2.webp'
 import { Facebook, Twitter, Linkedin, Instagram } from 'react-bootstrap-icons'
 
 const Footer = () => {

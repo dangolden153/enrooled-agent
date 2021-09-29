@@ -3,8 +3,8 @@ import React from 'react'
 
 import TopRatedCard from './TopRatedCard';
 import { ChevronRight } from 'react-bootstrap-icons';
-import woman from '../public/images/card-woman.png'
-import man from '../public/images/card-man.png'
+import woman from '../public/images/card-woman.webp'
+import man from '../public/images/card-man.webp'
 import CardList from './CardList';
 
 const TopRated = () => {

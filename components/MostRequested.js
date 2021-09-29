@@ -1,5 +1,5 @@
 import React from 'react'
-import image from '../public/images/most-requested.png'
+import image from '../public/images/most-requested.webp'
 import CityList from './CityList'
 
 const MostRequested = () => {
