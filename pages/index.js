@@ -1,6 +1,6 @@
 // import Image from 'next/image'
-import banner1 from '../public/images/banner1.png'
-import start1 from '../public/images/start-section1.png'
+import banner1 from '../public/images/banners/landing-page.webp'
+import start1 from '../public/images/start-section1.webp'
 import styles from '../styles/LandingPage.module.scss'
 import Banner from "../components/Banner";
 import TopRated from '../components/TopRated';

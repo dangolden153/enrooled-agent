@@ -1,6 +1,6 @@
 import { ChevronRight } from 'react-bootstrap-icons'
 import Image from 'next/image'
-import _default from '../public/images/search-section.png'
+import _default from '../public/images/search-section.webp'
 
 const SearchSection = () => {
     return (
