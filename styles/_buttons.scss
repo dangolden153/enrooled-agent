@@ -65,3 +65,11 @@
         color: white;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .btn-common {
+        margin-top: 2rem;
+        width: 17rem;
+        font-size: 1.2rem;
+    }
+}

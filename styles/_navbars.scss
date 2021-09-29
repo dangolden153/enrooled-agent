@@ -18,6 +18,18 @@
             margin-right: 5px;
         }
     }
+
+    @media only screen and (max-width: 768px) {
+        h5 {
+            font-size: 0.6rem;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        button {
+            font-size: 0.7rem;
+        }
+    }
 }
 
 .white-nav {
@@ -31,6 +43,13 @@
     }
 
     @media only screen and (max-width: 768px) {
+
+        .navbar-brand {
+            img {
+                width: 15rem;
+            }
+        }
+
         .bar {
             display: flex;
             flex-wrap: inherit;

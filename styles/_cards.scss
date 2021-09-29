@@ -20,13 +20,19 @@
         padding-left: 7rem;
         padding-right: 7rem;
 
+        span {
+            font-size: 0.8rem !important;
+        }
+
         &:hover {
-            width: 105%;
+            width: 100%;
+            margin-right: 10% !important;
         }
     }
 }
 
 .card-top-rated {
+    max-width: 400px;
     padding-left: 5rem;
     padding-right: 5rem;
     padding-top: 4rem;
@@ -77,8 +83,5 @@
 }
 
 .card-video {
-    // width: 100%;
     margin-top: 4rem;
-    // height: 100%;
-    // margin-bottom: 4rem;
 }
