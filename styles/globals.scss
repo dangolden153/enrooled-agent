@@ -1,13 +1,17 @@
 @import 'colors';
 @import 'layout';
+@import 'pagination';
+@import './ea-listings/ea-listings';
+@import './what-is-an-ea/what-is-an-ea';
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow-x: hidden;
+  font-family: 'DM Serif Display',-apple-system, serif;;
 }
 
 a {
