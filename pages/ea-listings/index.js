@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Banner from "../../components/Banner";
 import EaListbanner from "../../public/images/banners/ea-listing.webp";
-import Dummy from "../../public/images/card-man.png";
+import Dummy from "../../public/images/card-man.webp";
 import Image from "next/image";
 import LaptopMan from "../../public/images/right-agent.webp";
 import { Star, StarFill } from "react-bootstrap-icons";
