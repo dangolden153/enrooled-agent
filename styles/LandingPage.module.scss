@@ -2,15 +2,6 @@
 
 .landingPage {
 
-    h1 {
-        font-size: 3rem;
-        font-weight: bolder;
-    }
-
-    h6 {
-        font-weight: bold;
-    }
-
     .stats {
         padding-top: 5%;
         padding-left: 10%;
@@ -59,16 +50,46 @@
                 font-weight: bold;
             }
         }
+    }
 
-        @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
 
-            .subscriberForm {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
+        .mailingList {
+            padding-top: 5%;
+            padding-bottom: 2%;
+            padding-right: 10% !important;
+            padding-left: 10% !important;
+            background: #F6F8FF;
+            color: $primary-color;
+
             h1 {
-                font-size: 2.3rem;
-                font-weight: bolder;
+                font-size: 1.9rem;
+            }
+    
+            .subscriberForm {
+                margin-top: 3%;
+                margin-bottom: 5%;
+                flex-direction: column !important;
+                align-items: center;
+    
+                input[type='email'] {
+                    width: 21rem;
+                    height: 3rem;
+                    margin-bottom: 5%;
+                    border-radius: 4px;
+                    outline: none;
+                    border-color: grey;
+                    border-style: solid;
+                }
+    
+                button {
+                    border-radius: 4px;
+                    box-shadow: 0px 10px 24px 0px #00000059;
+                    width: 12rem;
+                    background: $primary-color;
+                    color: white;
+                    font-weight: bold;
+                }
             }
         }
     }

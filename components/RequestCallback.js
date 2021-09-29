@@ -17,7 +17,7 @@ const RequestCallback = () => {
                     <input type="text" name="fjjdnf" id="" placeholder="Subject" />
                     <input type="text" name="fjjdnf" id="" placeholder="Phone Number" />
                 </div>
-                <div className="form-group">
+                <div className="form-group d-flex flex-row justify-content-center">
                     <textarea className="" rows='10' placeholder="Message"></textarea>
                 </div>
             </Form>
