@@ -2,11 +2,23 @@
     color:#fff;
     text-align: center;
     h1{
-        font-size: 70px !important;
+        font-size: 70px  ;
     }
     span{
         font-size: 19px;
     }
+}
+
+@media (max-width: 700px) {
+    .bannerText{
+        h1{
+            font-size: 50px ;
+        }
+        span{
+            font-size: 14px;
+        }
+    }
+    
 }
 
 .agentList{
@@ -43,6 +55,35 @@
             }
         }
     }
+}
+
+@media (max-width: 700px) {
+    .agentList{
+        h1{
+            text-align: center;
+        }
+        .findMore{
+            flex-direction: column;
+            text-align: center;
+            button{
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .findAgent{
+        text-align: center;
+        h1{
+            text-align: center;
+        }
+        span{
+            font-size: 14px !important;
+        }
+        .image{
+            display: none;
+        }
+    }
+    
 }
 
 .findAgent{

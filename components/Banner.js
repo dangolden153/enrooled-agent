@@ -11,6 +11,7 @@ const Banner = ({ search = false, background, children }) => {
       style={{
         backgroundImage: `url(${background.src})`,
         backgroundSize: "cover",
+        backgroundPosition: "center 100%",
       }}
     >
       <div className="banner-inner">

@@ -3,6 +3,7 @@ import Banner from "../../components/Banner";
 import EaListbanner from "../../public/images/banners/ea-listing.webp";
 import Dummy from "../../public/images/card-man.png";
 import Image from "next/image";
+import LaptopMan from "../../public/images/right-agent.webp";
 import { Star, StarFill } from "react-bootstrap-icons";
 import HorizontalCard from "../../components/HorizontalCard";
 import data from "../../components/AgentList.json";
@@ -69,7 +70,9 @@ const index = () => {
               <br />
               <button>Get started</button>
             </div>
-            <div className="col-md-6 col-xl-6"></div>
+            <div className="col-md-6 image col-xl-6">
+              <Image src={LaptopMan} />
+            </div>
           </div>
         </div>
       </div>
