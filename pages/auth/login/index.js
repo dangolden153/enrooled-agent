@@ -12,7 +12,7 @@ import {
   faGoogle,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import styles from "../../../styles/auth/_login.module.scss";
+import styles from "../../../styles/auth/Login.module.scss";
 import Link from "next/link";
 
 library.add(fab, faGoogle);

@@ -7,6 +7,11 @@
     margin-right: 13.5px;
     border-radius: 10px;
     border-width: 3px;
+
+    &:hover {
+        width: 12.05rem;
+        height: 3.05rem;
+    }
 }
 
 .btn-primary {
@@ -15,6 +20,12 @@
     border-color: white;
     font-weight: bold;
     outline: none;
+
+    &:hover {
+        color: white;
+        background: $primary-color;
+        border-color: white;
+    }
 }
 
 .btn-outline {
@@ -31,10 +42,15 @@
     border-color: white;
     font-weight: bold;
     outline: none;
+
+    &:hover {
+        background: $primary-color;
+        border-color: darken($color: white, $amount: 30%);
+    }
 }
 
 .btn-card {
-    width: 75%;
+    width: 85%;
     color: white;
     font-weight: bold;
     background: black;
