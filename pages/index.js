@@ -1,15 +1,15 @@
 // import Image from 'next/image'
-import banner1 from '../public/images/banners/landing-page.webp'
-import start1 from '../public/images/start-section1.webp'
-import styles from '../styles/LandingPage.module.scss'
+import banner1 from "../public/images/banners/landing-page.webp";
+import start1 from "../public/images/start-section1.webp";
+import styles from "../styles/LandingPage.module.scss";
 import Banner from "../components/Banner";
-import TopRated from '../components/TopRated';
-import VideoCard from '../components/VideoCard';
-import { ChevronDown } from 'react-bootstrap-icons';
-import SearchSection from '../components/SearchSection';
-import StartSection from '../components/StartSection';
-import MostRequested from '../components/MostRequested';
-import RequestCallback from '../components/RequestCallback';
+import TopRated from "../components/TopRated";
+import VideoCard from "../components/VideoCard";
+import { ChevronDown } from "react-bootstrap-icons";
+import SearchSection from "../components/SearchSection";
+import StartSection from "../components/StartSection";
+import MostRequested from "../components/MostRequested";
+import RequestCallback from "../components/RequestCallback";
 
 export default function LandingPage() {
   return (
@@ -22,7 +22,9 @@ export default function LandingPage() {
         </h6>
       </Banner>
 
-      <div className={`${styles.stats} d-flex flex-column flex-lg-row text-center align-items-center justify-content-between justify-content-lg-center`}>
+      <div
+        className={`${styles.stats} d-flex flex-column flex-lg-row text-center align-items-center justify-content-between justify-content-lg-center`}
+      >
         <div className="col-lg-4">
           <h1>60,000+</h1>
           <h6>Enrolled Agents listed and reviewed</h6>
@@ -39,11 +41,13 @@ export default function LandingPage() {
 
       <TopRated />
 
-      <div className={`${styles.taxResources} d-flex flex-column align-items-center justify-content-center`}>
+      <div
+        className={`${styles.taxResources} d-flex flex-column align-items-center justify-content-center`}
+      >
         <h1>Tax Resources</h1>
         {/* <video src=""></video> */}
         <div className="d-flex flex-row w-100 justify-content-center">
-          <VideoCard big='true' />
+          <VideoCard big="true" />
         </div>
         <div className="d-flex flex-row w-100 justify-content-between">
           <div className="col-3">
@@ -59,7 +63,9 @@ export default function LandingPage() {
             <VideoCard />
           </div>
         </div>
-        <button type="button" className='btn-common'>Load more videos <ChevronDown /></button>
+        <button type="button" className="btn-common">
+          Load more videos <ChevronDown />
+        </button>
       </div>
 
       <SearchSection />
@@ -70,13 +76,21 @@ export default function LandingPage() {
 
       <RequestCallback />
 
-      <div className={`${styles.mailingList} d-flex flex-column align-items-center justify-content-center`}>
+      <div
+        className={`${styles.mailingList} d-flex flex-column align-items-center justify-content-center`}
+      >
         <h1>Get the latest update</h1>
         <h6>Subscribe to our mailing list.</h6>
         <div className="d-flex flex-row justify-content-center">
-          <form className={`${styles.subscriberForm} d-flex flex-row w-100 justify-content-between`} action="" method="post">
+          <form
+            className={`${styles.subscriberForm} d-flex flex-row w-100 justify-content-between`}
+            action=""
+            method="post"
+          >
             <input type="email" name="email" placeholder="Email" />
-            <button type="submit" className='btn'>Subscribe</button>
+            <button type="submit" className="btn">
+              Subscribe
+            </button>
           </form>
         </div>
       </div>

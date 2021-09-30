@@ -1,0 +1,60 @@
+.eaText{
+    margin-bottom: 5rem;
+    width:55%;
+    h1{
+        color:$primary-color;
+        font-size: 40px;
+    }
+    p{
+        color:$secondary-color;
+        
+        font-size: 17px;
+        font-family: sans-serif;
+       
+    }
+    ul li {
+        color:$secondary-color;
+        font-size: 17px;
+        text-align: left !important;
+    }
+    ul{
+        padding: 10px ;
+        color: $primary-color;
+        font-family: sans-serif;
+    }
+    
+
+}
+
+.borderBtm{    
+    
+    margin-bottom: 3rem !important;
+    hr{
+        margin-right: 35% !important;
+        margin-left: 35%;
+        width: 30%;
+    }
+}
+
+@media (max-width: 700px) {
+    .eaText{
+        width: 100%;
+        h1{
+            text-align: center;
+        }
+        p{
+            
+            font-size: 15px !important;
+            padding: 0 !important;
+            text-align: center;
+        }
+     
+        ul{
+            padding: 10px !important;
+        }
+        ul li{
+            font-size: 15px !important;
+        }
+    }
+   
+}

@@ -1,14 +1,13 @@
-import React from 'react'
-import styles from '../../styles/WhatIsAnEA.module.scss'
+import React from "react";
 
 const index = () => {
   return (
     <div>
       {/* Banner */}
-      <div className={styles.bgBanner}></div>
+      <div className="bgBanner"></div>
 
       {/* Who is an enrolled agent */}
-      <div className={`${styles.eaText} container text-center`}>
+      <div className="container text-center eaText">
         <h1>Who is an Enrolled Agent?</h1>
         <p>
           An Enrolled Agent is a tax professional that has unlimited right to
@@ -18,39 +17,40 @@ const index = () => {
         </p>
       </div>
 
+      {/* <hr className="borderBtm" /> */}
       {/* Border Bottom */}
-      <div className={styles.borderBtm}>
-        <div></div>
+      <div className="text-center borderBtm">
+        <hr />
       </div>
 
       {/* Becoming an agent */}
-      <div className={`${styles.eaText} container text-center`}>
+      <div className="container text-center eaText">
         <h1>Becoming an Enrolled Agent</h1>
         <ul>
           <li>
             You must obtain a Preparer Tax Identification Number (PTIN), which
             you are required to use on all our clients’ filed tax returns to
-            ensure maximum privacy as a tax.{' '}
+            ensure maximum privacy as a tax.{" "}
           </li>
           <li>
             You are required to take the Special Enrollment Examination (SEE)
-            and achieve passing scores on all three.{' '}
+            and achieve passing scores on all three.{" "}
           </li>
           <li>
             You must file form 23 within one year of completing your exam which
             prompts the IRS to begin conducting a background check and a full
-            review of the applicant's personal and business taxes.{' '}
+            review of the applicant's personal and business taxes.{" "}
           </li>
         </ul>
       </div>
 
       {/* Border Bottom */}
-      <div className={styles.borderBtm}>
-        <div></div>
+      <div className="borderBtm">
+        <hr />
       </div>
 
       {/* Maintaining Status */}
-      <div className={`${styles.eaText} container text-center`}>
+      <div className="container text-center eaText">
         <h1>Maintaining an Enrolled Agent Status</h1>
         <ul>
           <li>
@@ -70,7 +70,7 @@ const index = () => {
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;

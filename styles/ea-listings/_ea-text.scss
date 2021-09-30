@@ -1,0 +1,128 @@
+.bannerText{
+    color:#fff;
+    text-align: center;
+    h1{
+        font-size: 70px  ;
+    }
+    span{
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 700px) {
+    .bannerText{
+        h1{
+            font-size: 50px ;
+        }
+        span{
+            font-size: 14px;
+        }
+    }
+    
+}
+
+.agentList{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    h1{
+        margin-bottom: 2rem;
+        color: $primary-color;
+    }
+    .findMore{
+        padding: 0 4rem;
+        
+        
+        button{
+            color: #01105b;
+            font-size: 18px;
+            border-radius: 5px;
+            width: 200px;
+            height: 50px;
+            font-weight: bold;
+            font-family: sans-serif;
+            border: 3px solid #01105B;
+            box-sizing: border-box;
+            filter: drop-shadow(0px 10px 24px rgba(0, 0, 0, 0.25));
+            transition: background-color 0.5s,width 0.5s;
+        }
+
+        &:hover{
+            button{
+                background-color: #01105b;
+                color: #fff;
+                width: 220px;
+               
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .agentList{
+        h1{
+            text-align: center;
+        }
+        .findMore{
+            flex-direction: column;
+            text-align: center;
+            button{
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .findAgent{
+        text-align: center;
+        h1{
+            text-align: center;
+        }
+        span{
+            font-size: 14px !important;
+        }
+        .image{
+            display: none;
+        }
+    }
+    
+}
+
+.findAgent{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: #f6f8ff;
+    
+
+    h1{
+        color: $primary-color;
+        margin-bottom: 2rem;
+    }
+    span{
+        color: #818181;
+        font-size: 17px;
+        
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+    button{
+        font-family: sans-serif;
+        margin-top: 2rem;
+        color: #01105b;
+        font-size: 18px;
+        border-radius: 5px;
+        width: 200px;
+        height: 50px;
+        font-weight: bold;
+        border: 3px solid #01105B;
+        box-sizing: border-box;
+        filter: drop-shadow(0px 10px 24px rgba(0, 0, 0, 0.25));
+        transition: background-color 0.5s,width 0.5s;
+        
+    }
+    button:hover{
+        background-color: #01105b;
+        color: #fff;
+        width: 220px;
+       
+    } 
+    
+}
