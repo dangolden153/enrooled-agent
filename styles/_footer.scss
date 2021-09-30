@@ -67,7 +67,9 @@
     }
 
     .socials {
+        width: 85% !important;
         margin-bottom: 2rem;
+        margin-top: 1rem;
         margin-left: 2rem;
     }
 
@@ -76,8 +78,24 @@
     }
 
     .footer-inner {
+        background: black !important;
+        padding-top: 2rem !important;
+
         .btn-outline {
             font-size: 0.7rem;
         }
+    }
+
+    .footer-up {
+        margin-bottom: 2rem !important;
+        align-items: center;
+    }
+
+    .footer-link {
+        text-align: center;
+    }
+
+    .footer-link-list {
+        padding-left: 0;
     }
 }
