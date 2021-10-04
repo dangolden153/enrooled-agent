@@ -2,6 +2,7 @@ import NewsCard from "./NewsCard"
 import React, { useState } from 'react'
 import img from '../public/images/news.png'
 import CardListTwo from "./CardListTwo"
+import { ChevronLeft, ChevronRight } from "react-bootstrap-icons"
 
 const demo = [
     {
@@ -197,27 +198,27 @@ const News = () => {
 
 
             <nav>
-                <ul className="pagination">
-                    <li className="page-item">
+                <ul className="pagination-container">
+                    <li className="pagination-item">
                         {
-                            <button className='page-link' onClick={() => prevPage()}>
-                                <span aria-hidden="true">&laquo;</span>
+                            <button className='page-link' onClick={() => prevPage()} disabled={page === 1}>
+                                <ChevronLeft />
                             </button>
                         }
                     </li>
                     {
                         rangeInclusive(pages).map((_page, index) => (
-                            <li key={index} className={`page-item ${page === _page ? 'active' : ''}`}>
-                                <button key={index} className='page-link' onClick={() => _setPage(_page)}>
+                            <li key={index} className="pagination-item">
+                                <button key={index} className={`page-link ${page === _page ? 'active' : ''}`} onClick={() => _setPage(_page)}>
                                     {_page}
                                 </button>
                             </li>
                         ))
                     }
-                    <li className="page-item">
+                    <li className="pagination-item">
                         {
-                            <button className='page-link' onClick={() => nextPage()}>
-                                <span aria-hidden="true">&raquo;</span>
+                            <button className='page-link' onClick={() => nextPage()} disabled={page === pages}>
+                                <ChevronRight />
                             </button>
                         }
                     </li>
