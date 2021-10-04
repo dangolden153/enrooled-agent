@@ -83,6 +83,53 @@
     // margin-bottom: 4rem;
 }
 
+.card-horizontal {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.card-news {
+    padding: 1rem;
+    padding-left: 1.5rem;
+    width: 500px;
+
+    .news-image {
+        margin-top: 5px;
+    }
+
+    .card-news-body {
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        span {
+            width: 95%;
+        }
+    }
+
+    &:hover {
+        background: #E1EFFF;
+    }
+}
+
+.card-article {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    outline: none;
+    border: 0;
+    box-shadow: none;
+
+
+    .card-article-body {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
 .horizontalCard{
     display: flex;
     align-items: center;

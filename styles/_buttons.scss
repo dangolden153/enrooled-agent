@@ -82,6 +82,21 @@
     }
 }
 
+.btn-news {
+    background: white !important;
+    color: black !important;
+    border-color: black;
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 8rem !important;
+    border-radius: 5px;
+
+    &:hover {
+        background: black !important;
+        color: white !important;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .btn-common {
         margin-top: 2rem;

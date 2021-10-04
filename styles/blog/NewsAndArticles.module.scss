@@ -1,0 +1,30 @@
+$primary-color: #0F1F73;
+
+.newsAndArticles {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: $primary-color;
+    }
+
+    h4 {
+        margin-bottom: 2rem;
+    }
+
+    .newsHeader {
+
+        h1 {
+            font-size: 2.2rem;
+        }
+    }
+
+    hr {
+        height: 2px;
+        margin-bottom: 1.5rem; 
+        opacity: 0.5;
+        color: black !important;
+    }
+}
