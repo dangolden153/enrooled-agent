@@ -314,3 +314,18 @@
         }
     }
 }
+
+.form-select {
+    height: 4rem;
+    background: transparent;
+    color: white;
+
+    .select-option {
+        color: black;
+    }
+
+    .select-option.active {
+        background: $primary-color;
+        font-weight: bold;
+    }
+}

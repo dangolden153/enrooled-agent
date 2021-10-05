@@ -19,32 +19,34 @@ const Footer = () => {
                     </div>
                     <hr />
                     <div className="row footer-down d-flex justify-content-between">
-                        <div className="col-lg-4 socials">
-                            <div className="row d-flex justify-content-between">
+                        <div className="col-lg-2 socials">
+                            <div className="d-flex flex-row justify-content-between">
                                 <Facebook size='25' />
                                 <Twitter size='25' />
                                 <Linkedin size='25' />
                                 <Instagram size='25' />
                             </div>
                         </div>
-                        <div className="col-4">
-                            <ul className="footer-link-list">
-                                <li className="footer-link">Find a Tax Expert in your locality</li>
-                                <li className="footer-link">All Enrolled Agents</li>
-                                <li className="footer-link">Ask an EA</li>
-                                <li className="footer-link">Verify an Enrolled Agents License</li>
-                                <li className="footer-link">Enrolled Agent</li>
-                                <li className="footer-link">Free Enrolled Agent Listings</li>
-                            </ul>
-                        </div>
-                        <div className="col-4">
-                            <ul className="footer-link-list">
-                                <li className="footer-link">About Us</li>
-                                <li className="footer-link"> Contact Us</li>
-                                <li className="footer-link">Privacy Policy</li>
-                                <li className="footer-link">Terms of Use</li>
-                                <li className="footer-link">FAQs</li>
-                            </ul>
+                        <div className="col-lg-8 d-flex flex-row justify-content-center">
+                            <div className="col-6">
+                                <ul className="footer-link-list">
+                                    <li className="footer-link">Find a Tax Expert in your locality</li>
+                                    <li className="footer-link">All Enrolled Agents</li>
+                                    <li className="footer-link">Ask an EA</li>
+                                    <li className="footer-link">Verify an Enrolled Agents License</li>
+                                    <li className="footer-link">Enrolled Agent</li>
+                                    <li className="footer-link">Free Enrolled Agent Listings</li>
+                                </ul>
+                            </div>
+                            <div className="col-">
+                                <ul className="footer-link-list">
+                                    <li className="footer-link">About Us</li>
+                                    <li className="footer-link"> Contact Us</li>
+                                    <li className="footer-link">Privacy Policy</li>
+                                    <li className="footer-link">Terms of Use</li>
+                                    <li className="footer-link">FAQs</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
