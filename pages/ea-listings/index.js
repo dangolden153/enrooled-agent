@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from "react";
 import Banner from "../../components/Banner";
-import EaListbanner from "../../public/images/banners/ea-listing.webp";
-import Dummy from "../../public/images/card-man.webp";
+import EaListbanner from "../../public/images/banners/ea-listing.png";
+import Dummy from "../../public/images/card-man.png";
 import Image from "next/image";
-import LaptopMan from "../../public/images/right-agent.webp";
+import LaptopMan from "../../public/images/right-agent.png";
 import { Star, StarFill } from "react-bootstrap-icons";
 import HorizontalCard from "../../components/HorizontalCard";
 import data from "../../components/AgentList.json";

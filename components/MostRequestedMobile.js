@@ -1,6 +1,6 @@
 import React from 'react'
 import { ChevronRight } from 'react-bootstrap-icons'
-import image from '../public/images/most-requested.webp'
+import image from '../public/images/most-requested.png'
 import CitySelect from './CitySelect'
 
 const MostRequestedMobile = () => {

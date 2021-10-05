@@ -1,4 +1,4 @@
-import banner1 from '../../public/images/banners/landing-page.webp'
+import banner1 from '../../public/images/banners/landing-page.png'
 import Banner from "../../components/Banner";
 import TopRated from '../../components/TopRated';
 import SearchSection from '../../components/SearchSection';
