@@ -66,6 +66,12 @@ const Header = () => {
         case '/what-is-an-ea':
             pageName = 'What is an EA'
             break
+        case '/blog':
+            pageName = 'Blog'
+            break
+        case '/blog/all':
+            pageName = 'All Blog Posts'
+            break
         default:
             pageName = 'Default Page'
             break

@@ -329,3 +329,34 @@
         font-weight: bold;
     }
 }
+
+.pagination-item {
+    .page-link {
+        border-radius: 30px !important;
+        background: #C4C4C4;
+        color: $primary-color;
+        font-size: 1rem;
+        width: 45px;
+        height: 45px;
+
+        &:hover {
+            background: $primary-color;
+            color: white;
+        }
+
+        &.active {
+            border-radius: 30px !important;
+            background: $primary-color;
+            font-size: 1rem;
+            color: white;
+    
+            width: 45px;
+            height: 45px;
+    
+            &:hover {
+                background: #C4C4C4;
+                color: $primary-color;
+            }
+        }
+    }
+}
