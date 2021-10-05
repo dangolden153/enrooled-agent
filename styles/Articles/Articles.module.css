@@ -1,0 +1,214 @@
+.articles {
+    width: 100%;
+}
+.topdiv {
+    width: 100%;
+    position: relative;
+    top: 100px;
+}
+.head {
+    width: 1328px;
+    position: relative;
+    font-family: DM Serif Display;
+    font-size: 53px;
+    left: 102px;
+    font-style: normal;
+    color: hsla(230, 98%, 18%, 1);
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+.egent {
+    font-family: Proxima Nova;
+    font-size: 20px;
+    width: 278px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    position: relative;
+    left: 582px;
+    color: rgb(121, 120, 120);
+    letter-spacing: 0em;
+}
+.dollar {
+    width: 1270px;
+    position: relative;
+    height: 747px;
+    left: 205px;
+    top: 150px;
+}
+.september {
+    font-size: 20px;
+    width: 278px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    position: relative;
+    top: 18px;
+    left: 621px;
+    color: rgb(121, 120, 120);
+    letter-spacing: 0em;
+}
+.texts {
+    position: relative;
+    width: 957px;
+    top: 75px;
+    height: 300px;
+    left: 343px;
+    /* bottom: 900px; */
+    /* background-color: rgb(128, 105, 46); */
+}
+.texts p{
+    font-family: Proxima Nova;
+    font-size: 30px;
+    /* font-style: normal; */
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;    
+}
+.middleTexts {
+width: 955px;
+left: 175px;
+position: relative;
+}
+.middleTexts p{
+font-size: 20px;
+/* font-style: normal; */
+font-weight: 300;
+line-height: 45px;
+letter-spacing: 0em;
+}
+
+.comments {
+    position: relative;
+    left: 295px;
+    width: 955px;
+    /* background-color: darkcyan; */
+}
+#coment {
+    width: 154px;
+    font-family: Proxima Nova;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: 0em;
+}
+.andrew {
+    display: flex;
+    position: relative;
+    margin-top: 25px;
+    width: 80%;
+    left: 285px;
+}
+.andrew img{
+    border-radius: 50%;
+}
+.fornia {
+position: relative;
+top: 10px;
+/* height: 60px; */
+left: 20px;
+/* padding-top: 6px; */
+font-size: 19px;
+}
+#p {
+    /* height: 60px; */
+width: 364px;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 50px;
+position: relative;
+left: 263px;
+margin-top: 50px;
+font-size: 20px;
+border-radius: 10px;
+background: #F6F8FF;
+}
+#p2 {
+    /* height: 60px; */
+width: 699px;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 70px;
+position: relative;
+padding-right: 50px;
+left: 263px;
+margin-top: 50px;
+/* color: brown; */
+font-size: 20px;
+border-radius: 10px;
+background: #F6F8FF;
+}
+.box {
+    position: relative;
+    left: 220px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 955px;
+    border-radius: 10px;
+    padding-top: 180px;
+    border: 1px solid #818181;
+    /* background: 3px solid #F6F8FF; */
+}
+.buttn button{
+    width: 302px;
+    height: 60px;
+    position: relative;
+    left: 250px;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    background: #01105B;
+    color: white;
+    margin-bottom: 50px;
+}
+.boundry {
+    border: 1px solid #818181;
+    /* height: 0px; */
+    width: 1580px;
+    /* left: 170px; */
+    position: relative;
+    /* background-color: thistle; */
+    top: 10px;
+    margin-bottom: 30px;
+}
+.latest {
+    font-family: DM Serif Display;
+    font-size: 52px;
+    font-style: normal;
+    margin-bottom: 40px;
+    font-weight: 400;
+    line-height: 43px;
+    text-align: center;
+    color: #01105B;
+}
+.load button{
+    width: 182px;
+    height: 60px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid #000000;
+    margin-bottom: 65px;
+}
+.news {
+    /* width: 90%; */
+    /* display: flex; */
+    /* margin: 0 auto; */
+    /* justify-content: space-around; */
+}
+.tech img{
+    width: 100%;
+}
+
+#p3 {
+    width: 70%;
+}
