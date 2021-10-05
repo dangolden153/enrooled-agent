@@ -16,7 +16,7 @@ const Banner = ({ search = false, background, children }) => {
     >
       <div className="banner-inner">
         {children}
-        <SearchBar show={search ? "true" : "false"} />
+        { search ? <SearchBar /> : <></>}
       </div>
     </div>
   );
