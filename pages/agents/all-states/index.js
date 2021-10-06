@@ -13,7 +13,10 @@
         const index = () => {
             return (
                 <div className={styles.agentList}>
-                    <Banner background={Background} search={true} />
+                    <Banner background={Background} search={true}>
+        <h1 className="banner-title">Enrolled Agents Listing</h1>
+        <h6 className="banner-extra">View all Tax Expert Listings</h6>
+      </Banner>
                     
                     <div className={styles.enrolled}>
               <Container>
@@ -271,15 +274,15 @@
                 <Row>
                   <Col>
                   <div className={styles.butn}>
-            <button>Find More Local EAs <span id={styles.inner}>&#62;</span></button>
+            <button>Find More Local EAs</button>
             </div>
                   </Col>
                   <Col>
                     <div className={styles.range}>
                       {/* <h1>Work in Progress....</h1> */}
-                      {/* <div className={styles.sliderA}><span>&#60;</span></div><p><b>1</b></p> */}
-                {/* <p id={styles.numba}>2 3 4 of 45</p>  */}
-                {/* <div className={styles.sliderB}><span>&#62;</span></div> */}
+                      <div className={styles.sliderA}><span>&#60;</span></div><p><b>1</b></p>
+                <p id={styles.numba}>2 3 4 of 45</p> 
+                <div className={styles.sliderB}><span>&#62;</span></div>
            
                           </div>
                   </Col>
