@@ -1,8 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import NavLink from './NavLink'
-import logoImage from '../../public/logo.png'
-
+import React from "react";
+import Image from "next/image";
+import NavLink from "./NavLink";
+import logoImage from "../../public/logo.png";
 
 const WhiteNav = () => {
   return (
@@ -81,7 +80,7 @@ const WhiteNav = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink href="/blog">
+              <NavLink href="/blog/all">
                 <a className="nav-link">News & Articles</a>
               </NavLink>
             </li>
