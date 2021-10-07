@@ -4,14 +4,15 @@
 .topdiv {
     width: 100%;
     position: relative;
-    top: 100px;
+    top: 50px;
 }
 .head {
-    width: 1328px;
+    width: 80%;
+    margin: 0 auto;
     position: relative;
     font-family: DM Serif Display;
     font-size: 53px;
-    left: 102px;
+    /* left: 102px; */
     font-style: normal;
     color: hsla(230, 98%, 18%, 1);
     font-weight: 400;
@@ -23,31 +24,34 @@
 .egent {
     font-family: Proxima Nova;
     font-size: 20px;
-    width: 278px;
+    padding-top: 25px;
+    /* width: 278px; */
+
+    text-align: center;
     font-style: normal;
     font-weight: 700;
     line-height: 34px;
     position: relative;
-    left: 582px;
+    /* left: 582px; */
     color: rgb(121, 120, 120);
     letter-spacing: 0em;
 }
 .dollar {
-    width: 1270px;
-    position: relative;
-    height: 747px;
-    left: 205px;
-    top: 150px;
+    width: 70%;
+   padding-bottom: 50px;
+    margin: 0 auto;
+    padding-top: 140px;
 }
 .september {
     font-size: 20px;
-    width: 278px;
+    /* width: 278px; */
     font-style: normal;
     font-weight: 700;
     line-height: 34px;
     position: relative;
     top: 18px;
-    left: 621px;
+    text-align: center;
+    /* left: 621px; */
     color: rgb(121, 120, 120);
     letter-spacing: 0em;
 }
@@ -56,9 +60,7 @@
     width: 957px;
     top: 75px;
     height: 300px;
-    left: 343px;
-    /* bottom: 900px; */
-    /* background-color: rgb(128, 105, 46); */
+    margin: 0 auto;
 }
 .texts p{
     font-family: Proxima Nova;
@@ -69,23 +71,20 @@
     letter-spacing: 0em;    
 }
 .middleTexts {
-width: 955px;
-left: 175px;
-position: relative;
+    width: 955px;
+    margin: 0 auto;
+    position: relative;
 }
 .middleTexts p{
 font-size: 20px;
-/* font-style: normal; */
-font-weight: 300;
 line-height: 45px;
-letter-spacing: 0em;
 }
 
 .comments {
     position: relative;
-    left: 295px;
+    margin: 0 auto;
     width: 955px;
-    /* background-color: darkcyan; */
+    padding-bottom: 50px;
 }
 #coment {
     width: 154px;
@@ -100,8 +99,9 @@ letter-spacing: 0em;
     display: flex;
     position: relative;
     margin-top: 25px;
-    width: 80%;
-    left: 285px;
+    margin: 0 auto;
+    width: 75%;
+    /* padding-left: 180px; */
 }
 .andrew img{
     border-radius: 50%;
@@ -109,42 +109,36 @@ letter-spacing: 0em;
 .fornia {
 position: relative;
 top: 10px;
-/* height: 60px; */
 left: 20px;
-/* padding-top: 6px; */
 font-size: 19px;
 }
 #p {
-    /* height: 60px; */
 width: 364px;
 padding-top: 15px;
 padding-bottom: 15px;
 padding-left: 50px;
 position: relative;
-left: 263px;
+margin-bottom: 20px;
 margin-top: 50px;
 font-size: 20px;
 border-radius: 10px;
 background: #F6F8FF;
 }
 #p2 {
-    /* height: 60px; */
 width: 699px;
 padding-top: 15px;
 padding-bottom: 15px;
 padding-left: 70px;
 position: relative;
 padding-right: 50px;
-left: 263px;
 margin-top: 50px;
-/* color: brown; */
 font-size: 20px;
 border-radius: 10px;
 background: #F6F8FF;
 }
 .box {
     position: relative;
-    left: 220px;
+    /* left: 165px; */
     margin-top: 100px;
     margin-bottom: 50px;
     width: 955px;
@@ -153,11 +147,14 @@ background: #F6F8FF;
     border: 1px solid #818181;
     /* background: 3px solid #F6F8FF; */
 }
+.buttn {
+    text-align: right;
+}
 .buttn button{
     width: 302px;
     height: 60px;
     position: relative;
-    left: 250px;
+    /* left: 250px; */
     border: none;
     text-align: center;
     border-radius: 10px;
@@ -178,7 +175,7 @@ background: #F6F8FF;
 }
 .latest {
     font-family: DM Serif Display;
-    font-size: 52px;
+    font-size: 23px;
     font-style: normal;
     margin-bottom: 40px;
     font-weight: 400;
@@ -199,16 +196,35 @@ background: #F6F8FF;
     border: 2px solid #000000;
     margin-bottom: 65px;
 }
-.news {
-    /* width: 90%; */
-    /* display: flex; */
-    /* margin: 0 auto; */
-    /* justify-content: space-around; */
+.new {
+    width: 85%; 
+    display: flex;
+     margin: 0 auto; 
+    justify-content: space-between;
 }
-.tech img{
-    width: 100%;
-}
-
 #p3 {
     width: 70%;
+}
+
+@media only screen and (max-width: 768px) {
+    .articles {
+        overflow: hidden;
+    }
+    .dollar {
+        width: 100%;
+        padding-top: 75px;
+    }
+    .texts {
+        height: 340px;
+    }
+    .new {
+        width: 100%;
+        flex-wrap: wrap; 
+        margin: 0 auto;
+    }
+    .buttn button{
+        width: 200px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
 }
