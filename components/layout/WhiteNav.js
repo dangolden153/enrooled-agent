@@ -1,8 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import NavLink from './NavLink'
-import logoImage from '../../public/logo.webp'
-
+import React from "react";
+import Image from "next/image";
+import NavLink from "./NavLink";
+import logoImage from "../../public/logo.png";
 
 const WhiteNav = () => {
   return (
