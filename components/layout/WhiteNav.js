@@ -80,7 +80,7 @@ const WhiteNav = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink href="/blog">
+              <NavLink href="/blog/all">
                 <a className="nav-link">News & Articles</a>
               </NavLink>
             </li>

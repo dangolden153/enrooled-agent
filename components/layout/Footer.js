@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import logoImage from "../../public/logo2.png";
 import { Facebook, Twitter, Linkedin, Instagram } from "react-bootstrap-icons";
 
@@ -37,6 +38,7 @@ const Footer = () => {
               <div className="col-6">
                 <ul className="footer-link-list">
                   <li className="footer-link">
+<<<<<<< HEAD
                     Find a Tax Expert in your locality
                   </li>
                   <li className="footer-link">All Enrolled Agents</li>
@@ -46,15 +48,55 @@ const Footer = () => {
                   </li>
                   <li className="footer-link">Enrolled Agent</li>
                   <li className="footer-link">Free Enrolled Agent Listings</li>
+=======
+                    <Link href="/find-agent">
+                      Find a Tax Expert in your locality
+                    </Link>
+                  </li>
+                  <li className="footer-link">
+                    <Link href="/ea-listings">All Enrolled Agents</Link>
+                  </li>
+                  <li className="footer-link">
+                    <Link href="/ask-an-ea">Ask an EA</Link>
+                  </li>
+                  <li className="footer-link">
+                    <Link href="/license-verification">
+                      Verify an Enrolled Agents License
+                    </Link>
+                  </li>
+                  <li className="footer-link">
+                    <Link href="/new-listing">
+                      Free Enrolled Agent Listings
+                    </Link>
+                  </li>
+>>>>>>> c94a244a177ece399d78bffa285a2c6400ae070a
                 </ul>
               </div>
               <div className="col-">
                 <ul className="footer-link-list">
+<<<<<<< HEAD
                   <li className="footer-link">About Us</li>
                   <li className="footer-link"> Contact Us</li>
                   <li className="footer-link">Privacy Policy</li>
                   <li className="footer-link">Terms of Use</li>
                   <li className="footer-link">FAQs</li>
+=======
+                  <li className="footer-link">
+                    <Link href="/about">About Us</Link>
+                  </li>
+                  <li className="footer-link">
+                    <Link href="/contact"> Contact Us</Link>
+                  </li>
+                  <li className="footer-link">
+                    <Link href="/privacy-policy">Privacy Policy</Link>
+                  </li>
+                  <li className="footer-link">
+                    <Link href="/terms">Terms of Use</Link>
+                  </li>
+                  <li className="footer-link">
+                    <Link href="/faq">FAQs</Link>
+                  </li>
+>>>>>>> c94a244a177ece399d78bffa285a2c6400ae070a
                 </ul>
               </div>
             </div>
