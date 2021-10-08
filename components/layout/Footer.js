@@ -38,17 +38,6 @@ const Footer = () => {
               <div className="col-6">
                 <ul className="footer-link-list">
                   <li className="footer-link">
-<<<<<<< HEAD
-                    Find a Tax Expert in your locality
-                  </li>
-                  <li className="footer-link">All Enrolled Agents</li>
-                  <li className="footer-link">Ask an EA</li>
-                  <li className="footer-link">
-                    Verify an Enrolled Agents License
-                  </li>
-                  <li className="footer-link">Enrolled Agent</li>
-                  <li className="footer-link">Free Enrolled Agent Listings</li>
-=======
                     <Link href="/find-agent">
                       Find a Tax Expert in your locality
                     </Link>
@@ -69,18 +58,10 @@ const Footer = () => {
                       Free Enrolled Agent Listings
                     </Link>
                   </li>
->>>>>>> c94a244a177ece399d78bffa285a2c6400ae070a
                 </ul>
               </div>
               <div className="col-">
                 <ul className="footer-link-list">
-<<<<<<< HEAD
-                  <li className="footer-link">About Us</li>
-                  <li className="footer-link"> Contact Us</li>
-                  <li className="footer-link">Privacy Policy</li>
-                  <li className="footer-link">Terms of Use</li>
-                  <li className="footer-link">FAQs</li>
-=======
                   <li className="footer-link">
                     <Link href="/about">About Us</Link>
                   </li>
@@ -96,7 +77,6 @@ const Footer = () => {
                   <li className="footer-link">
                     <Link href="/faq">FAQs</Link>
                   </li>
->>>>>>> c94a244a177ece399d78bffa285a2c6400ae070a
                 </ul>
               </div>
             </div>
