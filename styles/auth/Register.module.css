@@ -1,9 +1,28 @@
-.login {
-    height: 948px;
+.signUp {
+    text-align: center;
+}
+.acc {
+    color: hsla(230, 98%, 18%, 1); 
+    font-size: 57px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.signP{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 19px;
+    font-weight: lighter;
+    padding-top: 25px;
+    padding-bottom: 30px;
+}
+
+.register {
+    height: 1286px;
     width: 654px;
     margin: 0 auto;
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 120px;
     border-radius: 10px; 
     border: 3px solid hsla(230, 98%, 18%, 1);    
 }
@@ -22,7 +41,6 @@
     text-align: center;
 }
 .buttons {
-    /* background-color: rgb(133, 87, 54); */
     position: relative;
     top: 75px;
 }
@@ -32,12 +50,48 @@
     height: 80px;
     border-radius: 10px;
     position: relative;
-    top: 17px;
+    top: 148px;
     font-size: 16px;
     padding-left: 35px;
     font-weight: 300;
-    border: 2px solid hsla(230, 98%, 18%, 1)
-   
+    border: 2px solid #C4C4C4;
+    margin-bottom: 30px;
+}
+.Fname {
+    width: 492px;
+    text-align: justify;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+    top: 14px;
+    font-size: 16px;
+    padding-left: 35px;
+    font-weight: lighter;
+    border: 3px solid #01105B;
+}
+.Lname {
+    width: 492px;
+    text-align: justify;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+    top: 47px;
+    font-size: 16px;
+    padding-left: 35px;
+    font-weight: lighter;
+    border: 2px solid #C4C4C4;
+}
+.Cmails {
+    width: 492px;
+    text-align: justify;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+    top: 80px;
+    font-size: 16px;
+    padding-left: 35px;
+    font-weight: 300;
+    border: 2px solid #C4C4C4;
 }
 .password {
     width: 492px;
@@ -45,15 +99,15 @@
     padding-left: 35px;
     border-radius: 10px;
     position: relative;
-    top: 40px;
+    top: 112px;
     font-size: 16px;
     font-weight: 300;
-    border: 2px solid hsla(230, 98%, 18%, 1)
+    border: 2px solid #C4C4C4;
 }
 .reset {
     display: flex;
     position: relative;
-    top: 170px;
+    top: 240px;
     justify-content: space-evenly;
 }
 .passtext {
@@ -79,12 +133,14 @@
     height: 60px;
     color: white;
     border: none;
+    font-size: 20px;
+    font-weight: 700;
     border-radius: 10px;
     background: hsla(230, 98%, 18%, 1);
 }
 .socials {
     position: relative;
-    top: 240px;
+    top: 310px;
 }
 .google button {
     height: 80px;
@@ -135,12 +191,12 @@ background: hsla(0, 100%, 40%, 1);
 }
 
 @media only screen and (max-width: 768px) {
-    .login {
-        height: 800px;
+    .register {
+        height: 1120px;
         width: 450px;
-        padding-bottom: 40px; 
+        padding-bottom: 20px; 
     }
-    .mails, .password {
+    .Cmails, .password, .Lname, .Fname, .mails {
         width: 312px!important;
         height: 60px!important;
     }

@@ -149,27 +149,24 @@ background: #F6F8FF;
 }
 .buttn {
     text-align: right;
+    margin-bottom: 65px;
 }
 .buttn button{
     width: 302px;
     height: 60px;
     position: relative;
-    /* left: 250px; */
     border: none;
     text-align: center;
     border-radius: 10px;
     font-size: 20px;
     background: #01105B;
     color: white;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .boundry {
     border: 1px solid #818181;
-    /* height: 0px; */
     width: 1580px;
-    /* left: 170px; */
     position: relative;
-    /* background-color: thistle; */
     top: 10px;
     margin-bottom: 30px;
 }
@@ -194,16 +191,62 @@ background: #F6F8FF;
     border-radius: 10px;
     background-color: white;
     border: 2px solid #000000;
-    margin-bottom: 65px;
+    margin-top: 38px;
 }
 .new {
-    width: 85%; 
+    width: 100%; 
+     /* margin: 0 auto;  */
+}
+.newDev {
     display: flex;
-     margin: 0 auto; 
+    width: 100%;
+    margin: 0 auto;
     justify-content: space-between;
 }
+.newdev2 {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+    justify-content: space-between;
+}
+.dev {
+    display: flex;
+    width: 48%;
+    padding-left: 23px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.devColor {
+    display: flex;
+    width: 48%;
+    background: #E1EFFF;
+    padding-left: 23px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.loadColor button{
+    width: 182px;
+    height: 60px;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    color: white;
+    line-height: 23px;
+    border-radius: 10px;
+    background-color: black;
+    border: none;
+    margin-top: 38px;
+}
+.devText {
+    padding-left: 37px;
+}
 #p3 {
-    width: 70%;
+    width: 100%;
+    padding-top: 15px;
+    padding-right: 15px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -218,13 +261,21 @@ background: #F6F8FF;
         height: 340px;
     }
     .new {
-        width: 100%;
+        width: 50%;
+        background-color: thistle;
         flex-wrap: wrap; 
-        margin: 0 auto;
+        /* margin: 0 auto; */
+    }
+    .tech img{
+        width: 100%;
     }
     .buttn button{
         width: 200px;
         height: 60px;
         margin-bottom: 20px;
+    }
+    .newDev {
+        flex-wrap: wrap;
+        width: 100%;
     }
 }

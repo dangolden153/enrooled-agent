@@ -1,115 +1,170 @@
-import React from "react";
-import Image from "next/image";
-import newsImage from "../../public/images/news.png";
-import Dollar from "../../public/images/dollar-bill.png";
-import NewsCard from "../../components/NewsCard";
-import ArticleCard from "../../components/ArticleCard";
-
-const demo = [
-  {
-    img: newsImage,
-    title: "Lorem Ipsum is simply dummy text of the...",
-    link: "/",
-  },
-  {
-    img: newsImage,
-    title: "Lorem Ipsum is simply dummy text of the...",
-    link: "/",
-  },
-  {
-    img: newsImage,
-    title: "Lorem Ipsum is simply dummy text of the...",
-    link: "/",
-  },
-];
-
+import React from 'react'
+import styles from '../../styles/blog/SingleNews.module.css'
+import Image from 'next/image'
+import Dollar from '../../public/images/dollars.png'
+import ArticleText from '../../components/ArticleText'
+import Lady from '../../public/images/card-woman.png'
+import { Container, Row, Col } from 'react-bootstrap';
+import Techie from '../../public/images/techie.png'
 const index = () => {
-  return (
-    <div className="container recent-article">
-      <div className="article-head">
-        <h1>News & Articles</h1>
-      </div>
-
-      <hr />
-
-      <h4>Recent News</h4>
-
-      <div className="row mb-5">
-        <div className="col-md-6 col-xl-6">
-          <div className=" mb-3">
-            <Image height="560px" src={Dollar} />
-            <div className="mt-5">
-              <p className="">
-                <small className="text-muted">24th September, 2021</small>
-              </p>
-              <h5 className="">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.{" "}
-              </h5>
+    return (
+        <div className={styles.articles}>
+            <div className={styles.topdiv}>
+                <h1 className={styles.head}>Lorem Ipsum is simply dummy text of
+                    the printing and typesetting industry. </h1>
+                <div className={styles.egent}>
+                    <p>written by: <b>Egent enrolled News</b></p>
+                </div>
             </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-xl-6">
-          {demo.map((news, index) => (
-            <NewsCard
-              key={index}
-              img={news.img}
-              title={news.title}
-              link={news.link}
-            />
-          ))}
-          <div className="text-end  all-news">
-            <button>Load All News</button>
-          </div>
-        </div>
-      </div>
 
-      <hr />
+            <div className={styles.dollar}>
+                <Image src={Dollar} alt="An icon of a dollar" />
+                <p className={styles.september}>24th Septmber, 2021</p>
+            </div>
 
-      <div className="row mt-5 mb-5">
-        <div className="col-md-8 col-xl-8 row border-end border-2">
-          <h4 className="mb-4">Recent Articles</h4>
-          {demo.map((news, index) => (
-            <div className="col-md-6 col-xl-6 mb-3 ">
-              <ArticleCard
-                key={index}
-                img={news.img}
-                title={news.title}
-                link={news.link}
-              />
+            <Container>
+                <Row>
+                    <div className={styles.texts}>
+                        <p><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                            the industry's standard dummy text ever since the 1500s,</b></p>
+                        <hr />
+                    </div>
+                </Row>
+            </Container>
+
+            <div><ArticleText /></div>
+
+            <Container>
+                {/* <Row> */}
+                    <div className={styles.comments}>
+                        <h1 id={styles.coment}>Comments</h1>
+                    </div>
+
+                    <div className={styles.andrew}>
+                        <div>
+                            <Image src={Lady} alt="A laughing lady" />
+                        </div>
+
+                        {/* <div className={styles.smith}> */}
+                        <div className={styles.fornia}>
+                            <h6><b>Andrew Smith</b></h6>
+                            <p>California</p>
+                        </div>
+                    </div>
+                    {/* </div> */}
+                    <div className={styles.andrew}>
+                    <div id={styles.p}><p><u>Where does it come from?</u></p></div>
+                    </div>
+                    
+                    <div className={styles.andrew}>
+                        <div>
+                            <Image src={Lady} alt="A laughing lady" />
+                        </div>
+
+                        {/* <div className={styles.smith}> */}
+                        <div className={styles.fornia}>
+                            <h6><b>Andrew Smith</b></h6>
+                            <p>California</p>
+                        </div>
+                    </div>
+                    {/* </div> */}
+                    <div className={styles.andrew}>
+                    <div id={styles.p2}><p><u>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                        piece of classical Latin literature from 45 BC</u></p></div>
+                </div>
+                {/* </Row> */}
+            </Container>
+
+            <Container>
+                {/* <Row> */}
+                <div className={styles.andrew}>
+                    <div>
+                        <input type="text" name="text" className={styles.box}></input>
+                    </div>
+                    </div>
+                    <div className={styles.buttn}>
+                        <button type="submit">Comment</button>
+                    </div>
+                    
+                {/* </Row> */}
+            </Container>
+            <hr className={styles.boundry} />
+
+            <div className={styles.latest}>
+                <h1><b>Latest News</b></h1>
             </div>
-          ))}
-          <div className="text-start mb-5 ">
-            <button>Load All Articles</button>
-          </div>
-        </div>
-        <div className="col-md-4 col-xl-4 text-center">
-          <h4 className="mb-4">Advertisement</h4>
-          <div style={{ width: "92%" }} className="text-start ms-5 mb-3">
-            <Image src={Dollar} />
-            <div className="mt-3">
-              <h5 className="">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.{" "}
-              </h5>
+
+            <Container>
+                <div className={styles.new}>
+
+                    <div className={styles.newDev}>
+
+                    <div className={styles.devColor}>
+                        <div className={styles.tech}>
+                            <Image src={Techie} alt="A developer" />
+                        </div>
+                       <div className={styles.devText}>
+                       <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
+                        <div className={styles.loadColor}>
+                            <button type="submit"><b>Load news</b></button>
+                        </div>
+                       </div>
+                       </div>
+                  
+                    <div className={styles.dev}>
+                        <div className={styles.tech}>
+                            <Image src={Techie} alt="A developer" />
+                        </div>
+                        <div className={styles.devText}>
+                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
+                        <div className={styles.load}>
+                            <button type="submit"><b>Load news</b></button>
+                        </div>
+                        </div>
+                    </div>
+                     </div>
+
+<div className={styles.newdev2}>
+                     <div className={styles.dev}>
+                        <div className={styles.tech}>
+                            <Image src={Techie} alt="A developer" />
+                        </div>
+                        <div className={styles.devText}>
+                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
+                        <div className={styles.load}>
+                            <button type="submit"><b>Load news</b></button>
+                        </div>
+                        </div>
+                    </div>
+
+                    
+                    <div className={styles.dev}>
+                        <div className={styles.tech}>
+                            <Image src={Techie} alt="A developer" />
+                        </div>
+                        <div className={styles.devText}>
+                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
+                        <div className={styles.load}>
+                            <button type="submit"><b>Load news</b></button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+
+                <div className={styles.buttn}>
+                <button type="submit">Load all news</button>
             </div>
-          </div>
-          <div style={{ width: "92%" }} className="text-start ms-5 mb-3">
-            <Image src={Dollar} />
-            <div className="mt-3">
-              <h5 className="">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.{" "}
-              </h5>
-            </div>
-          </div>
-          <div className=" text-center ">
-            <button>View All</button>
-          </div>
+            </Container>
+
+      
         </div>
       </div>
     </div>
   );
 };
 
-export default index;
+export default index
+
+

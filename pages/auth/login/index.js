@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "../../../src/redux/actions/auth/auth";
-// import Image from 'next/image'
-// import Google from '../../../public/auth/google-brands.svg'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -50,7 +48,7 @@ const Login = () => {
           <div className={styles.buttons}>
             <div>
               <input
-                className={styles.email}
+                className={styles.mails}
                 placeholder="Login with Email"
                 type="text"
                 autoComplete="email"
