@@ -8,15 +8,15 @@ const Banner = ({ search = false, background, children }) => {
 
   return (
     <div
+      className="banner"
       style={{
         backgroundImage: `url(${background.src})`,
         backgroundSize: "cover",
-        backgroundPosition: "center 100%",
       }}
     >
       <div className="banner-inner">
         {children}
-        { search ? <SearchBar /> : <></>}
+        {search ? <SearchBar /> : <></>}
       </div>
     </div>
   );
