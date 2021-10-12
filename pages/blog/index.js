@@ -124,7 +124,7 @@ const index = () => {
                     </div>
                      </div>
 
-<div className={styles.newdev2}>
+            <div className={styles.newdev2}>
                      <div className={styles.dev}>
                         <div className={styles.tech}>
                             <Image src={Techie} alt="A developer" />
@@ -151,11 +151,12 @@ const index = () => {
                     </div>
                     </div>
 
-                </div>
+              
 
                 <div className={styles.buttn}>
                 <button type="submit">Load all news</button>
             </div>
+         
             </Container>
 
       

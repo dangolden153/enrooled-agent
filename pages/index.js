@@ -10,7 +10,7 @@ import SearchSection from "../components/SearchSection";
 import StartSection from "../components/StartSection";
 import MostRequested from "../components/MostRequested";
 import RequestCallback from "../components/RequestCallback";
-
+import TaxVideo from "../widgets/TaxVideo";
 export default function LandingPage() {
   return (
     <div className={`col-12 justify-content-between ${styles.landingPage}`}>
@@ -46,7 +46,8 @@ export default function LandingPage() {
       >
         <h1>Tax Resources</h1>
         {/* <video src=""></video> */}
-        <div className="d-flex flex-row w-100 justify-content-center">
+        <TaxVideo/>
+        {/* <div className="d-flex flex-row w-100 justify-content-center">
           <VideoCard big="true" />
         </div>
         <div className="d-flex flex-row w-100 justify-content-between">
@@ -65,7 +66,7 @@ export default function LandingPage() {
         </div>
         <button type="button" className="btn-common">
           Load more videos <ChevronDown />
-        </button>
+        </button> */}
       </div>
 
       <SearchSection />
