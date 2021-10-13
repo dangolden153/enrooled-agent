@@ -1,0 +1,60 @@
+.askEA {
+    background: #E5E5E5;
+}
+.questions {
+    width: 831px;
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 55px;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin: 0 auto;
+}
+.ask {
+    color: hsla(230, 98%, 18%, 1);
+    width: 575px;
+    font-size: 36px;
+    /* padding-left: 120px; */
+    font-weight: 400;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    text-align: right;
+}
+.text {
+    font-size: 16px;
+    padding-top: 15px;
+}
+.answers {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 3px 0px;
+    /* background-color: rgb(18, 124, 114); */
+}
+.right button{
+    width: 164px;
+    height: 42px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    color: white;
+    background: hsla(230, 98%, 18%, 1);
+}
+.left button{
+    width: 139px;
+    height: 28px;
+    color: red;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    background: hsla(0, 100%, 96%, 1);
+}
+.P1 {
+    font-size: 16px;
+    font-weight: 200;
+}
