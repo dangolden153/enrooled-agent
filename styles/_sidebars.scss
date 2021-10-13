@@ -1,0 +1,29 @@
+.sidebar {
+    background: #01105B;
+    border-radius: 0px 25px 25px 0px;
+    width: 243px;
+    height: 70vh;
+    color: white;
+    transition: width 1s;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            svg {
+                margin-top: -5px;
+            }
+
+            span {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &.sidebar-toggled {
+        width: 132px !important;
+    }
+}
