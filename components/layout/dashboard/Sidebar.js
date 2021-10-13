@@ -33,15 +33,17 @@ const Sidebar = () => {
     ]
 
     return (
-        <div className={`sidebar ${toggled ? 'sidebar-toggled' : ''} d-flex flex-column align-items-center justify-content-center`}>
-            <ul>
-                {
-                    items.map((item, index) => (
-                        <li key={index}>{item.icon} <span className={toggled ? 'd-none' : 'd-inline'}>{item.text}</span></li>
-                    ))
-                }
-            </ul>
-            <a className='sidebar-toggler' onClick={() => setToggled(!toggled)}> {toggled ? <ArrowRight /> : <ArrowLeft /> } </a>
+        <div className={toggled ? 'col-1' : 'col-2'}>
+            <div className={`sidebar ${toggled ? 'sidebar-toggled' : ''} d-flex flex-column align-items-center justify-content-center`}>
+                <ul>
+                    {
+                        items.map((item, index) => (
+                            <li key={index}>{item.icon} <span className={toggled ? 'd-none' : 'd-inline'}>{item.text}</span></li>
+                        ))
+                    }
+                </ul>
+                <a className='sidebar-toggler' onClick={() => setToggled(!toggled)}> {toggled ? <ArrowRight /> : <ArrowLeft />} </a>
+            </div>
         </div>
     )
 }

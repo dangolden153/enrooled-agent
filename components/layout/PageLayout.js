@@ -1,6 +1,8 @@
 import React from 'react'
 import Footer from './Footer'
 import Header from './Header'
+import BlueNav from './BlueNav'
+import WhiteNav from './WhiteNav'
 
 const PageLayout = ({ children }) => {
     return (
@@ -17,7 +19,7 @@ const PageLayout = ({ children }) => {
             </div>
 
             { children }
-            
+
             <Footer />
         </div>
     )
