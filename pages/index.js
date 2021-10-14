@@ -16,7 +16,6 @@ import RequestCallback from "../components/RequestCallback";
 import TaxVideo from "../widgets/TaxVideo";
 export default function LandingPage() {
   const { addToast } = useToasts();
-  const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     email: "",
@@ -128,7 +127,7 @@ export default function LandingPage() {
         <div className="d-flex flex-row justify-content-center">
           <form
             className={`${styles.subscriberForm} d-flex flex-row w-100 justify-content-between`}
-            onSubmit={handleSubmit}
+            onSubmit={handleMailListSubmit}
           >
             <input
               type="email"
