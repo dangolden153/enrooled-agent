@@ -1,6 +1,4 @@
 import React from 'react'
-import BlueNav from './BlueNav'
-import WhiteNav from './WhiteNav'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -32,6 +30,15 @@ const Header = () => {
             break
         case '/dashboard':
             pageName = 'Dashboard'
+            break
+        case "/dashboard/account":
+            pageName = 'Account Page'
+            break
+        case "/dashboard/articles":
+            pageName = 'Articles Page'
+            break
+        case "/dashboard/help":
+            pageName = 'Find Help'
             break
         case '/ea-listings':
             pageName = 'EA Listings'
@@ -84,14 +91,6 @@ const Header = () => {
                 <meta name="description" content="Insert Description Here" />
                 <link rel="icon" href="" />
             </Head>
-            <div className="col-12">
-                <div className="row">
-                    <BlueNav />
-                </div>
-                <div className="row">
-                    <WhiteNav />
-                </div>
-            </div>
         </header>
     )
 }

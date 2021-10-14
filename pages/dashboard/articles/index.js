@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Dollar from '../../../public/images/dollar.png'
 import ArticleText from '../../../components/ArticleText'
 import Lady from '../../../public/images/card-woman.png'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Techie from '../../../public/images/techie.png'
 const index = () => {
     return (
