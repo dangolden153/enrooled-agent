@@ -1,5 +1,4 @@
-import React,{ useState, useEffect, useCallback} from 'react'
-import {useSelector, useDispatch} from "react-redux";
+import React,{ useState} from 'react'
 import { useToasts } from "react-toast-notifications";
 import {newListingRequest} from "../src/services/user"
 const index = () => {
@@ -46,26 +45,10 @@ const handleSubmit = async(e) => {
         license_number,
         proof_of_license
     } = data;
-    const listingInfo = {
-        first_name, 
-        last_name, 
-        email, 
-        street_address, 
-        street_address2, 
-        state, 
-        city, 
-        zipcode, 
-        title, 
-        position, 
-        service,
-        brief_description ,
-        state_license,
-        license_number,
-        proof_of_license
-    }
+
     try{
         setLoading(true);
-        let response = await newListingRequest(listingInfo);
+        let response = await newListingRequest(data);
         if(response){
             if(response.data){
             addToast("Your listing request has been sent successfully!", {
