@@ -7,7 +7,5 @@ export const contactFormRequest = asyncHandler(
 export const subscribeToMailingList = asyncHandler(
   async (data) => await axios.post(`/`, data),
 );
-export const callBackRequest = asyncHandler(
-  async (data) => await axios.post(`/`, data),
-);
+
 
