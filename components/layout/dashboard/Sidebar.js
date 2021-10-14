@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowLeft, PeopleFill, QuestionCircle, Clipboard, ChatDots, Gear, DoorOpen, ArrowRight } from 'react-bootstrap-icons'
+import Image from 'next/image'
+import profileImage from "../../../public/images/card-woman.png";
 
 const Sidebar = () => {
 
@@ -35,6 +37,7 @@ const Sidebar = () => {
     return (
         <div className={toggled ? 'col-1' : 'col-2'}>
             <div className={`sidebar ${toggled ? 'sidebar-toggled' : ''} d-flex flex-column align-items-center justify-content-center`}>
+                <Image className='rounded-circle' src={profileImage} />
                 <ul>
                     {
                         items.map((item, index) => (

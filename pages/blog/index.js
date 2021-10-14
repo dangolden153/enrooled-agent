@@ -36,39 +36,39 @@ const index = () => {
 
             <Container>
                 {/* <Row> */}
-                    <div className={styles.comments}>
-                        <h1 id={styles.coment}>Comments</h1>
+                <div className={styles.comments}>
+                    <h1 id={styles.coment}>Comments</h1>
+                </div>
+
+                <div className={styles.andrew}>
+                    <div>
+                        <Image src={Lady} alt="A laughing lady" />
                     </div>
 
-                    <div className={styles.andrew}>
-                        <div>
-                            <Image src={Lady} alt="A laughing lady" />
-                        </div>
-
-                        {/* <div className={styles.smith}> */}
-                        <div className={styles.fornia}>
-                            <h6><b>Andrew Smith</b></h6>
-                            <p>California</p>
-                        </div>
+                    {/* <div className={styles.smith}> */}
+                    <div className={styles.fornia}>
+                        <h6><b>Andrew Smith</b></h6>
+                        <p>California</p>
                     </div>
-                    {/* </div> */}
-                    <div className={styles.andrew}>
+                </div>
+                {/* </div> */}
+                <div className={styles.andrew}>
                     <div id={styles.p}><p><u>Where does it come from?</u></p></div>
-                    </div>
-                    
-                    <div className={styles.andrew}>
-                        <div>
-                            <Image src={Lady} alt="A laughing lady" />
-                        </div>
+                </div>
 
-                        {/* <div className={styles.smith}> */}
-                        <div className={styles.fornia}>
-                            <h6><b>Andrew Smith</b></h6>
-                            <p>California</p>
-                        </div>
+                <div className={styles.andrew}>
+                    <div>
+                        <Image src={Lady} alt="A laughing lady" />
                     </div>
-                    {/* </div> */}
-                    <div className={styles.andrew}>
+
+                    {/* <div className={styles.smith}> */}
+                    <div className={styles.fornia}>
+                        <h6><b>Andrew Smith</b></h6>
+                        <p>California</p>
+                    </div>
+                </div>
+                {/* </div> */}
+                <div className={styles.andrew}>
                     <div id={styles.p2}><p><u>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
                         piece of classical Latin literature from 45 BC</u></p></div>
                 </div>
@@ -81,11 +81,11 @@ const index = () => {
                     <div>
                         <input type="text" name="text" className={styles.box}></input>
                     </div>
-                    </div>
-                    <div className={styles.buttn}>
-                        <button type="submit">Comment</button>
-                    </div>
-                    
+                </div>
+                <div className={styles.buttn}>
+                    <button type="submit">Comment</button>
+                </div>
+
                 {/* </Row> */}
             </Container>
             <hr className={styles.boundry} />
@@ -99,71 +99,66 @@ const index = () => {
 
                     <div className={styles.newDev}>
 
-                    <div className={styles.devColor}>
-                        <div className={styles.tech}>
-                            <Image src={Techie} alt="A developer" />
+                        <div className={styles.devColor}>
+                            <div className={styles.tech}>
+                                <Image src={Techie} alt="A developer" />
+                            </div>
+                            <div className={styles.devText}>
+                                <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
+                                <div className={styles.loadColor}>
+                                    <button type="submit"><b>Load news</b></button>
+                                </div>
+                            </div>
                         </div>
-                       <div className={styles.devText}>
-                       <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
-                        <div className={styles.loadColor}>
-                            <button type="submit"><b>Load news</b></button>
-                        </div>
-                       </div>
-                       </div>
-                  
-                    <div className={styles.dev}>
-                        <div className={styles.tech}>
-                            <Image src={Techie} alt="A developer" />
-                        </div>
-                        <div className={styles.devText}>
-                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
-                        <div className={styles.load}>
-                            <button type="submit"><b>Load news</b></button>
-                        </div>
-                        </div>
-                    </div>
-                     </div>
 
-            <div className={styles.newdev2}>
-                     <div className={styles.dev}>
-                        <div className={styles.tech}>
-                            <Image src={Techie} alt="A developer" />
-                        </div>
-                        <div className={styles.devText}>
-                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
-                        <div className={styles.load}>
-                            <button type="submit"><b>Load news</b></button>
-                        </div>
+                        <div className={styles.dev}>
+                            <div className={styles.tech}>
+                                <Image src={Techie} alt="A developer" />
+                            </div>
+                            <div className={styles.devText}>
+                                <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
+                                <div className={styles.load}>
+                                    <button type="submit"><b>Load news</b></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    
-                    <div className={styles.dev}>
-                        <div className={styles.tech}>
-                            <Image src={Techie} alt="A developer" />
+                    <div className={styles.newdev2}>
+                        <div className={styles.dev}>
+                            <div className={styles.tech}>
+                                <Image src={Techie} alt="A developer" />
+                            </div>
+                            <div className={styles.devText}>
+                                <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
+                                <div className={styles.load}>
+                                    <button type="submit"><b>Load news</b></button>
+                                </div>
+                            </div>
                         </div>
-                        <div className={styles.devText}>
-                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
-                        <div className={styles.load}>
-                            <button type="submit"><b>Load news</b></button>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
 
-              
+
+                        <div className={styles.dev}>
+                            <div className={styles.tech}>
+                                <Image src={Techie} alt="A developer" />
+                            </div>
+                            <div className={styles.devText}>
+                                <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
+                                <div className={styles.load}>
+                                    <button type="submit"><b>Load news</b></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div className={styles.buttn}>
-                <button type="submit">Load all news</button>
-            </div>
-         
+                    <button type="submit">Load all news</button>
+                </div>
             </Container>
-
-      
         </div>
-      </div>
-    </div>
-  );
+
+    )
 };
 
 export default index
