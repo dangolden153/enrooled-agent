@@ -3,9 +3,10 @@
 @import 'pagination';
 @import './ea-listings/ea-listings';
 @import './what-is-an-ea/what-is-an-ea';
+@import './new-listing/new-listing';
 @import './about/about';
 @import './recent-articles/recent-article';
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
 
 
 html,
@@ -13,7 +14,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: 'DM Serif Display',-apple-system, serif;;
+  font-family: 'Reem Kufi',-apple-system, serif;;
 }
 
 a {
