@@ -47,13 +47,14 @@ const Login = () => {
           autoDismiss: true,
        });
        router.push("/dashboard");
+      }
       }catch(x){
           addToast("An error occured trying to login.", {
           appearance: "error",
           autoDismiss: true,
         });
       }
-    }
+    
   };
   return (
     <div className={`container`}>
