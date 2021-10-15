@@ -1,11 +1,13 @@
 import React from 'react'
-import styles from '../../styles/blog/SingleNews.module.css'
+import styles from '../../styles/blog/SingleNews.module.scss'
 import Image from 'next/image'
 import Dollar from '../../public/images/dollars.png'
 import ArticleText from '../../components/ArticleText'
 import Lady from '../../public/images/card-woman.png'
 import { Container, Row, Col } from 'react-bootstrap';
 import Techie from '../../public/images/techie.png'
+   
+
 const index = () => {
     return (
         <div className={styles.articles}>
@@ -45,13 +47,13 @@ const index = () => {
                             <Image src={Lady} alt="A laughing lady" />
                         </div>
 
-                        {/* <div className={styles.smith}> */}
+                       
                         <div className={styles.fornia}>
                             <h6><b>Andrew Smith</b></h6>
                             <p>California</p>
                         </div>
                     </div>
-                    {/* </div> */}
+                   
                     <div className={styles.andrew}>
                     <div id={styles.p}><p><u>Where does it come from?</u></p></div>
                     </div>
@@ -61,22 +63,22 @@ const index = () => {
                             <Image src={Lady} alt="A laughing lady" />
                         </div>
 
-                        {/* <div className={styles.smith}> */}
                         <div className={styles.fornia}>
                             <h6><b>Andrew Smith</b></h6>
                             <p>California</p>
                         </div>
                     </div>
-                    {/* </div> */}
+                   
                     <div className={styles.andrew}>
                     <div id={styles.p2}><p><u>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                        piece of classical Latin literature from 45 BC</u></p></div>
+                        piece of classical Latin literature from 45 BC</u></p>
+                        </div>
                 </div>
-                {/* </Row> */}
+                
             </Container>
 
             <Container>
-                {/* <Row> */}
+                
                 <div className={styles.andrew}>
                     <div>
                         <input type="text" name="text" className={styles.box}></input>
@@ -85,8 +87,6 @@ const index = () => {
                     <div className={styles.buttn}>
                         <button type="submit">Comment</button>
                     </div>
-                    
-                {/* </Row> */}
             </Container>
             <hr className={styles.boundry} />
 
@@ -110,6 +110,7 @@ const index = () => {
                         </div>
                        </div>
                        </div>
+                       </div>
                   
                     <div className={styles.dev}>
                         <div className={styles.tech}>
@@ -122,7 +123,7 @@ const index = () => {
                         </div>
                         </div>
                     </div>
-                     </div>
+                     {/* </div> */}
 
             <div className={styles.newdev2}>
                      <div className={styles.dev}>
@@ -151,20 +152,16 @@ const index = () => {
                     </div>
                     </div>
 
-              
-
                 <div className={styles.buttn}>
                 <button type="submit">Load all news</button>
             </div>
-         
+            </div>
             </Container>
-
       
-        </div>
       </div>
-    </div>
+    // </div>
   );
-};
+}
 
 export default index
 

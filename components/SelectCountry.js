@@ -1,13 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import styles from '../styles/agents/Select.module.css'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fas, search } from '@fortawesome/free-brands-svg-icons'
-// import { faSearch} from '@fortawesome/free-solid-svg-icon'
-
-// library.add(fas, search);
-{/* <i class="fas fa-search-location"></i> */}
+import styles from '../styles/agents/Select.module.scss'
 const countries = [
   { label: 'Apo Ae', value: 'Apo Ae' },
   { label: 'Arcata', value: 'Arcata' },

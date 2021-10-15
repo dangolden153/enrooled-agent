@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../../styles/Articles/Articles.module.css'
+import styles from '../../../styles/Articles/Articles.module.scss'
 import Image from 'next/image'
 import Dollar from '../../../public/images/dollar.png'
 import ArticleText from '../../../components/ArticleText'

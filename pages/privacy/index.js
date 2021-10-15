@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/Privacy.module.css'
+import styles from '../../styles/Privacy.module.scss'
 import Banner from '../../components/Banner'
 import Image from 'next/image'
 import Background from '../../public/images/policy.png'
