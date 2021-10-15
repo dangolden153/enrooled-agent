@@ -1,0 +1,30 @@
+.new-listing{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    h3{
+        font-size: 22px;
+        border-bottom: 0.5px solid #000;
+        margin-top: 30px;
+    }
+    label{
+        font-size: 20px;
+    }
+    input{
+        background-color: #e5e5e5; 
+        color: #818181;
+    }
+    textarea{
+        background-color: #e5e5e5; 
+        color: #818181;
+    }
+    .form-control:focus{
+        border-color: #ced4da !important;
+        box-shadow: none;
+    }
+    input[type=text]{
+        margin-bottom: 25px;
+    }
+    .terms{
+        margin-top: 100px;
+    }
+}
