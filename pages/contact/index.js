@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import Banner from "../../components/Banner";
 import NewListing from "../../public/images/banners/cropped-view.png";
 import "react-phone-number-input/style.css";
-import PhoneInput, {
-  formatPhoneNumber,
-  formatPhoneNumberIntl,
-  isValidPhoneNumber,
-} from "react-phone-number-input";
+import { contactFormRequest } from "../../src/services/common";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import { useToasts } from "react-toast-notifications";
-import { contactFormRequest } from "../src/services/common";
 
 const index = () => {
   const [value, setValue] = useState("");

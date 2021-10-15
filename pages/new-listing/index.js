@@ -7,7 +7,7 @@ import {
 import Banner from "../../components/Banner";
 import NewListing from "../../public/images/banners/cropped-view.png";
 import { useToasts } from "react-toast-notifications";
-import { newListingRequest } from "../src/services/user";
+import { newListingRequest } from "../../src/services/user";
 
 const index = () => {
   const [country, setCountry] = useState("");
