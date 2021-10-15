@@ -1,11 +1,12 @@
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/globals.scss";
 import PageLayout from "../components/layout/PageLayout";
 import DashboardLayout from "../components/layout/dashboard/DashboardLayout";
 import { wrapper } from "../src/redux/store";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import {ToastProvider} from 'react-toast-notifications';
+import { ToastProvider } from "react-toast-notifications";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     typeof document !== undefined
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }) {
       : null;
   }, []);
 
-  const router = useRouter()
+  const router = useRouter();
   switch (router.pathname) {
     case "/auth/login":
       return <Component {...pageProps} />;
@@ -26,25 +27,25 @@ function MyApp({ Component, pageProps }) {
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-      )
+      );
     case "/dashboard/account":
       return (
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-      )
+      );
     case "/dashboard/articles":
       return (
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-      )
+      );
     default:
       return (
         <ToastProvider>
-        <PageLayout>
-          <Component {...pageProps} />
-        </PageLayout>
+          <PageLayout>
+            <Component {...pageProps} />
+          </PageLayout>
         </ToastProvider>
       );
   }

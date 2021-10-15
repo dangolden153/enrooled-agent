@@ -3,9 +3,13 @@
 @import 'pagination';
 @import './ea-listings/ea-listings';
 @import './what-is-an-ea/what-is-an-ea';
+@import './new-listing/new-listing';
 @import './about/about';
+@import './terms/terms';
+@import './contact/contact';
 @import './recent-articles/recent-article';
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
 
 html,
@@ -13,7 +17,11 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  font-family: 'DM Serif Display',-apple-system, serif;;
+  font-family: 'DM Serif Display',-apple-system, serif;
+}
+
+p{
+  font-family:  'Roboto', sans-serif !important;
 }
 
 a {
