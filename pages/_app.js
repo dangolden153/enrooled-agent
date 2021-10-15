@@ -6,6 +6,7 @@ import DashboardLayout from "../components/layout/dashboard/DashboardLayout";
 import { wrapper } from "../src/redux/store";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { ToastProvider } from "react-toast-notifications";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     typeof document !== undefined
@@ -39,17 +40,13 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </DashboardLayout>
       );
-    case "/dashboard/help":
-      return (
-        <DashboardLayout>
-          <Component {...pageProps} />
-        </DashboardLayout>
-      );
     default:
       return (
-        <PageLayout>
-          <Component {...pageProps} />
-        </PageLayout>
+        <ToastProvider>
+          <PageLayout>
+            <Component {...pageProps} />
+          </PageLayout>
+        </ToastProvider>
       );
   }
 }
