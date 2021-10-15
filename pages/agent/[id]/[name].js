@@ -18,7 +18,7 @@ library.add(fab, faFacebook);
 library.add(fab, faTwitter);
 library.add(fab, faInstagram);
 
-const index = () => {
+const AgentDetails = () => {
     return (
 <div className={styles.viewAgent}>
   
@@ -74,4 +74,4 @@ const index = () => {
 </div>
     )
 }
-export default index
+export default AgentDetails
