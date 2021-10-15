@@ -1,6 +1,6 @@
 import axios from "axios";
 //import { NotificationManager } from 'react-notifications';
-import { API_KEY, API_URL } from "../../config";
+import { API_URL } from "../../config";
 
 
 let error_message_defined = false;

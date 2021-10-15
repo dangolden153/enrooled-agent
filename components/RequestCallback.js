@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React,{ useState, useRef } from 'react'
 import Form from './Form'
 import { useToasts } from "react-toast-notifications";
 import { contactFormRequest } from "../src/services/common";
@@ -12,6 +12,7 @@ const RequestCallback = () => {
       subject: "",
       message: "",
     });
+    const formData = useRef(null)
     const handleChange = (e) => {
       const { name, value } = e.target;
       setData({ ...data, [name]: value });
@@ -23,8 +24,10 @@ const RequestCallback = () => {
       try {
         setLoading(true);
         let response = await contactFormRequest(data);
+        formData.current.reset();
         if (response) {
           if (response.data) {
+            
             addToast("Your request has been sent", {
               appearance: "success",
               autoDismiss: true,
@@ -32,12 +35,13 @@ const RequestCallback = () => {
           }
           setLoading(false);
         }
+        
       } catch (error) {
         setLoading(false);
         addToast(
           `${
-            error.response.msg
-              ? error.response.msg
+            error.response.data.message
+              ? error.response.data.message
               : "An error occured. Please try again."
           }`,
           {
@@ -52,8 +56,8 @@ const RequestCallback = () => {
             <h1>Request a Call Back</h1>
             <h5>Please fill out the form and press the submit button.
                 We will get back to you within 1-2 business days</h5>
-
-            <Form onSubmit={handleSubmit} submitText="Find More Local EA's">
+          <div className='form-wrapper d-flex flex-column w-100 align-items-between'>
+            <form ref={formData} onSubmit={handleSubmit} className='form-between d-flex flex-column w-100 align-content-between'>
                 <div className="form-group">
                     <input 
                     type="text" 
@@ -106,7 +110,11 @@ const RequestCallback = () => {
                     required
                     ></textarea>
                 </div>
-            </Form>
+                 <div className="form-btn-wrapper d-flex flex-row w-100 justify-content-center justify-content-lg-end">
+                    <button type="submit" className='btn btn-form'>{loading ? "Please Wait..." : "Submit"}</button>
+                </div>
+            </form>
+            </div>
         </div>
     )
 }
