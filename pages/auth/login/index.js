@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "../../../src/redux/actions/auth/auth";
+import { useToasts } from "react-toast-notifications";
+import { useRouter } from 'next/router'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -18,6 +20,8 @@ library.add(fab, faFacebook);
 library.add(fab, faTwitter);
 
 const Login = () => {
+  const addToast  = useToasts();
+  const router = useRouter();
   const inputField = {
     email: "",
     password: "",
@@ -34,9 +38,23 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
-    if (email && password) {
-      dispatch(login(email, password));
-    }
+    try{
+
+      if (email && password) {
+        dispatch(login(email, password));
+        addToast("Logged in successfully!", {
+          appearance: "success",
+          autoDismiss: true,
+       });
+       router.push("/dashboard");
+      }
+      }catch(x){
+          addToast("An error occured trying to login.", {
+          appearance: "error",
+          autoDismiss: true,
+        });
+      }
+    
   };
   return (
     <div className={`container`}>

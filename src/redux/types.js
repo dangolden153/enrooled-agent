@@ -7,3 +7,7 @@ export const LOAD_USER = "LOAD_USER";
 export const AUTH_ERROR = "AUTH_ERROR";
 //Logout
 export const LOGOUT = "LOGOUT";
+
+
+//AGENT
+export const ALL_AGENTS = "ALL_AGENTS";

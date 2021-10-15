@@ -1,4 +1,9 @@
 // import Image from 'next/image'
+import React, { useState, useEffect } from "react";
+import {useDispatch, useSelector} from "react-redux";
+import { useToasts } from "react-toast-notifications";
+import { subscribeToMailingList } from "../src/services/common";
+import {getAgents} from "../src/redux/actions/agent";
 import banner1 from "../public/images/banners/landing-page.png";
 import start1 from "../public/images/start-section1.png";
 import styles from "../styles/LandingPage.module.scss";
@@ -12,6 +17,50 @@ import MostRequested from "../components/MostRequested";
 import RequestCallback from "../components/RequestCallback";
 import TaxVideo from "../widgets/TaxVideo";
 export default function LandingPage() {
+  const { addToast } = useToasts();
+  const dispatch = useDispatch();
+  const agents = useSelector((state) => state.agents);
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState({
+    email: "",
+  });
+  useEffect(() => {
+      getAgents();
+  },[]);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
+  const handleMailListSubmit = async (e) => {
+    e.preventDefault();
+    const { email } = data;
+    try {
+      setLoading(true);
+      let response = await subscribeToMailingList(data);
+      if (response) {
+        if (response.data) {
+          addToast("You have subscribed to our mailing list successfully", {
+            appearance: "success",
+            autoDismiss: true,
+          });
+        }
+        setLoading(false);
+      }
+    } catch (error) {
+      setLoading(false);
+      addToast(
+        `${
+          error.response.msg
+            ? error.response.msg
+            : "An error occured. Please try again."
+        }`,
+        {
+          appearance: "error",
+          autoDismiss: true,
+        },
+      );
+    }
+  };
   return (
     <div className={`col-12 justify-content-between ${styles.landingPage}`}>
       <Banner search background={banner1}>
@@ -46,7 +95,7 @@ export default function LandingPage() {
       >
         <h1>Tax Resources</h1>
         {/* <video src=""></video> */}
-        <TaxVideo/>
+        <TaxVideo />
         {/* <div className="d-flex flex-row w-100 justify-content-center">
           <VideoCard big="true" />
         </div>
@@ -85,10 +134,17 @@ export default function LandingPage() {
         <div className="d-flex flex-row justify-content-center">
           <form
             className={`${styles.subscriberForm} d-flex flex-row w-100 justify-content-between`}
-            action=""
-            method="post"
+            onSubmit={handleMailListSubmit}
           >
-            <input type="email" name="email" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={data.email}
+              onChange={handleChange}
+              disabled={loading ? true : false}
+              required
+            />
             <button type="submit" className="btn">
               Subscribe
             </button>

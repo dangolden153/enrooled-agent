@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import auth from "./auth/auth";
-const rootReducer = combineReducers({ auth: auth });
+import {getAgents} from "./agent";
+const rootReducer = combineReducers({ auth: auth, getAgents:getAgents });
 
 export default rootReducer;
