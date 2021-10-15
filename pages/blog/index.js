@@ -293,6 +293,8 @@ const index = () => {
               </div>
             </div>
           </div>
+          </div>
+          </Container>
 
             <Container>
                 <Row>
