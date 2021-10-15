@@ -7,7 +7,11 @@ const index = () => {
     <div className={`container ${styles.dashboard}`}>
       <h1>Welcome back, Jane.</h1>
 
+      {/* IF USER */}
       <UserDashboardListing />
+
+      {/* IF AGENT */}
+      {/* <AgentDashboardListing /> */}
     </div>
   );
 };

@@ -9,6 +9,7 @@
 @import './contact/contact';
 @import './recent-articles/recent-article';
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 
 
 html,
@@ -17,6 +18,10 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'DM Serif Display',-apple-system, serif;
+}
+
+p{
+  font-family:  'Roboto', sans-serif !important;
 }
 
 a {
