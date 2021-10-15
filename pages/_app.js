@@ -39,12 +39,6 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </DashboardLayout>
       )
-    case "/dashboard/help":
-      return (
-        <DashboardLayout>
-          <Component {...pageProps} />
-        </DashboardLayout>
-      )
     default:
       return (
         <ToastProvider>
