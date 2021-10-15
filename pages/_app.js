@@ -17,28 +17,38 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   switch (router.pathname) {
     case "/auth/login":
-      return <Component {...pageProps} />;
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
     case "/auth/register":
-      return <Component {...pageProps} />;
+      return <ToastProvider><Component {...pageProps} /></ToastProvider>;
     case "/auth/reset-password":
-      return <Component {...pageProps} />;
+      return <ToastProvider><Component {...pageProps} /></ToastProvider>;
     case "/dashboard":
       return (
+        <ToastProvider>
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
+        </ToastProvider>
       );
     case "/dashboard/account":
       return (
+        <ToastProvider>
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
+        </ToastProvider>
       );
     case "/dashboard/articles":
       return (
+         <ToastProvider>
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
+        </ToastProvider>
       );
     default:
       return (
