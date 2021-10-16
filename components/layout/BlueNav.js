@@ -16,12 +16,14 @@ const BlueNav = () => {
                     <button className='btn btn-primary'>Dashboard</button>
                 </Link>
                 : 
+                <>
                 <Link href='auth/register'>
                     <button className='btn btn-primary'>Sign Up</button>
                 </Link>
                 <Link href='auth/login'>
                     <button className='btn btn-outline-primary'>Login</button>
                 </Link> 
+                </>
                 }
             </div>
         </div>
