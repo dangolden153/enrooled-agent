@@ -9,9 +9,7 @@ import { useRouter } from "next/router";
 import { ToastProvider } from "react-toast-notifications";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    typeof document !== undefined
-      ? require("bootstrap/dist/js/bootstrap")
-      : null;
+    typeof document !== undefined ? require("bootstrap/dist/js/bootstrap") : null;
   }, []);
 
   const router = useRouter();
@@ -23,32 +21,30 @@ function MyApp({ Component, pageProps }) {
         </ToastProvider>
       );
     case "/auth/register":
-      return <ToastProvider><Component {...pageProps} /></ToastProvider>;
-    case "/auth/reset-password":
-      return <ToastProvider><Component {...pageProps} /></ToastProvider>;
-    case "/dashboard":
       return (
         <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
+    case "/auth/reset-password":
+      return <Component {...pageProps} />;
+    case "/dashboard":
+      return (
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-        </ToastProvider>
       );
     case "/dashboard/account":
       return (
-        <ToastProvider>
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-        </ToastProvider>
       );
     case "/dashboard/articles":
       return (
-         <ToastProvider>
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-        </ToastProvider>
       );
     default:
       return (

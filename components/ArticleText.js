@@ -1,4 +1,4 @@
-import styles from '../styles/Articles/Articles.module.scss'
+import styles from '../styles/Articles/Articles.module.css'
 import { Container, Row } from 'react-bootstrap';
 const index = () => {
     return (

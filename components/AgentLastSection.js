@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import styles from '../styles/agents/LastSection.module.scss'
+import styles from '../styles/agents/LastSection.module.css'
 
 const AgentLastSection = ({ image }) => {
     return (

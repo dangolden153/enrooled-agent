@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
-import styles from '../../styles/ea-listings/Askea.module.scss'
+import styles from '../../styles/ea-listings/Askea.module.css'
 
 const index = () => {
     return (
