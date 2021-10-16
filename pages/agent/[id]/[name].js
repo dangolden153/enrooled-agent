@@ -11,7 +11,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import styles from '../../../styles/agents/agentdetails.module.scss'
+import styles from '../../../styles/agents/agentdetails.module.css'
 
 library.add(fab, faLinkedin);
 library.add(fab, faFacebook);

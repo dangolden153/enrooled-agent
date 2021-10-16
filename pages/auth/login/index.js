@@ -2,16 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "../../../src/redux/actions/auth/auth";
 import { useToasts } from "react-toast-notifications";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
+import saveSession from "../../../hooks/saveSession";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  fab,
-  faFacebook,
-  faGoogle,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { fab, faFacebook, faGoogle, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styles from "../../../styles/auth/Login.module.scss";
 import Link from "next/link";
 
@@ -20,7 +16,7 @@ library.add(fab, faFacebook);
 library.add(fab, faTwitter);
 
 const Login = () => {
-  const addToast  = useToasts();
+  const { addToast } = useToasts();
   const router = useRouter();
   const inputField = {
     email: "",
@@ -35,26 +31,25 @@ const Login = () => {
     const { name, value } = e.target;
     setForm((form) => ({ ...form, [name]: value }));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitted(true);
-    try{
-
-      if (email && password) {
-        dispatch(login(email, password));
+    if (email && password) {
+      const res = await dispatch(login(email, password));
+      if (res.code === 200) {
         addToast("Logged in successfully!", {
           appearance: "success",
           autoDismiss: true,
-       });
-       router.push("/dashboard");
-      }
-      }catch(x){
-          addToast("An error occured trying to login.", {
+        });
+        await saveSession(res.data, res.data.access_token);
+        router.push("/dashboard");
+      } else {
+        addToast(res?.response?.data?.msg || "An error occured trying to login.", {
           appearance: "error",
           autoDismiss: true,
         });
       }
-    
+    }
   };
   return (
     <div className={`container`}>
@@ -98,11 +93,10 @@ const Login = () => {
             </div>
 
             <div className={styles.btn}>
-              
               <button type="submit">
                 {loading && "Loading"}
                 Continue
-                </button>
+              </button>
             </div>
           </div>
 
@@ -116,18 +110,14 @@ const Login = () => {
 
             <div className={styles.facebook}>
               <button>
-                <FontAwesomeIcon
-                  icon={["fab", "facebook-f"]}
-                  id={styles.icon}
-                />
+                <FontAwesomeIcon icon={["fab", "facebook-f"]} id={styles.icon} />
                 Login with Facebook
               </button>
             </div>
 
             <div className={styles.twitter}>
               <button>
-                <FontAwesomeIcon icon={["fab", "twitter"]} id={styles.icon} />{" "}
-                Login with Twitter
+                <FontAwesomeIcon icon={["fab", "twitter"]} id={styles.icon} /> Login with Twitter
               </button>
             </div>
           </div>

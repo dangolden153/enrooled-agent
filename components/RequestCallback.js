@@ -40,8 +40,8 @@ const RequestCallback = () => {
         setLoading(false);
         addToast(
           `${
-            error.response?.data?.message
-              ? error.response?.data?.message
+            error.response.data.message
+              ? error.response.data.message
               : "An error occured. Please try again."
           }`,
           {

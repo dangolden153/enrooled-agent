@@ -1,29 +1,34 @@
-import {
-ALL_AGENTS
-} from "../../types";
+import { ALL_AGENTS, TOP_AGENTS } from "../../types";
 
 const initState = {
-    error: null,
-    agents:  [], 
-    agent : {},
-    page: 1,
-    prev: true,
-    next: false,
-    perPage: 10,
-    status: "success"
-}; 
+  error: null,
+  agents: [],
+  topAgents: [],
+  agent: {},
+  page: 1,
+  prev: true,
+  next: false,
+  perPage: 10,
+  status: "success",
+};
 
-export function getAgents(state = initState, action){
-    const {type, payload} = action;
-    switch (type) {
-        case ALL_AGENTS :
-            return{
-            ...state, 
-            agents: payload,     
-        }
+export function getAgents(state = initState, action) {
+  const { type, payload } = action;
+  switch (type) {
+    case ALL_AGENTS:
+      return {
+        ...state,
+        agents: payload,
+      };
 
-        default : {
-            return state
-        }
+    case TOP_AGENTS:
+      return {
+        ...state,
+        topAgents: payload,
+      };
+
+    default: {
+      return state;
     }
+  }
 }

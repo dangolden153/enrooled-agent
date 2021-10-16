@@ -4,7 +4,7 @@
         import Image from 'next/image'
         import Man from '../../../public/images/card-man.png'
         import { Container, Row, Col } from 'react-bootstrap';
-        import styles from '../../../styles/agents/AllStates.module.scss'
+        import styles from '../../../styles/agents/AllStates.module.css'
         import Background from '../../../public/images/banners/ea-listing.png'
         import AgentLastSection from '../../../components/StartSection';
         import SelectCountry from '../../../components/SelectCountry'

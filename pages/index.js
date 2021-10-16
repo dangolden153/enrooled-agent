@@ -1,9 +1,9 @@
 // import Image from 'next/image'
 import React, { useState, useEffect } from "react";
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useToasts } from "react-toast-notifications";
 import { subscribeToMailingList } from "../src/services/common";
-import {getAgents} from "../src/redux/actions/agent";
+import { getTopAgents } from "../src/redux/actions/agent";
 import banner1 from "../public/images/banners/landing-page.png";
 import start1 from "../public/images/start-section1.png";
 import styles from "../styles/LandingPage.module.scss";
@@ -19,14 +19,18 @@ import TaxVideo from "../widgets/TaxVideo";
 export default function LandingPage() {
   const { addToast } = useToasts();
   const dispatch = useDispatch();
-  const agents = useSelector((state) => state.agents);
+  const agents = useSelector((state) => state);
+
+  console.log(agents);
+
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     email: "",
   });
   useEffect(() => {
-      getAgents();
-  },[]);
+    dispatch(getTopAgents());
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
@@ -49,15 +53,11 @@ export default function LandingPage() {
     } catch (error) {
       setLoading(false);
       addToast(
-        `${
-          error.response.msg
-            ? error.response.msg
-            : "An error occured. Please try again."
-        }`,
+        `${error.response.msg ? error.response.msg : "An error occured. Please try again."}`,
         {
           appearance: "error",
           autoDismiss: true,
-        },
+        }
       );
     }
   };
@@ -66,8 +66,7 @@ export default function LandingPage() {
       <Banner search background={banner1}>
         <h1 className="banner-title">Find Your Next IRS Enrolled Agent</h1>
         <h6 className="banner-extra">
-          Browse through our directory of over 60,000 professionals and engage
-          them for free
+          Browse through our directory of over 60,000 professionals and engage them for free
         </h6>
       </Banner>
 
