@@ -7,13 +7,13 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import { useToasts } from "react-toast-notifications";
 
 const index = () => {
-  const [value, setValue] = useState("");
+  const [phone, setPhone] = useState("");
   const { addToast } = useToasts();
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     name: "",
     email: "",
-    phone: "",
+    phone: phone,
     subject: "",
     message: "",
   });
@@ -48,15 +48,14 @@ const index = () => {
         {
           appearance: "error",
           autoDismiss: true,
-        }
+        },
       );
     }
   };
 
-  const handleValue = (val) => {
-    setValue(val);
+  const handleValue = (phone) => {
+    setPhone(phone);
   };
-
   return (
     <div>
       <Banner background={NewListing}>
@@ -68,62 +67,89 @@ const index = () => {
         <div className="row">
           <div className="col-md-6">
             <div className="card">
-              <div className="card-body ">
-                <h2 className="text-center">Get In Touch With Us</h2>
-                <label required className="form-control-label text-start  ">
-                  Full Name<span className="text-danger">*</span>
-                </label>
-                <input
-                  required
-                  type="text"
-                  placeholder="John Doe"
-                  className="form-control"
-                />
-                <label className="form-control-label  ">Subject</label>
-                <input
-                  type="text"
-                  placeholder="Account Claims"
-                  className="form-control"
-                />
-                <label className="form-control-label  ">
-                  Phone Number <span className="text-danger">*</span>
-                </label>
-                <PhoneInput
-                  defaultCountry="US"
-                  error={
-                    value
-                      ? isValidPhoneNumber(value)
-                        ? undefined
-                        : "Invalid phone number"
-                      : "Phone number required"
-                  }
-                  placeholder="Enter phone number"
-                  className="form-control"
-                  value={value}
-                  onChange={handleValue}
-                  style={{ marginBottom: "20px" }}
-                />
-                <label className="form-control-label text-muted">
-                  Email<span className="text-danger">*</span>
-                </label>
-                <input
-                  required
-                  type="email"
-                  placeholder="jdoe@gmail.com"
-                  className="form-control"
-                />
-                <label className="form-control-label text-muted">
-                  How can we help you?
-                </label>
-                <textarea
-                  rows="20"
-                  style={{ height: "285px" }}
-                  placeholder="Your message"
-                  className="form-control"
-                />
+              <form onSubmit={handleSubmit}>
+                <div className="card-body ">
+                  <h2 className="text-center">Get In Touch With Us</h2>
+                  <label required className="form-control-label text-start  ">
+                    Full Name<span className="text-danger">*</span>
+                  </label>
+                  <input
+                    required
+                    type="text"
+                    placeholder="John Doe"
+                    className="form-control"
+                    name="name"
+                    value={data.name}
+                    onChange={handleChange}
+                    disabled={loading ? true : false}
+                    required
+                  />
+                  <label className="form-control-label  ">Subject</label>
+                  <input
+                    type="text"
+                    placeholder="Account Claims"
+                    className="form-control"
+                    name="subject"
+                    value={data.subject}
+                    onChange={handleChange}
+                    disabled={loading ? true : false}
+                    required
+                  />
+                  <label className="form-control-label  ">
+                    Phone Number <span className="text-danger">*</span>
+                  </label>
+                  <PhoneInput
+                    defaultCountry="US"
+                    error={
+                      phone
+                        ? isValidPhoneNumber(phone)
+                          ? undefined
+                          : "Invalid phone number"
+                        : "Phone number required"
+                    }
+                    placeholder="Enter phone number"
+                    className="form-control"
+                    style={{ marginBottom: "20px" }}
+                    name="phone"
+                    value={phone}
+                    onChange={handleValue}
+                    disabled={loading ? true : false}
+                    required
+                  />
+                  <label className="form-control-label text-muted">
+                    Email<span className="text-danger">*</span>
+                  </label>
+                  <input
+                    required
+                    type="email"
+                    placeholder="jdoe@gmail.com"
+                    className="form-control"
+                    name="email"
+                    value={data.email}
+                    onChange={handleChange}
+                    disabled={loading ? true : false}
+                    required
+                  />
+                  <label className="form-control-label text-muted">
+                    How can we help you?
+                  </label>
+                  <textarea
+                    rows="20"
+                    style={{ height: "285px" }}
+                    placeholder="Your message"
+                    className="form-control"
+                    name="message"
+                    value={data.message}
+                    onChange={handleChange}
+                    disabled={loading ? true : false}
+                    required
+                  />
 
-                <button className="btn contact-button">SEND MESSAGE</button>
-              </div>
+                  <button type="submit" className="btn contact-button">
+                    {loading ? "Please Wait..." : "SEND MESSAGE"}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
 
