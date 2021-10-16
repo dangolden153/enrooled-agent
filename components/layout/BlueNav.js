@@ -21,7 +21,7 @@ const BlueNav = () => {
                 </Link>
                 <Link href='auth/login'>
                     <button className='btn btn-outline-primary'>Login</button>
-                </Link>
+                </Link> 
                 }
             </div>
         </div>
