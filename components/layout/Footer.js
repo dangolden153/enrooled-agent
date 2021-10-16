@@ -28,10 +28,10 @@ const Footer = () => {
           <div className="row footer-down d-flex justify-content-between">
             <div className="col-lg-2 socials">
               <div className="d-flex flex-row justify-content-between">
-                <Facebook size="25" />
-                <Twitter size="25" />
-                <Linkedin size="25" />
-                <Instagram size="25" />
+                <Link href="https://www.facebook.com/EnrolledAgentdotcom"><Facebook size="25" /></Link>
+                <Link href="https://twitter.com/EAgentdotcom"><Twitter size="25" /></Link>
+                <Link href="https://www.linkedin.com/company/enrolledagent"><Linkedin size="25" /></Link>
+                <Link href="https://www.instagram.com/enrolledagentdotcom"><Instagram size="25" /></Link>
               </div>
             </div>
             <div className="col-lg-8 d-flex flex-row justify-content-center">
@@ -69,7 +69,7 @@ const Footer = () => {
                     <Link href="/contact"> Contact Us</Link>
                   </li>
                   <li className="footer-link">
-                    <Link href="/privacy-policy">Privacy Policy</Link>
+                    <Link href="/privacy">Privacy Policy</Link>
                   </li>
                   <li className="footer-link">
                     <Link href="/terms">Terms of Use</Link>
