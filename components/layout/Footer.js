@@ -49,11 +49,6 @@ const Footer = () => {
                     <Link href="/ask-an-ea">Ask an EA</Link>
                   </li>
                   <li className="footer-link">
-                    <Link href="/license-verification">
-                      Verify an Enrolled Agents License
-                    </Link>
-                  </li>
-                  <li className="footer-link">
                     <Link href="/new-listing">
                       Free Enrolled Agent Listings
                     </Link>
