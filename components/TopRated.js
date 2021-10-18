@@ -26,7 +26,7 @@ const TopRated = () => {
                     name={agent.agent && agent.agent.first_name + agent.agent.first_name}
                     location={agent.agent && agent.agent.city + ',' + agent.agent.state}
                     numStars={agent.rating}
-                    profileLink=""
+                    profileLink={`agent/${agent.id}/${agent.first_name}`}
                 />
                     )
                 })}

@@ -23,7 +23,7 @@ const TopRatedCard = ({ image, name, location, numStars, profileLink }) => {
             <div className="star-list d-flex flex-row justify-content-between">
                 {getStars(5, numStars)}
             </div>
-           <Link href={profileLink}> <button type='button' className='btn btn-card'>View Profile</button></Link>
+           <Link href={profileLink}><button type='button' className='btn btn-card'>View Profile</button></Link>
         </Card>
     )
 }
