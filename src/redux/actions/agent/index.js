@@ -1,7 +1,7 @@
 import { axiosWithoutAuth } from "../../../utils/axiosInstance";
 import { ALL_AGENTS, TOP_AGENTS } from "../../types";
 
-export const getAgents = () => async (dispatch) => {
+export const getAllAgents = () => async (dispatch) => {
   try {
     const res = await axiosWithoutAuth.get("/agents/index");
     dispatch({

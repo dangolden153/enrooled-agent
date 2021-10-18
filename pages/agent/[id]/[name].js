@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState} from "react";
+import {useSelector, shallowEqual} from "react-redux";
 import Image from "next/image";
 import Smilie from "../../../public/images/PP.png";
 import Head from "next/head";
@@ -9,7 +10,7 @@ import {
   fab,
   faFacebook,
   faInstagram,
-  faLinkedin,
+  faLinkedin, 
   //   faUser,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
@@ -22,6 +23,64 @@ library.add(fab, faInstagram);
 // library.add(far, faUser);
 
 const index = () => {
+  const [showAbout, setShowAbout] = useState(true);
+  const [showDetails, setShowDetials] = useState(false);
+  var tabContents;
+  if(showAbout == true)
+  {
+    tabContents =  <div className={styles.right}>
+            <div className={styles.detail}>
+              <p id={styles.detailA}>
+                <u>About</u>
+              </p>
+              <p id={styles.detailB}>Enrolled Agent Details</p>
+            </div>
+            <div id={styles.line}>
+              <hr />
+            </div>
+
+            <div className={styles.enroledDetail}>
+              <p>
+                Jane Doe is an Enrolled Agent who operates in and around
+                EVERGREEN. Jane Doe is admitted to practice unrestricted before
+                the Internal Revenue Service and can represent clients
+                throughout the United States. Jane Doe is an EnrolledAgent.com
+                verified Enrolled Agent. Enrolled Agent status is the highest
+                credential awarded by the Internal Revenue Service. Jane Doe is
+                Enrolled Agent credential is recognized across all 50 US states.
+              </p>
+            </div>
+          </div>
+  }else if(showDetails == true){
+        tabContents =  
+        <div className={styles.right}>
+            <div className={styles.detail}>
+              <p id={styles.detailA}>
+                About
+              </p>
+              <p id={styles.detailB} onClick={handleAbout}><u>Enrolled Agent Details</u></p>
+            </div>
+            <div id={styles.line}>
+              <hr />
+            </div>
+
+            <div className={styles.enroledDetail}>
+              <p>
+                Detials is an Enrolled Agent who operates in and around
+                EVERGREEN. Jane Doe is admitted to practice unrestricted before
+                the Internal Revenue Service and can represent clients
+                throughout the United States. Jane Doe is an EnrolledAgent.com
+                verified Enrolled Agent. Enrolled Agent status is the highest
+                credential awarded by the Internal Revenue Service. Jane Doe is
+                Enrolled Agent credential is recognized across all 50 US states.
+              </p>
+            </div>
+          </div>
+  }
+  const handleAbout = () => {
+    setShowAbout(false);
+    setShowDetials(true)
+  }
   return (
     <>
         <Head>
@@ -87,21 +146,21 @@ const index = () => {
           <div className={styles.right}>
             <div className={styles.topleft}>
               <div className={styles.claim}>
-                <h3 id={styles.jane}>Jane Doe</h3>
-                <p id={styles.doe}>(Claimed)</p>
+                <h3 id={styles.agent_name}>Jane Doe</h3>
+                <p id={styles.agent_status}>(Claimed)</p>
               </div>
 
               <div className={styles.btn}>
                 <button>
-                  <u>Write a review</u>
+                  Write a review
                 </button>
               </div>
             </div>
             <p className={styles.expert}>
-              <b>Tax Professional Expert</b>
+              <b>Tax Professional</b>
             </p>
             <div>
-              <p id={styles.rank}>Rankings</p>
+              <p id={styles.rank}>Ratings</p>
               <p className={styles.star}>
                 8.7 <span className={styles.stars}>&#9733;</span>{" "}
                 <span className={styles.stars}>&#9733;</span>
@@ -113,30 +172,9 @@ const index = () => {
           {/* <div>
 <p>what is going on here?</p>
       </div> */}
-
-          <div className={styles.right}>
-            <div className={styles.detail}>
-              <p id={styles.detailA}>
-                <u>About</u>
-              </p>
-              <p id={styles.detailB}>Agent Details</p>
-            </div>
-            <div id={styles.line}>
-              <hr />
-            </div>
-
-            <div className={styles.enroledDetail}>
-              <p>
-                Jane Doe is an Enrolled Agent who operates in and around
-                EVERGREEN. Jane Doe is admitted to practice unrestricted before
-                the Internal Revenue Service and can represent clients
-                throughout the United States. Jane Doe is an EnrolledAgent.com
-                verified Enrolled Agent. Enrolled Agent status is the highest
-                credential awarded by the Internal Revenue Service. Jane Doe is
-                Enrolled Agent credential is recognized across all 50 US states.
-              </p>
-            </div>
-          </div>
+          {
+            tabContents
+         }
 
           <div className={styles.bottomDiv}>
             <div className={styles.client}>

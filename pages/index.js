@@ -16,13 +16,10 @@ import StartSection from "../components/StartSection";
 import MostRequested from "../components/MostRequested";
 import RequestCallback from "../components/RequestCallback";
 import TaxVideo from "../widgets/TaxVideo";
+import Head from "next/head";
 export default function LandingPage() {
   const { addToast } = useToasts();
   const dispatch = useDispatch();
-  const agents = useSelector((state) => state);
-
-  console.log(agents);
-
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     email: "",
