@@ -1,17 +1,17 @@
 import axios from "axios";
 //import { NotificationManager } from 'react-notifications';
-import { LOCAL_URL, API_URL } from "../../config";
+import { API_URL } from "../../config";
 import { getSession } from "next-auth/client";
 
 const axiosInstance = axios.create({
-  baseURL: LOCAL_URL,
+  baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
 export const axiosWithoutAuth = axios.create({
-  baseURL: LOCAL_URL,
+  baseURL: API_URL,
   headers: {
     "content-Type": "application/json",
   },

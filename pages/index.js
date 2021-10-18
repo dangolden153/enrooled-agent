@@ -16,7 +16,7 @@ import StartSection from "../components/StartSection";
 import MostRequested from "../components/MostRequested";
 import RequestCallback from "../components/RequestCallback";
 import TaxVideo from "../widgets/TaxVideo";
-export default function LandingPage({topRatedAgents}) {
+export default function LandingPage() {
   const { addToast } = useToasts();
   const dispatch = useDispatch();
   const agents = useSelector((state) => state);
@@ -87,7 +87,7 @@ export default function LandingPage({topRatedAgents}) {
         </div>
       </div>
 
-      <TopRated topRatedAgents={topRatedAgents} />
+      <TopRated />
 
       <div
         className={`${styles.taxResources} d-flex flex-column align-items-center justify-content-center`}

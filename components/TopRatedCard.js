@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Star, StarFill } from 'react-bootstrap-icons';
 import Card from './Card';
-
+import Link from 'next/link';
 const TopRatedCard = ({ image, name, location, numStars, profileLink }) => {
 
     const getStars = (max, stars) => {
@@ -23,7 +23,7 @@ const TopRatedCard = ({ image, name, location, numStars, profileLink }) => {
             <div className="star-list d-flex flex-row justify-content-between">
                 {getStars(5, numStars)}
             </div>
-            <button type='button' className='btn btn-card'>View Profile</button>
+           <Link href={profileLink}> <button type='button' className='btn btn-card'>View Profile</button></Link>
         </Card>
     )
 }
