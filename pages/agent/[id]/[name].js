@@ -23,64 +23,7 @@ library.add(fab, faInstagram);
 // library.add(far, faUser);
 
 const index = () => {
-  const [showAbout, setShowAbout] = useState(true);
-  const [showDetails, setShowDetials] = useState(false);
-  var tabContents;
-  if(showAbout == true)
-  {
-    tabContents =  <div className={styles.right}>
-            <div className={styles.detail}>
-              <p id={styles.detailA}>
-                <u>About</u>
-              </p>
-              <p id={styles.detailB}>Enrolled Agent Details</p>
-            </div>
-            <div id={styles.line}>
-              <hr />
-            </div>
 
-            <div className={styles.enroledDetail}>
-              <p>
-                Jane Doe is an Enrolled Agent who operates in and around
-                EVERGREEN. Jane Doe is admitted to practice unrestricted before
-                the Internal Revenue Service and can represent clients
-                throughout the United States. Jane Doe is an EnrolledAgent.com
-                verified Enrolled Agent. Enrolled Agent status is the highest
-                credential awarded by the Internal Revenue Service. Jane Doe is
-                Enrolled Agent credential is recognized across all 50 US states.
-              </p>
-            </div>
-          </div>
-  }else if(showDetails == true){
-        tabContents =  
-        <div className={styles.right}>
-            <div className={styles.detail}>
-              <p id={styles.detailA}>
-                About
-              </p>
-              <p id={styles.detailB} onClick={handleAbout}><u>Enrolled Agent Details</u></p>
-            </div>
-            <div id={styles.line}>
-              <hr />
-            </div>
-
-            <div className={styles.enroledDetail}>
-              <p>
-                Detials is an Enrolled Agent who operates in and around
-                EVERGREEN. Jane Doe is admitted to practice unrestricted before
-                the Internal Revenue Service and can represent clients
-                throughout the United States. Jane Doe is an EnrolledAgent.com
-                verified Enrolled Agent. Enrolled Agent status is the highest
-                credential awarded by the Internal Revenue Service. Jane Doe is
-                Enrolled Agent credential is recognized across all 50 US states.
-              </p>
-            </div>
-          </div>
-  }
-  const handleAbout = () => {
-    setShowAbout(false);
-    setShowDetials(true)
-  }
   return (
     <>
         <Head>
@@ -172,9 +115,29 @@ const index = () => {
           {/* <div>
 <p>what is going on here?</p>
       </div> */}
-          {
-            tabContents
-         }
+          <div className={styles.right}>
+            <div className={styles.detail}>
+              <p id={styles.detailA}>
+                <u>About</u>
+              </p>
+              <p id={styles.detailB}>Enrolled Agent Details</p>
+            </div>
+            <div id={styles.line}>
+              <hr />
+            </div>
+
+            <div className={styles.enroledDetail}>
+              <p>
+                Jane Doe is an Enrolled Agent who operates in and around
+                EVERGREEN. Jane Doe is admitted to practice unrestricted before
+                the Internal Revenue Service and can represent clients
+                throughout the United States. Jane Doe is an EnrolledAgent.com
+                verified Enrolled Agent. Enrolled Agent status is the highest
+                credential awarded by the Internal Revenue Service. Jane Doe is
+                Enrolled Agent credential is recognized across all 50 US states.
+              </p>
+            </div>
+          </div>
 
           <div className={styles.bottomDiv}>
             <div className={styles.client}>
