@@ -56,7 +56,7 @@ const index = () => {
 
                         <div className={styles.topleft}>
                             <div className={styles.claim}>
-                                <h3 id={styles.jane}>Jane Doe</h3><p id={styles.doe}><i>(Claimed)</i></p>
+                                <h3 id={styles.jane}>Jane Doe</h3><p id={styles.doe}>(Claimed)</p>
                             </div>
 
 
