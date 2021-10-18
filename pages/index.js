@@ -62,6 +62,24 @@ export default function LandingPage() {
     }
   };
   return (
+    <>
+      <Head>
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+            <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
+            <meta charset="UTF-8" />
+            <meta name="google" content="notranslate" />
+            <meta httpEquiv="Content-Language" content="en" />
+            <meta name="description" 
+            content="Find a tax professional for your tax requirements. 
+             Enrolled Agent has a list of verified tax practitioners. 
+             Search from the lists of irs enrolled agent ." />
+            <meta name="keywords"
+                content="consulting,finance,advisor,consultant,business,service,insurance,agency" />
+            <meta name="Enrolled Agent" content="Enrolled Agent" />
+
+            <title>Enrolled Agent Lookup | Find Tax Preparer |  IRS Enrolled Agent Search</title>
+        </Head>
     <div className={`col-12 justify-content-between ${styles.landingPage}`}>
       <Banner search background={banner1}>
         <h1 className="banner-title">Find Your Next IRS Enrolled Agent</h1>
@@ -151,5 +169,6 @@ export default function LandingPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

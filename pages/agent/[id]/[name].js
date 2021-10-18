@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Smilie from "../../../public/images/PP.png";
+import Head from "next/head";
 // import { Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -22,6 +23,23 @@ library.add(fab, faInstagram);
 
 const index = () => {
   return (
+    <>
+        <Head>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+            <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
+            <meta charset="UTF-8" />
+            <meta name="google" content="notranslate" />
+            <meta httpEquiv="Content-Language" content="en" />
+            <meta name="description" 
+            content="Find a tax professional for your tax requirements. 
+             Enrolled Agent has a list of verified tax practitioners. 
+             Search from the lists of irs enrolled agent ." />
+            <meta name="keywords"
+                content="consulting,finance,advisor,consultant,business,service,insurance,agency" />
+            <meta name="Enrolled Agent" content="Enrolled Agent" />
+
+            <title>Enrolled Agent Lookup | Find Tax Preparer |  IRS Enrolled Agent Search</title>
+        </Head>
     <div className={styles.viewAgent}>
       <div className={styles.top}>
         {/* <Container> */}
@@ -202,6 +220,7 @@ const index = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default index;
