@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
-import styles from '../styles/agents/Select.module.css'
+import styles from '../styles/agents/Select.module.scss'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { fas, search } from '@fortawesome/free-brands-svg-icons'

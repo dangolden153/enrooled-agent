@@ -10,7 +10,7 @@ import {
   faGoogle,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import styles from '../../../styles/auth/Register.module.css'
+import styles from '../../../styles/auth/Register.module.scss'
 import Link from "next/link";
 
 library.add(fab, faGoogle);

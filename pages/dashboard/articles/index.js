@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../../styles/Articles/AgentArticle.module.css'
+import styles from '../../../styles/Articles/AgentArticle.module.scss'
 
 const index = () => {
     return (
