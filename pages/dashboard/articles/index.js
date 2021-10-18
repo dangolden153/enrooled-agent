@@ -1,141 +1,34 @@
 import React from 'react'
-import styles from '../../../styles/Articles/Articles.module.css'
-import Image from 'next/image'
-import Dollar from '../../../public/images/dollar.png'
-import ArticleText from '../../../components/ArticleText'
-import Lady from '../../../public/images/card-woman.png'
-import { Container, Row } from 'react-bootstrap';
-import Techie from '../../../public/images/techie.png'
+import styles from '../../../styles/Articles/AgentArticle.module.scss'
+
 const index = () => {
     return (
-        <div className={styles.articles}>
-            <div className={styles.topdiv}>
-                <h1 className={styles.head}>Lorem Ipsum is simply dummy text of
-                    the printing and typesetting industry. </h1>
-                <div className={styles.egent}>
-                    <p>written by: <b>Egent enrolled News</b></p>
-                </div>
+        <div className={styles.agentArticle}>
+
+            <div className={styles.postArticle}>
+                <div className={styles.ask}><h2>Articles posted by you</h2></div>
+                <div className={styles.right}><button>Write New Articles</button></div>
             </div>
 
-            <div className={styles.dollar}>
-                <Image src={Dollar} alt="An icon of a dollar" />
-                <p className={styles.september}>24th Septmber, 2021</p>
-            </div>
+            <div className={styles.questions}>
+                <p className={styles.PText}>Build your profile to increase your ranking in the search
+                    results by publishing quality tax-related articles.
+                    Publishing quality articles will increase your reputation
+                    on our site; increase your profile followings on our site;
+                    get your profile in front of more clients.</p>
 
-            <Container>
-                <Row>
-                    <div className={styles.texts}>
-                        <p><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                            the industry's standard dummy text ever since the 1500s,</b></p>
-                        <hr />
+                <div className={styles.posts}>
+                    <div className={styles.leftPost}>
+                        <p>1.</p>
+                        <p id={styles.p}>ARTICLES OF THE MODEL CONVENTION WITH RESPECT TO TAXES ON INCOME AND ON CAPITAL</p>
                     </div>
-                </Row>
-            </Container>
-
-            <div><ArticleText /></div>
-
-            <Container>
-                {/* <Row> */}
-                    <div className={styles.comments}>
-                        <h1 id={styles.coment}>Comments</h1>
-                    </div>
-
-                    <div className={styles.andrew}>
-                        <div>
-                            <Image src={Lady} alt="A laughing lady" />
-                        </div>
-
-                        {/* <div className={styles.smith}> */}
-                        <div className={styles.fornia}>
-                            <h6><b>Andrew Smith</b></h6>
-                            <p>California</p>
-                        </div>
-                    </div>
-                    {/* </div> */}
-                    <div className={styles.andrew}>
-                    <div id={styles.p}><p><u>Where does it come from?</u></p></div>
-                    </div>
-                    
-                    <div className={styles.andrew}>
-                        <div>
-                            <Image src={Lady} alt="A laughing lady" />
-                        </div>
-
-                        {/* <div className={styles.smith}> */}
-                        <div className={styles.fornia}>
-                            <h6><b>Andrew Smith</b></h6>
-                            <p>California</p>
-                        </div>
-                    </div>
-                    {/* </div> */}
-                    <div className={styles.andrew}>
-                    <div id={styles.p2}><p><u>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                        piece of classical Latin literature from 45 BC</u></p></div>
-                </div>
-                {/* </Row> */}
-            </Container>
-
-            <Container>
-                {/* <Row> */}
-                <div className={styles.andrew}>
-                    <div>
-                        <input type="text" name="text" className={styles.box}></input>
-                    </div>
-                    </div>
-                    <div className={styles.buttn}>
-                        <button type="submit">Comment</button>
-                    </div>
-                    
-                {/* </Row> */}
-            </Container>
-            <hr className={styles.boundry} />
-
-            <div className={styles.latest}>
-                <h1><b>Latest News</b></h1>
-            </div>
-
-            <Container>
-                <div className={styles.new}>
-                    <div className={styles.dev}>
-                        <div className={styles.tech}>
-                            <Image src={Techie} alt="A developer" />
-                        </div>
-                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
-                        <div className={styles.load}>
-                            <button type="submit"><b>Load news</b></button>
-                        </div>
-                    </div>
-
-                    <div className={styles.dev}>
-                        <div className={styles.tech}>
-                            <Image src={Techie} alt="A developer" />
-                        </div>
-                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
-                        <div className={styles.load}>
-                            <button type="submit"><b>Load news</b></button>
-                        </div>
-                    </div>
-
-                    <div className={styles.dev}>
-                        <div className={styles.tech}>
-                            <Image src={Techie} alt="A developer" />
-                        </div>
-                        <p id={styles.p3}><b>Lorem Ipsum is simply dummy text of the printin.</b></p>
-                        <div className={styles.load}>
-                            <button type="submit"><b>Load news</b></button>
-                        </div>
+                    <div className={styles.date}>
+                        <p>21 October, 2021</p>
                     </div>
                 </div>
 
-                <div className={styles.buttn}>
-                <button type="submit">Load all news</button>
             </div>
-            </Container>
-
-      
         </div>
     )
 }
-
 export default index
-
