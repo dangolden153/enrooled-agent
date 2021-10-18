@@ -70,7 +70,7 @@ const Header = () => {
         case '/terms':
             pageName = 'Terms and Conditions'
             break
-        case '/what-is-an-ea':
+        case '/who-is-an-ea':
             pageName = 'What is an EA'
             break
         case '/blog':

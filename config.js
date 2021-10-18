@@ -1,2 +1,2 @@
-export const API_URL = process.env.REACT_APP_API_URL
-export const BASE_URL = process.env.REACT_APP_BASE_URL
+export const LOCAL_URL = process.env.NEXT_PUBLIC_API_LOCAL_URL
+export const API_URL = process.env.NEXT_PUBLIC_API_URL;

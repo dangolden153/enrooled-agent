@@ -1,23 +1,31 @@
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/globals.scss";
 import PageLayout from "../components/layout/PageLayout";
 import DashboardLayout from "../components/layout/dashboard/DashboardLayout";
 import { wrapper } from "../src/redux/store";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { ToastProvider } from "react-toast-notifications";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    typeof document !== undefined
-      ? require("bootstrap/dist/js/bootstrap")
-      : null;
+    typeof document !== undefined ? require("bootstrap/dist/js/bootstrap") : null;
   }, []);
 
-  const router = useRouter()
+  const router = useRouter();
   switch (router.pathname) {
     case "/auth/login":
-      return <Component {...pageProps} />;
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
     case "/auth/register":
-      return <Component {...pageProps} />;
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
     case "/auth/reset-password":
       return <Component {...pageProps} />;
     case "/dashboard":
@@ -25,30 +33,26 @@ function MyApp({ Component, pageProps }) {
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-      )
+      );
     case "/dashboard/account":
       return (
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-      )
+      );
     case "/dashboard/articles":
       return (
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-      )
-    case "/dashboard/help":
-      return (
-        <DashboardLayout>
-          <Component {...pageProps} />
-        </DashboardLayout>
-      )
+      );
     default:
       return (
-        <PageLayout>
-          <Component {...pageProps} />
-        </PageLayout>
+        <ToastProvider>
+          <PageLayout>
+            <Component {...pageProps} />
+          </PageLayout>
+        </ToastProvider>
       );
   }
 }

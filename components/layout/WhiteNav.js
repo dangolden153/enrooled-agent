@@ -59,16 +59,9 @@ const WhiteNav = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink href="/agents">
+                  <NavLink href="/ea-listings">
                     <a className="dropdown-item" href="/">
                       All Enrolled Agents
-                    </a>
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink href="/license-verification">
-                    <a className="dropdown-item" href="/">
-                      Verify an Enrolled Agent's License
                     </a>
                   </NavLink>
                 </li>

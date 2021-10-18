@@ -1,8 +1,8 @@
-import Script from 'next/script'
+import Script from "next/script";
 const TaxVideo = () => {
-    return (
-      <>
-        <Script id="show-banner" strategy="lazyOnload">
+  return (
+    <>
+      <Script id="show-banner" strategy="lazyOnload">
         {`
             setTimeout(function(){
       var oScript = document.createElement("script");
@@ -19,10 +19,10 @@ const TaxVideo = () => {
         }
       },20000);
         `}
-        </Script>
-        <section class="container pb-50" id="widget"></section>
-      </>
-    );
-}
+      </Script>
+      <section class="container pb-50" id="widget"></section>
+    </>
+  );
+};
 
-export default TaxVideo
+export default TaxVideo;
