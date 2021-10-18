@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../styles/Privacy.module.css'
 import Banner from '../../components/Banner'
 import Image from 'next/image'
-import Background from '../../public/images/privacy.png'
+import Background from '../../public/images/policy.png'
 import { Container } from 'react-bootstrap';
 
 const index = () => {

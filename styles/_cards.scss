@@ -92,31 +92,29 @@
     .card-news {
         padding: 1rem;
         padding-left: 1.5rem;
-        
-    
+
         .news-image {
             margin-top: 5px;
         }
-    
+
         .card-news-body {
             margin-left: 1rem;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-    
+
             span {
                 width: 95%;
             }
         }
-    
+
         &:hover {
-            background: #E1EFFF;
+            background: #e1efff;
         }
     }
 }
 
 @media only screen and (max-width: 991px) {
-
     .card-news {
         padding: 1rem;
         // padding-left: 1.5rem;
@@ -124,7 +122,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    
+
         .card-news-body {
             margin-left: 1rem;
             display: flex;
@@ -138,9 +136,9 @@
                 width: max-content;
             }
         }
-    
+
         &:hover {
-            background: #E1EFFF;
+            background: #e1efff;
         }
     }
 }
@@ -148,7 +146,6 @@
 .card-news {
     padding: 1rem;
     padding-left: 1.5rem;
-    
 
     .news-image {
         margin-top: 5px;
@@ -166,7 +163,7 @@
     }
 
     &:hover {
-        background: #E1EFFF;
+        background: #e1efff;
     }
 }
 
@@ -178,7 +175,6 @@
     border: 0;
     box-shadow: none;
 
-
     .card-article-body {
         margin-top: 1rem;
         display: flex;
@@ -187,7 +183,7 @@
     }
 }
 
-.horizontalCard{
+.horizontalCard {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -195,19 +191,19 @@
     border-bottom: 0.5px solid #818181;
     padding: 2rem 0;
     cursor: pointer;
-    transition: background-color 1s, color 2s,box-shadow 1s,border 2s;
+    transition: background-color 1s, color 2s, box-shadow 1s, border 2s;
 
-    &:hover{
+    &:hover {
         background-color: #f6f8ff;
         box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
         border: none;
-        button{
+        button {
             background-color: $primary-color;
             color: #fff;
         }
     }
 
-    button{
+    button {
         background-color: #e1efff;
         color: #01105b;
         font-size: 18px;
@@ -217,19 +213,82 @@
         font-weight: bold;
         border: none;
     }
-    h2{
+    h2 {
         font-size: 20px;
     }
-    span{
+    span {
         font-size: 15px;
     }
-    .review{
+    .review {
         color: #01105b;
     }
 }
 
 @media (max-width: 700px) {
     .horizontalCard {
-      flex-direction: column;
+        flex-direction: column;
     }
-  }
+}
+
+.card-user-listing {
+    margin-top: 20px;
+    padding: 2rem;
+    padding-left: 6rem !important;
+    width: 847px !important;
+    border-radius: 20px;
+
+    ul li::marker {
+        color: #01105b;
+        font-size: 1.75rem;
+        margin-top: 10px;
+    }
+
+    li {
+        color: #616161;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+
+        button {
+            height: 4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            background: #8dbded;
+            border-radius: 10px;
+            color: white;
+            border: 0;
+        }
+    }
+}
+
+.card-faq {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 20rem !important;
+    height: 10rem !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    border-color: white;
+
+    transition: all 0.5s;
+
+    &:hover {
+        border-bottom-color: $primary-color;
+        border-bottom-width: 7px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    h2 {
+        text-align: center;
+        color: $primary-color;
+    }
+}
