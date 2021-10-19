@@ -1,9 +1,11 @@
-import { ALL_AGENTS, TOP_AGENTS } from "../../types";
+import { ALL_AGENTS, TOP_AGENTS, SEARCH_AGENT, SINGLE_AGENT } from "../../types";
 
 const initState = {
   error: null,
   agents: [],
   topAgents: [],
+  searchAgents: [],
+  singleAgent: {},
   agent: {},
   page: 1,
   prev: true,
@@ -25,6 +27,18 @@ export function getAgents(state = initState, action) {
       return {
         ...state,
         topAgents: payload,
+      };
+
+    case SEARCH_AGENT:
+      return {
+        ...state,
+        searchAgents: payload,
+      };
+
+    case SINGLE_AGENT:
+      return {
+        ...state,
+        singleAgent: payload,
       };
 
     default: {

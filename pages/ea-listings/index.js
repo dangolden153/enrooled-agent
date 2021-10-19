@@ -1,5 +1,4 @@
-import React, { useMemo, useState, useEffect } from "react";
-import {useSelector, useDispatch} from "react-redux";
+import React, { useMemo, useState } from "react";
 import Banner from "../../components/Banner";
 import EaListbanner from "../../public/images/banners/ea-listing.png";
 import Dummy from "../../public/images/card-man.png";
@@ -9,20 +8,16 @@ import { Star, StarFill } from "react-bootstrap-icons";
 import HorizontalCard from "../../components/HorizontalCard";
 import data from "../../components/AgentList.json";
 import Pagination from "../../components/Pagination";
-import { getAllAgents } from "../../src/redux/actions/agent";
-import avatar from '../../public/images/avatar.png'
+
 const index = () => {
-  const dispatch = useDispatch();
   let PageSize = 10;
-  useEffect(() => {
-    dispatch(getAllAgents());
-  }, []);
+
   const [currentPage, setCurrentPage] = useState(1);
-  const agents = useSelector((state) => state.getAgents.agents);
+
   const currentList = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    return agents.slice(firstPageIndex, lastPageIndex);
+    return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
   return (
     <div>
@@ -37,14 +32,13 @@ const index = () => {
       {/* Enrolled Agent List */}
       <div className=" agentList container">
         <h1>Enrolled Agents</h1>
-        {currentList.map((agent) => {
+        {currentList.map((item) => {
           return (
             <HorizontalCard
-              name={agent && agent.first_name + agent.first_name}
-              location={agent && agent.city + ',' + agent.state}
-              image={agent && (agent.image_url ?? avatar)}
-              numStars={agent.rating ?? "0"}
-              href={`agent/${agent.id}/${agent.first_name}`}
+              name={item.name}
+              location={item.location}
+              image={Dummy}
+              numStars={item.review}
             />
           );
         })}
@@ -56,7 +50,6 @@ const index = () => {
             totalCount={data.length}
             pageSize={PageSize}
             onPageChange={(page) => setCurrentPage(page)}
-            
           />
         </div>
       </div>

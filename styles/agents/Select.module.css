@@ -1,0 +1,8 @@
+.select {
+    width: 40%;
+    position: relative;
+    color: hsla(230, 98%, 18%, 1);
+    border: none;
+    text-align: center;
+    left: 220px;
+}
