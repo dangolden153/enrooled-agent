@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import Link from 'next/link';
 import { Star, StarFill } from "react-bootstrap-icons";
 
-const HorizontalCard = ({ name, location, image, numStars }) => {
+const HorizontalCard = ({ name, location, image, numStars,href }) => {
   const getStars = (max, stars) => {
     let starList = [];
     for (let i = 0; i < stars; i++) {
@@ -29,7 +30,7 @@ const HorizontalCard = ({ name, location, image, numStars }) => {
       <div className="review">
         {getStars(5, numStars)} <br /> {numStars} reviews
       </div>
-      <button>View Profile</button>
+      <Link href={href}><button>View Profile</button></Link>
     </div>
   );
 };
