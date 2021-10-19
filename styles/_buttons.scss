@@ -7,11 +7,7 @@
     margin-right: 13.5px;
     border-radius: 10px;
     border-width: 3px;
-
-    &:hover {
-        width: 12.05rem;
-        height: 3.05rem;
-    }
+    transition: all 0.5s;
 }
 
 .btn-primary {
@@ -34,6 +30,12 @@
     border-color: white;
     font-weight: bold;
     outline: none;
+
+    &:hover {
+        color: $primary-color !important;
+        background: white;
+        border-color: white;
+    }
 }
 
 .btn-outline-primary {
@@ -44,8 +46,9 @@
     outline: none;
 
     &:hover {
-        background: $primary-color;
-        border-color: darken($color: white, $amount: 30%);
+        color: $primary-color !important;
+        background: white;
+        border-color: white;
     }
 }
 
@@ -101,6 +104,6 @@
     .btn-common {
         margin-top: 2rem;
         width: 17rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
