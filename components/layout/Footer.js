@@ -34,7 +34,7 @@ const Footer = () => {
                 <Link href="https://www.instagram.com/enrolledagentdotcom"><Instagram size="25" /></Link>
               </div>
             </div>
-            <div className="col-lg-8 d-flex flex-row justify-content-center">
+            <div className="d-flex flex-row justify-content-center">
               <div className="col-6">
                 <ul className="footer-link-list">
                   <li className="footer-link">

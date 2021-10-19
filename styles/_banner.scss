@@ -25,16 +25,15 @@
         }
 
         .banner-extra {
-            font-size: 0.55rem;
-
+            font-size: 0.9rem;
+            text-align: center;
+            width: 80%;
         }
     }
-
 }
 
-
 @media (max-width: 800px) {
-    .banner{
+    .banner {
         background-position: center 100%;
     }
 }
