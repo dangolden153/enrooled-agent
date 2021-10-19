@@ -27,30 +27,24 @@ function MyApp({ Component, pageProps }) {
         </ToastProvider>
       );
     case "/auth/reset-password":
-      return <ToastProvider><Component {...pageProps} /></ToastProvider>;
+      return <Component {...pageProps} />;
     case "/dashboard":
       return (
-        <ToastProvider>
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-        </ToastProvider>
       );
     case "/dashboard/account":
       return (
-        <ToastProvider>
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-        </ToastProvider>
       );
     case "/dashboard/articles":
       return (
-        <ToastProvider>
         <DashboardLayout>
           <Component {...pageProps} />
         </DashboardLayout>
-        </ToastProvider>
       );
     default:
       return (
