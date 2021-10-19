@@ -9,17 +9,23 @@ import { useRouter } from "next/router";
 import { ToastProvider } from "react-toast-notifications";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    typeof document !== undefined
-      ? require("bootstrap/dist/js/bootstrap")
-      : null;
+    typeof document !== undefined ? require("bootstrap/dist/js/bootstrap") : null;
   }, []);
 
   const router = useRouter();
   switch (router.pathname) {
     case "/auth/login":
-      return <Component {...pageProps} />;
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
     case "/auth/register":
-      return <Component {...pageProps} />;
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
     case "/auth/reset-password":
       return <Component {...pageProps} />;
     case "/dashboard":

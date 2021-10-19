@@ -1,9 +1,9 @@
 // import Image from 'next/image'
 import React, { useState, useEffect } from "react";
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useToasts } from "react-toast-notifications";
 import { subscribeToMailingList } from "../src/services/common";
-import {getAgents} from "../src/redux/actions/agent";
+import { getTopAgents } from "../src/redux/actions/agent";
 import banner1 from "../public/images/banners/landing-page.png";
 import start1 from "../public/images/start-section1.png";
 import styles from "../styles/LandingPage.module.scss";
@@ -16,17 +16,18 @@ import StartSection from "../components/StartSection";
 import MostRequested from "../components/MostRequested";
 import RequestCallback from "../components/RequestCallback";
 import TaxVideo from "../widgets/TaxVideo";
+import Head from "next/head";
 export default function LandingPage() {
   const { addToast } = useToasts();
   const dispatch = useDispatch();
-  const agents = useSelector((state) => state.agents);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState({
     email: "",
   });
   useEffect(() => {
-      getAgents();
-  },[]);
+    dispatch(getTopAgents());
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
@@ -49,25 +50,38 @@ export default function LandingPage() {
     } catch (error) {
       setLoading(false);
       addToast(
-        `${
-          error.response.msg
-            ? error.response.msg
-            : "An error occured. Please try again."
-        }`,
+        `${error.response.msg ? error.response.msg : "An error occured. Please try again."}`,
         {
           appearance: "error",
           autoDismiss: true,
-        },
+        }
       );
     }
   };
   return (
+    <>
+      <Head>
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+            <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
+            <meta charset="UTF-8" />
+            <meta name="google" content="notranslate" />
+            <meta httpEquiv="Content-Language" content="en" />
+            <meta name="description" 
+            content="Find a tax professional for your tax requirements. 
+             Enrolled Agent has a list of verified tax practitioners. 
+             Search from the lists of irs enrolled agent ." />
+            <meta name="keywords"
+                content="consulting,finance,advisor,consultant,business,service,insurance,agency" />
+            <meta name="Enrolled Agent" content="Enrolled Agent" />
+
+            <title>Enrolled Agent Lookup | Find Tax Preparer |  IRS Enrolled Agent Search</title>
+        </Head>
     <div className={`col-12 justify-content-between ${styles.landingPage}`}>
       <Banner search background={banner1}>
         <h1 className="banner-title">Find Your Next IRS Enrolled Agent</h1>
         <h6 className="banner-extra">
-          Browse through our directory of over 60,000 professionals and engage
-          them for free
+          Browse through our directory of over 60,000 professionals and engage them for free
         </h6>
       </Banner>
 
@@ -152,5 +166,6 @@ export default function LandingPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

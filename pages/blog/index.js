@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/blog/SingleNews.module.css";
+import styles from "../../styles/blog/SingleNews.module.scss";
 import Image from "next/image";
 import Dollar from "../../public/images/dollars.png";
 import ArticleText from "../../components/ArticleText";

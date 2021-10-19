@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { ArrowLeft, PeopleFill, QuestionCircle, Clipboard, ChatDots, Gear, DoorOpen, ArrowRight } from 'react-bootstrap-icons'
 import Image from 'next/image'
 import profileImage from "../../../public/images/card-woman.png";
-
+import { useSelector } from "react-redux";
 const Sidebar = () => {
-
+const user = useSelector((state) => state.auth.user);
     const [toggled, setToggled] = useState(false)
 
     const items = [
@@ -37,7 +37,7 @@ const Sidebar = () => {
     return (
         <div className={toggled ? 'col-1' : 'col-2'}>
             <div className={`sidebar ${toggled ? 'sidebar-toggled' : ''} d-flex flex-column align-items-center justify-content-center`}>
-                <Image className='rounded-circle' src={profileImage} />
+                <Image className='rounded-circle' src={user?.imageUrl || profileImage} />
                 <ul>
                     {
                         items.map((item, index) => (

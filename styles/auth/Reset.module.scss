@@ -1,0 +1,34 @@
+.password_container{
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    .title{
+        font-weight: bold;
+        font-size: 30px;
+        color: #393939;
+    }
+    p{
+        font-size: 13px;
+        text-align: center;
+        color: #999999
+    }
+    label{
+        font-weight: normal;
+        font-size: 18px;
+        color: #777676;
+    }
+    input{
+        border: 1px solid #CBCBCB;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+    button{
+        background: #01105B;
+        border-radius: 5px;
+        .buttonTitle{
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+    }
+}

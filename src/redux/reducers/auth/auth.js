@@ -1,10 +1,4 @@
-import {
-  LOAD_USER,
-  LOGIN_SUCCESS,
-  LOGIN_FAIL,
-  LOGOUT,
-  AUTH_ERROR,
-} from "../../types";
+import { LOAD_USER, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, AUTH_ERROR } from "../../types";
 
 const initialState = {
   //token: window.localStorage.getItem("token") ? window.localStorage.getItem("token") : null,
@@ -26,12 +20,14 @@ export default function login(state = initialState, action) {
       };
     case LOGIN_SUCCESS:
       //localStorage.setItem("token", payload.token);
+      console.log("herere!!", payload.data);
       return {
         ...state,
         ...payload,
         isAuthenticated: true,
         loading: false,
-        user: payload,
+        user: payload.data,
+        token: payload.data.access_token,
       };
     case LOGIN_FAIL:
     case LOGOUT:

@@ -8,6 +8,6 @@ export const AUTH_ERROR = "AUTH_ERROR";
 //Logout
 export const LOGOUT = "LOGOUT";
 
-
 //AGENT
 export const ALL_AGENTS = "ALL_AGENTS";
+export const TOP_AGENTS = "TOP_AGENTS";
