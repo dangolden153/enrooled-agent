@@ -1,0 +1,166 @@
+.enrolled {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 50px;
+    width: 100%;
+}
+.agentList {
+    width: 100%;
+}
+.agents {
+    width: 1202px;
+    position: relative;
+    left: 270px;
+}
+.agentsmiddle {
+    background: hsla(230, 100%, 98%, 1);
+    width: 1200px;
+    position: relative;
+    left: 270px;
+    bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 5px 10px 15px;
+}
+#enrol {
+    color: hsla(230, 98%, 18%, 1);
+    font-family: DM Serif Display;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+}
+.line {
+    border: 0.5px solid hsla(0, 0%, 15%, 1);
+    width: 1200px;
+    position: relative;
+    left: 210px;
+}
+.dum {
+    position: relative;
+    left: 30px;
+    width: 170px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+}
+.ratings {
+    color: hsla(230, 98%, 18%, 1);
+    position: relative;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    left: 10px;
+}
+#span {
+    display: flex;
+}
+#texas {
+    font-family: DM Serif Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0em;
+}
+.dum p{
+    font-family: Proxima Nova;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+}
+.icon {
+    position: relative;
+    right: 10px;
+}
+.icon img{
+    border-radius: 50%;
+}
+
+.dummy {
+    display: flex;
+}
+.btn {
+    position: relative;
+    left: 10px;
+}
+.btn button{
+    background: hsla(212, 100%, 94%, 1);
+    width: 217px;
+    height: 57px;
+    color: hsla(230, 98%, 18%, 1);
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 5px;
+}
+.butt button{
+    background: hsla(230, 98%, 18%, 1);
+    width: 217px;
+    height: 57px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.range {
+    display: flex;
+    width: 45%;
+    left: 180px;
+    position: relative;
+}
+.sliderA {
+    width: 12%;
+    height: 33px;
+    background: #C4C4C4;
+    text-align: center;
+    border-radius: 50%;
+    color: black;
+    font-size: 23.5px;
+    font-weight: 700;
+    border: none; 
+    margin-right: 20px;
+} 
+.sliderB {
+    width: 12%;
+    height: 33px;
+    background: hsla(230, 98%, 18%, 1);
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 23.5px;
+    border: none; 
+    font-weight: 700;
+    margin-left: 20px;
+} 
+#numba {
+    font-size: 18px;
+    color: rgb(148, 147, 147);
+    padding-left: 20px;
+}
+.locale {
+    width: 100%;
+    position: relative;
+    left: 80px;
+}
+.butn button{
+    width: 261px;
+    height: 53px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 22px;
+    font-style: normal;
+    color: hsla(230, 98%, 18%, 1);
+    font-weight: 400;
+    border: 3px solid hsla(230, 98%, 18%, 1);
+}

@@ -16,11 +16,15 @@
 
         .btn-outline:hover {
             color: white;
-            font-size: 1.1rem;
         }
 
         .footer-up {
             margin-bottom: 3%;
+
+            .footer-btns {
+                display: flex;
+                justify-content: flex-end;
+            }
         }
 
         hr {
@@ -48,6 +52,10 @@
                     font-weight: bold;
                     margin-bottom: 20px;
                     width: 15rem;
+
+                    a:hover {
+                        color: white;
+                    }
 
                     &:hover {
                         cursor: pointer;
@@ -82,17 +90,27 @@
         padding-top: 2rem !important;
 
         .btn-outline {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
+            width: 8rem;
+            
+            &:hover {
+                width: 8rem;
+            }
         }
     }
 
     .footer-up {
         margin-bottom: 2rem !important;
         align-items: center;
+
+        .footer-btns {
+            margin-top: 1rem;
+            justify-content: flex-start !important;
+        }
     }
 
     .footer-link {
-        text-align: center;
+        font-size: 1rem !important;
     }
 
     .footer-link-list {

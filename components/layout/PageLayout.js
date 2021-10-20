@@ -10,15 +10,11 @@ const PageLayout = ({ children }) => {
             <Header />
 
             <div className="col-12">
-                <div className="row">
-                    <BlueNav />
-                </div>
-                <div className="row">
-                    <WhiteNav />
-                </div>
+                <BlueNav />
+                <WhiteNav />
             </div>
 
-            { children }
+            {children}
 
             <Footer />
         </div>

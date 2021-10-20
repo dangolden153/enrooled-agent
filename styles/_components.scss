@@ -287,14 +287,19 @@
         padding: 0 !important;
 
         .form-group {
+            flex-direction: column !important;
             padding-right: 5%;
             padding-left: 5%;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
         }
 
         input {
             margin: 0 !important;
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
             font-size: 0.7rem !important;
-            width: 45% !important;
+            width: 100% !important;
             height: 3rem !important;
             padding-left: 1rem !important;
         }
@@ -303,6 +308,7 @@
             width: 100% !important;
             font-size: 1rem;
             padding-left: 1rem !important;
+            margin-top: 1rem !important;
         }
 
         .form-btn-wrapper {

@@ -1,0 +1,47 @@
+.privacy {
+    padding-bottom: 100px;
+}
+.header {
+    color: white;
+    /* width: 512px; */
+    position: relative;
+    top: 311px;
+    left: -460px;
+    font-size: 40px;
+    font-weight: 400;
+}
+.P {
+    width: 100%;
+    font: italic;
+    font-size: 18px;
+    font-weight: 200;
+    padding-bottom: 50px;
+    padding-top: 15px;
+    padding-left: 100px;
+}
+.P1 {
+    width: 980px;
+    font-size: 18px;
+}
+.P2 {
+    width: 964px;
+    font-size: 18px;
+    font-weight: 200;
+    font: Roboto;
+} 
+.subHead1 {
+    font-size: 24px;
+    font-weight: 500;
+    font: Roboto;
+}
+.subHead2 {
+    font-size: 22px;
+    font-weight: 500;
+    font: Roboto;
+}
+.list li{
+    font-size: 18px;
+    font-weight: 400;
+    font: Roboto;
+    width: 964px;
+}
