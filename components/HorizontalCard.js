@@ -22,7 +22,7 @@ const HorizontalCard = ({ name, location, image, numStars }) => {
         width="100"
         height="100"
       />
-      <div>
+      <div> 
         <h2>{name}</h2>
         <span>{location}</span>
       </div>
