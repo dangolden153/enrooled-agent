@@ -9,8 +9,8 @@ const Footer = () => {
     <footer className="footer container-fluid">
       <div className="footer-inner">
         <div className="col-12">
-          <div className="row footer-up d-flex justify-content-between">
-            <div className="col-6">
+          <div className="col-sm-12 footer-up d-lg-flex flex-row justify-content-between">
+            <div className="col-sm-12 col-lg-6">
               <Image
                 src={logoImage}
                 alt="pixs"
@@ -19,7 +19,7 @@ const Footer = () => {
                 className=""
               />
             </div>
-            <div className="d-flex col-6 justify-content-end">
+            <div className="col-sm-12 col-lg-6 footer-btns">
               <button className="btn btn-outline">Sign Up</button>
               <button className="btn btn-outline">Login</button>
             </div>
@@ -34,7 +34,7 @@ const Footer = () => {
                 <Link href="https://www.instagram.com/enrolledagentdotcom"><Instagram size="25" /></Link>
               </div>
             </div>
-            <div className="col-lg-8 d-flex flex-row justify-content-center">
+            <div className="d-lg-flex flex-row justify-content-center">
               <div className="col-6">
                 <ul className="footer-link-list">
                   <li className="footer-link">
