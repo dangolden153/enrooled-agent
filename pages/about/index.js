@@ -21,12 +21,9 @@ const index = () => {
 
       <div className=" about-text">
         <p className="text-muted">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially
+        EnrolledAgent.com is an online marketplace for tax professionals. Our goal is to create an environment where anyone can access licensed tax professionals with ease. We also seek to promote the Enrolled Agent brand and be a resource platform for all tax professionals.
+
+EnrolledAgent.com LLC which owns EnrolledAgent.com is not affiliated with the Internal Revenue Service or any tax and accounting body.
         </p>
       </div>
 
