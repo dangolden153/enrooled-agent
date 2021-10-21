@@ -13,7 +13,7 @@ const index = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
-    phone: phone,
+    phone: "",
     subject: "",
     message: "",
   });
