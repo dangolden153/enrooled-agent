@@ -1,4 +1,6 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
+import {useSelector, useDispatch} from "react-redux";
+import { useRouter } from "next/router";
 import Banner from "../../components/Banner";
 import EaListbanner from "../../public/images/banners/ea-listing.png";
 import Dummy from "../../public/images/card-man.png";
@@ -8,17 +10,32 @@ import { Star, StarFill } from "react-bootstrap-icons";
 import HorizontalCard from "../../components/HorizontalCard";
 import data from "../../components/AgentList.json";
 import Pagination from "../../components/Pagination";
-
+import {getAllAgents} from "../../src/redux/actions/agent";
 const index = () => {
   let PageSize = 10;
-
   const [currentPage, setCurrentPage] = useState(1);
-
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const agents = useSelector((state) => state.getAgents.agents);
+    const [isLoading, setLoading] = useState(true);
   const currentList = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
     const lastPageIndex = firstPageIndex + PageSize;
-    return data.slice(firstPageIndex, lastPageIndex);
+    return agents.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
+
+    const handleGetAllAgents = async () => {
+      const res = await dispatch(getAllAgents());
+      if (res) setLoading(false);
+    };
+
+    useEffect(() => {
+      if (router.isReady) handleGetAllAgents();
+    }, [router]);
+
+    if (isLoading) {
+      return <p>Loading</p>;
+    }
   return (
     <div>
       {/* Banner */}
@@ -32,13 +49,13 @@ const index = () => {
       {/* Enrolled Agent List */}
       <div className=" agentList container">
         <h1>Enrolled Agents</h1>
-        {currentList.map((item) => {
+        {agents && currentList.map((agent) => {
           return (
             <HorizontalCard
-              name={item.name}
-              location={item.location}
+              name={agent.name}
+              location={agent.location}
               image={Dummy}
-              numStars={item.review}
+              numStars={agent.review}
             />
           );
         })}
