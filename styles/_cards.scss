@@ -250,11 +250,20 @@
         flex-direction: column;
         width: 300px;
 
-        button {
+        .input_not_filled_btn {
             height: 4rem;
             margin-top: 2rem;
             margin-bottom: 1rem;
             background: #8dbded;
+            border-radius: 10px;
+            color: white;
+            border: 0;
+        }
+        .input_filled_btn {
+            height: 4rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            background: #02145B;
             border-radius: 10px;
             color: white;
             border: 0;
