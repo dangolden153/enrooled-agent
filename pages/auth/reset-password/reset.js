@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "../../styles/auth/Reset.module.scss"
+import styles from "../../../styles/auth/Reset.module.scss"
 const reset = () => {
     return (
       <div>
