@@ -7,6 +7,7 @@ import { wrapper } from "../src/redux/store";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { ToastProvider } from "react-toast-notifications";
+
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     typeof document !== undefined ? require("bootstrap/dist/js/bootstrap") : null;
@@ -27,6 +28,10 @@ function MyApp({ Component, pageProps }) {
         </ToastProvider>
       );
     case "/auth/reset-password":
+      return <Component {...pageProps} />;
+    case "/auth/reset-password/success":
+      return <Component {...pageProps} />;
+    case "/auth/reset-password/reset":
       return <Component {...pageProps} />;
     case "/dashboard":
       return (

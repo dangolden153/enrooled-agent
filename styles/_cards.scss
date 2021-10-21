@@ -79,8 +79,6 @@
 
 .card-video {
     margin-top: 4rem;
-    // height: 100%;
-    // margin-bottom: 4rem;
 }
 
 @media only screen and (min-width: 991px) {
@@ -290,5 +288,25 @@
     h2 {
         text-align: center;
         color: $primary-color;
+    }
+}
+
+.content-wrapper {
+    .card-auth {
+        width: 505px;
+        height: 320px;
+    
+        .image-wrapper {
+            width: 120px;
+            height: 120px;
+        }
+
+        h6 {
+            color: $primary-color;
+        }
+    }
+
+    span {
+        color: #999999;
     }
 }
