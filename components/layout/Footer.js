@@ -20,8 +20,8 @@ const Footer = () => {
               />
             </div>
             <div className="col-sm-12 col-lg-6 footer-btns">
-              <button className="btn btn-outline">Sign Up</button>
-              <button className="btn btn-outline">Login</button>
+              <Link href="/auth/register"><button className="btn btn-outline">Sign Up</button></Link>
+              <Link href="/auth/login"><button className="btn btn-outline">Login</button></Link>
             </div>
           </div>
           <hr />

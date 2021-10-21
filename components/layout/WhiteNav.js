@@ -2,10 +2,28 @@ import React from "react";
 import Image from "next/image";
 import NavLink from "./NavLink";
 import logoImage from "../../public/logo.png";
-
+import Head from "next/head";
+import Script from "next/script";
 const WhiteNav = () => {
   return (
     <nav className="navbar white-nav navbar-expand-lg navbar-light">
+      <Head>
+        <Script strategy="lazyOnload">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MMHPJG4');
+        `}
+        </Script>
+      </Head>
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMHPJG4"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+        }}
+      />
       <div className="w-100 bar d-lg-flex align-items-center justify-content-between">
         <a className="navbar-brand" href="/">
           <Image src={logoImage} />
@@ -38,9 +56,9 @@ const WhiteNav = () => {
               </NavLink>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <NavLink href="/what-is-an-ea">
+                  <NavLink href="/who-is-an-ea">
                     <a className="dropdown-item" href="/">
-                      What is an Enrolled Agent (EA)?
+                      Who is an Enrolled Agent (EA)?
                     </a>
                   </NavLink>
                 </li>
