@@ -7,8 +7,9 @@ const BlueNav = () => {
     return (
         <div className='row nav blue-nav justify-content-between'>
             <div className="col-6">
-                <h5><Telephone color='white' /> 1-855-22-AGENT</h5>
-                <h5><Envelope color='white' /> info@enrolledagent.com</h5>
+                <Link href="tel:+18552224368"><h5><Telephone color='white' /> 1-855-22-AGENT</h5></Link>
+                <Link href="mailto:info@enrolledagent.com"><h5><Envelope color='white' /> info@enrolledagent.com</h5></Link>
+                
             </div>
             <div className="d-flex col-6 justify-content-end">
                 {isAuthenticated ?
