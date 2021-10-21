@@ -76,14 +76,14 @@ const index = () => {
                 <b>Personal Information</b>
               </p>
               <hr />
-              {agentData?.showAddress && (
+              {agentData?.showAddress ? (
                 <div className={styles.contactDetails}>
                   <p id={styles.phone}>
                     <b>Address: </b>
                   </p>
                   <p id={styles.phone2}>{agentData?.address1}</p>
                 </div>
-              )}
+              ): <></>}
               <div className={styles.contactDetails}>
                 <p id={styles.phone}>
                   <b>Phone number: </b>
@@ -106,7 +106,23 @@ const index = () => {
                 </Link>
               </div>
 
+              <div className={`${styles.claim_button} text-center`}>
+                  {agentData?.is_claimed ? 
+                  <div className={styles.claimed}>
+                  <Link href="">
+                    <button>Listing Claimed</button>
+                  </Link>
+                </div>
+                    :  
+                   <div className={styles.not_claimed}>
+                  <Link href="">
+                    <button>CLaim Listing</button>
+                  </Link>
+                </div>
+                }
+              </div>
               <div className={styles.buttons}>
+              
                 <div className={styles.butt}>
                   <Link href={agentData?.phone ? `tel:${agentData?.phone}` : "#"}>
                     <button>Call</button>
@@ -163,7 +179,19 @@ const index = () => {
               </div>
 
               <div className={styles.enroledDetail}>
-                <p>{agentData?.bio}</p>
+                {agentData?.bio ? (
+
+                  <p>{agentData?.bio}</p>
+                  ) : (
+                  
+                  <p>
+                  {agentData?.first_name} {agentData?.last_name} is an Enrolled Agent who operates in and around ELK GROVE. 
+                  {agentData?.first_name} {agentData?.last_name} is admitted to practice unrestricted before the Internal Revenue Service and can represent clients throughout the United States. 
+                  {agentData?.first_name} {agentData?.last_name} is an EnrolledAgent.com verified Enrolled Agent. 
+                  Enrolled Agent status is the highest credential awarded by the Internal Revenue Service.
+                  {agentData?.first_name} {agentData?.last_name}'s Enrolled Agent credential is recognized across all 50 US states.
+                  </p>
+                )}
               </div>
             </div>
 
