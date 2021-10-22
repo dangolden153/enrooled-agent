@@ -1,0 +1,84 @@
+ .text{
+     margin-top: 60px;
+     margin-bottom: 60px;
+     h1{
+         color: #222222;
+         font-size: 38px;
+     }
+     p{
+         color: #222222;
+         font-size: 20px;
+     }
+     span{
+         color: #222222;
+         font-size: 16px;
+         font-weight: lighter;
+     }
+ }
+
+ .cards{
+     margin-bottom: 100px;
+     h2{
+         color: #000;
+     }
+     p{
+         color: #534a4a;
+     }
+     h1{
+         color: #534a4a;
+     }
+ }
+
+ .btn3{
+     margin-bottom: -24rem;
+     border: 1px solid #01105b;
+     color: #01105b;
+     &:hover{
+                
+        background-color: #01105b;
+        color: #fff
+    }
+ }
+ .btn2{
+     margin-bottom: -27rem;
+     border: 1px solid #01105b;
+     color: #01105b;
+     &:hover{
+                
+        background-color: #01105b;
+        color: #fff
+    }
+ }
+ .btn1{
+     margin-bottom: -16rem;
+     border: 1px solid #01105b;
+     color: #01105b;
+     &:hover{
+                
+        background-color: #01105b;
+        color: #fff
+    }
+ }
+
+ .start{
+     margin-bottom: 110px;
+     h1{
+         color: #000;
+     }
+     p{
+         font-size: 22px;
+         color: #474747;
+     }
+     button{
+        background-color: #01105b;
+        color: #fff;
+        width: 200px;
+        &:hover{
+            border: 1px solid #01105b;
+            background-color: #fff;
+            color: #01105b;
+            width: 220px;
+           
+       }
+     }
+ }
