@@ -25,7 +25,7 @@ const CityList = () => {
                 cityGroups.slice(0, 64).map((group, index) => (
                     <div key={index} className="city-list d-flex flex-column col-3">
                         {group.map((item, index) => (
-                            <Link key={index} href="">{item.name}</Link>
+                            <Link key={index} href={`agents/${item.name}`}>{item.name}</Link>
                         )
                         )}
                     </div>

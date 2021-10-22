@@ -16,3 +16,5 @@ export const SINGLE_AGENT = "SINGLE_AGENT";
 
 //City
 export const ALL_CITIES = "ALL_CITIES";
+export const STATE_AGENT = "STATE_AGENT";
+export const CITY_AGENT = "CITY_AGENT"; 

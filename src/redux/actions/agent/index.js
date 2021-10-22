@@ -1,5 +1,5 @@
 import { axiosWithoutAuth } from "../../../utils/axiosInstance";
-import { ALL_AGENTS, TOP_AGENTS, SEARCH_AGENT, SINGLE_AGENT } from "../../types";
+import { ALL_AGENTS, TOP_AGENTS, SEARCH_AGENT, CITY_AGENT, STATE_AGENT, SINGLE_AGENT } from "../../types";
 
 export const getAllAgents = () => async (dispatch) => {
   try {
@@ -34,6 +34,38 @@ export const searchAgent =
       console.log("search agents", res.data.data);
       dispatch({
         type: SEARCH_AGENT,
+        payload: res.data.data,
+      });
+      return res.data.data;
+    } catch (error) {
+      console.log("error", error);
+      return error;
+    }
+  };
+export const cityAgent =
+  ({ city, lName }) =>
+  async (dispatch) => {
+    try {
+      const res = await axiosWithoutAuth.get(`/agent/${city}`);
+      console.log("city agents", res.data.data);
+      dispatch({
+        type: CITY_AGENT,
+        payload: res.data.data,
+      });
+      return res.data.data;
+    } catch (error) {
+      console.log("error", error);
+      return error;
+    }
+  };
+export const stateAgent =
+  ({ state }) =>
+  async (dispatch) => {
+    try {
+      const res = await axiosWithoutAuth.get(`/agents/${state}`);
+      console.log("city agents", res.data.data);
+      dispatch({
+        type: STATE_AGENT,
         payload: res.data.data,
       });
       return res.data.data;
