@@ -1,0 +1,61 @@
+$blue: #01105B;
+
+.bannerInner {
+    height: 30rem !important;
+
+    button {
+        height: 3.5rem;
+        width: 3.5rem !important;
+        border-width: 1px;
+        border-color: $blue;
+        background: $blue;
+        z-index: 0 !important;
+
+        &:hover {
+            height: 3.5rem !important;
+            background: $blue;
+            border-color: $blue;
+        }
+    }
+}
+
+.searchbar {
+    width: 40% !important;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 991px) {
+    .searchbar {
+        width: 30% !important;
+    }
+}
+
+.letters {
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.letterz {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.letter {
+    height: 3.5rem;
+    width: 3.5rem !important;
+    border-color: $blue !important;
+    border-width: 1px !important;
+    border-radius: 5px;
+    padding: 1rem !important;
+    background: white !important;
+    color: $blue !important;
+    transition: color 1s;
+
+    &:hover {
+        background: $blue !important;
+        color: white !important;
+    }
+}

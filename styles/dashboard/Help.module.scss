@@ -1,53 +1,31 @@
-$primary-color: #0f1f73;
-$secondary-color: #818181;
-
-.faqLeft {
-    h1 {
-        font-size: 4.5rem;
-        font-weight: 400;
-        color: $primary-color;
-        width: 400px;
+.help{
+    margin-left: 150px;
+    margin-top: 10px;
+    margin-right: 60px;
+    margin-bottom: 60px;
+    padding: 50px !important;
+    h2{
+        color: #01105b;
+        text-align: center;
     }
-
-    margin-top: 5%;
-
-    form {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        padding-left: 15%;
-        padding-right: 15%;
-        width: 75% !important;
-
-        button {
-            height: 3.5rem;
-            width: 3.5rem !important;
-            border-width: 1px;
-            border-color: $secondary-color;
-
-            &:hover {
-                height: 3.5rem !important;
-            }
-        }
-    }
-
-    p {
-        width: 27rem !important;
-
-        span {
-            color: $primary-color;
-            font-weight: bold;
-        }
+    span{
+        color: #01105b;
+        font-size: 16px;
+        text-align: center;
     }
 }
 
-.popular {
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 5rem;
-}
-
-.accordion {
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 5rem;
+.accordion{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    h2{
+        color: #333346 !important;
+    }
+    span{
+        font-size: 14px;
+        color: #676767;
+    }
+    h4{
+        color: #7d7d80;
+    }
 }

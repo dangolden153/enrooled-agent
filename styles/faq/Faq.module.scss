@@ -1,0 +1,53 @@
+$primary-color: #0f1f73;
+$secondary-color: #818181;
+
+.faqLeft {
+    h1 {
+        font-size: 4.5rem;
+        font-weight: 400;
+        color: $primary-color;
+        width: 400px;
+    }
+
+    margin-top: 5%;
+
+    form {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 15%;
+        padding-right: 15%;
+        width: 75% !important;
+
+        button {
+            height: 3.5rem;
+            width: 3.5rem !important;
+            border-width: 1px;
+            border-color: $secondary-color;
+
+            &:hover {
+                height: 3.5rem !important;
+            }
+        }
+    }
+
+    p {
+        width: 27rem !important;
+
+        span {
+            color: $primary-color;
+            font-weight: bold;
+        }
+    }
+}
+
+.popular {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5rem;
+}
+
+.accordion {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 5rem;
+}

@@ -10,7 +10,9 @@ import { ToastProvider } from "react-toast-notifications";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    typeof document !== undefined ? require("bootstrap/dist/js/bootstrap") : null;
+    typeof document !== undefined
+      ? require("bootstrap/dist/js/bootstrap")
+      : null;
   }, []);
 
   const router = useRouter();
@@ -28,33 +30,61 @@ function MyApp({ Component, pageProps }) {
         </ToastProvider>
       );
     case "/auth/reset-password":
-      return <ToastProvider><Component {...pageProps} /></ToastProvider>;
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
     case "/auth/reset-password/success":
-      return <ToastProvider><Component {...pageProps} /></ToastProvider>;
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
     case "/auth/reset-password/reset":
-      return <ToastProvider><Component {...pageProps} /></ToastProvider>;
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
     case "/dashboard":
       return (
         <ToastProvider>
-        <DashboardLayout>
-          <Component {...pageProps} />
-        </DashboardLayout>
+          <DashboardLayout>
+            <Component {...pageProps} />
+          </DashboardLayout>
         </ToastProvider>
       );
     case "/dashboard/account":
       return (
         <ToastProvider>
-        <DashboardLayout>
-          <Component {...pageProps} />
-        </DashboardLayout>
+          <DashboardLayout>
+            <Component {...pageProps} />
+          </DashboardLayout>
+        </ToastProvider>
+      );
+    case "/dashboard/help":
+      return (
+        <ToastProvider>
+          <DashboardLayout>
+            <Component {...pageProps} />
+          </DashboardLayout>
         </ToastProvider>
       );
     case "/dashboard/articles":
       return (
         <ToastProvider>
-        <DashboardLayout>
-          <Component {...pageProps} />
-        </DashboardLayout>
+          <DashboardLayout>
+            <Component {...pageProps} />
+          </DashboardLayout>
+        </ToastProvider>
+      );
+    case "/dashboard/articles/new":
+      return (
+        <ToastProvider>
+          <DashboardLayout>
+            <Component {...pageProps} />
+          </DashboardLayout>
         </ToastProvider>
       );
     default:
