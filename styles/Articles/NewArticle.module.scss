@@ -1,0 +1,59 @@
+.new{
+    margin-left: 150px;
+    margin-top: 10px;
+    margin-right: 60px;
+    margin-bottom: 60px;
+    h2{
+        color: #01105b;
+        
+    }
+    p{
+        color: #262d2d;
+        font-size: 16px;
+        text-align: center;
+        padding: 0 70px;
+    }
+}
+
+.cards{
+    padding: 40px;
+    input,select{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        margin-bottom: 20px;
+        color: #cecece;
+        &:focus{
+            outline: none !important;
+            border-color: #fff !important;
+            box-shadow: none !important;
+        }
+    }
+    textarea{
+        margin-bottom: 20px;
+        color: #cecece;
+    }
+
+    button{
+        background-color: #01105b;
+        color: #fff;
+        width: 170px;
+        &:hover{
+            background-color: #fff;
+            color: #01105b;
+            width: 190px;
+        }
+        &:focus{
+            outline: none !important;
+            border-color: #fff !important;
+            box-shadow: none !important;
+        }
+    }
+
+}
+
+.control :focus{
+    outline: none !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+}
