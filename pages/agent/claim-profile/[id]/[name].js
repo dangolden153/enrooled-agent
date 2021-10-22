@@ -18,7 +18,7 @@ import styles from "../../../../styles/agents/ClaimProfile.module.scss";
 import { getSingleAgent } from "../../../../src/redux/actions/agent";
 import avatar from "../../../../public/images/avatar.png";
 import { useToasts } from "react-toast-notifications";
-import { claimAgentAccount } from "../../../../src/services/user";
+import { claimAgentAccount } from "../../../../src/services/agent";
 library.add(fab, faLinkedin);
 library.add(fab, faFacebook);
 library.add(fab, faTwitter);
