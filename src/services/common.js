@@ -8,4 +8,3 @@ export const subscribeToMailingList = asyncHandler(
   async (data) => await axios.post(`/`, data),
 );
 
-

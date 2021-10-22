@@ -23,10 +23,14 @@ const TopRated = () => {
             return (
               <TopRatedCard
                 key={index}
-                image={agent.agent && (agent.agent.image_url ?? avatar)}
-                name={agent.agent && agent.agent.first_name + agent.agent.first_name}
-                location={agent.agent && agent.agent.city + "," + agent.agent.state}
-                numStars={agent.rating}
+                image={avatar}
+                name={
+                  agent && agent.first_name +"," + agent.last_name
+                }
+                location={
+                  agent && agent.city + "," + agent.state
+                }
+                numStars={agent.rating ?? 0}
                 profileLink={`agent/${agent.id}/${agent.first_name}-${agent.last_name}`}
               />
             );

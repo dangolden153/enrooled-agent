@@ -30,7 +30,7 @@ export const searchAgent =
   ({ data, lName }) =>
   async (dispatch) => {
     try {
-      const res = await axiosWithoutAuth.get(`/agents/search?data=${data}&data=${lName}`);
+      const res = await axiosWithoutAuth.get(`/all-agents-search?data=${data}&data=${lName}`);
       console.log("search agents", res.data.data);
       dispatch({
         type: SEARCH_AGENT,

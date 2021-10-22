@@ -1,5 +1,8 @@
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { useRouter } from "next/router";
 import Image from "next/image";
-import Smilie from "../../../public/images/PP.png";
+import Smilie from "../../../../public/images/PP.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -11,31 +14,112 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 // import styles from "../../../styles/agents/viewagent.module.scss";
-import styles from "../../../styles/agents/ClaimProfile.module.scss";
+import styles from "../../../../styles/agents/ClaimProfile.module.scss";
+import { getSingleAgent } from "../../../../src/redux/actions/agent";
+import avatar from "../../../../public/images/avatar.png";
+import { useToasts } from "react-toast-notifications";
+import { claimAgentAccount } from "../../../../src/services/user";
 library.add(fab, faLinkedin);
 library.add(fab, faFacebook);
 library.add(fab, faTwitter);
 library.add(fab, faInstagram);
 
 const ClaimProfile = () => {
+  const router = useRouter();
+  const { addToast } = useToasts();
+  const dispatch = useDispatch();
+  const agentData = useSelector((state) => state.getAgents.singleAgent);
+  const [data, setData] = useState({
+    job_role: "",
+    company_size: "",
+    company_name: "",
+    company_revenue: "",
+    organization_type: "",
+    annual_tax: "",
+    agent_id: agentData.id,
+  });
+  const [isLoading, setLoading] = useState(true);
+
+  const handleGetAgent = async () => {
+    const res = await dispatch(getSingleAgent(router.query));
+    if (res) setLoading(false);
+  };
+
+  useEffect(() => {
+    if (router.isReady) handleGetAgent();
+  }, [router]);
+
+  if (isLoading) {
+    return <p>Loading</p>;
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const {
+      job_role,
+      company_size,
+      company_name,
+      company_revenue,
+      organization_type,
+      annual_tax,
+      agent_id
+    } = data;
+    try {
+      setLoading(true);
+      let response = await claimAgentAccount(data);
+      if (response) {
+        if (response.data) {
+          addToast("Your claim request has been sent successfully!", {
+            appearance: "success",
+            autoDismiss: true,
+          });
+        }
+        setLoading(false);
+      }
+    } catch (error) {
+      setLoading(false);
+      addToast(
+        `${
+          error.response.msg
+            ? error.response.msg
+            : "An error occured. Please try again."
+        }`,
+        {
+          appearance: "error",
+          autoDismiss: true,
+        },
+      );
+    }
+  };
   return (
     <div className="container">
       <div className={` row ${styles.container}`}>
         <div className="col-md-4">
           <div>
-            <Image src={Smilie} alt="An icon of a lady" />
+            <Image
+              src={agentData?.image_url || avatar}
+              alt="An icon of a lady"
+            />
           </div>
           <div className={styles.info}>
             <p className="border-bottom">Personal Information</p>
 
             <div className={styles.contactDetails}>
               <p id={styles.phone}>
-                Address: <span className="text-muted">EVERGREEN, NC 28438</span>
+                Address:{" "}
+                <span className="text-muted">
+                  {agentData?.address1 || agentData?.city}, {agentData?.state}
+                </span>
               </p>
             </div>
             <div className={styles.contactDetails}>
               <p id={styles.phone}>
-                Phone number: <span className="text-muted">404-862-9929</span>
+                Phone number:{" "}
+                <span className="text-muted">{agentData?.phone}</span>
               </p>
             </div>
 
@@ -92,7 +176,13 @@ const ClaimProfile = () => {
                     <label required className="form-control-label  ">
                       Job Role<span className="text-danger">*</span>
                     </label>
-                    <input type="text" className="form-control" required />
+                    <input type="text" className="form-control" 
+                        name="job_role"
+                        value={data.job_role}
+                        onChange={handleChange}
+                        disabled={loading ? true : false}
+                        required
+                    />
                   </div>
                   <div className="col-md-6">
                     <label className="form-control-label ">
@@ -102,7 +192,11 @@ const ClaimProfile = () => {
                       required
                       type="text"
                       className="form-control"
-                      required
+                      name="company_name"
+                        value={data.company_name}
+                        onChange={handleChange}
+                        disabled={loading ? true : false}
+                        required
                     />
                   </div>
                   <div className="col-md-6">
@@ -112,6 +206,11 @@ const ClaimProfile = () => {
                     <select
                       className="form-select"
                       aria-label="Default select example"
+                       name="company_size"
+                        value={data.company_size}
+                        onChange={handleChange}
+                        disabled={loading ? true : false}
+                        required
                     >
                       <option selected>Company Size</option>
                       <option value="1">One</option>
@@ -126,6 +225,11 @@ const ClaimProfile = () => {
                     <select
                       className="form-select"
                       aria-label="Default select example"
+                        name="organization_type"
+                        value={data.organization_type}
+                        onChange={handleChange}
+                        disabled={loading ? true : false}
+                        required
                     >
                       <option selected>Organization Type</option>
                       <option value="1">One</option>
@@ -140,6 +244,11 @@ const ClaimProfile = () => {
                     <select
                       className="form-select"
                       aria-label="Default select example"
+                        name="company_revenue"
+                        value={data.company_revenue}
+                        onChange={handleChange}
+                        disabled={loading ? true : false}
+                        required
                     >
                       <option selected>Company Revenue</option>
                       <option value="1">One</option>
@@ -154,6 +263,11 @@ const ClaimProfile = () => {
                     <select
                       className="form-select"
                       aria-label="Default select example"
+                        name="annual_tax"
+                        value={data.annual_tax}
+                        onChange={handleChange}
+                        disabled={loading ? true : false}
+                        required
                     >
                       <option selected>Annual Tax Returns</option>
                       <option value="1">One</option>
