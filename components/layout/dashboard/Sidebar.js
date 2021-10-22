@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowLeft, PeopleFill, QuestionCircle, Clipboard, ChatDots, Gear, DoorOpen, ArrowRight } from 'react-bootstrap-icons'
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from 'next/link';
 import profileImage from "../../../public/images/card-woman.png";
 import { useSelector } from "react-redux";
 const Sidebar = () => {
@@ -10,27 +11,33 @@ const user = useSelector((state) => state.auth.user);
     const items = [
         {
             icon: <PeopleFill />,
-            text: 'My Listing'
+            text: 'My Listing',
+            href: 'dashboard'
         },
         {
             icon: <QuestionCircle />,
-            text: 'Ask an EA'
+            text: 'Ask an EA',
+            href: 'dashboard/ask-ea'
         },
         {
             icon: <Clipboard />,
-            text: 'Articles'
+            text: 'Articles',
+            href: 'dashboard/articles'
         },
         {
             icon: <ChatDots />,
-            text: 'Messages'
+            text: 'Messages',
+            href: 'dashboard/messages'
         },
         {
             icon: <Gear />,
-            text: 'Account Details'
+            text: 'Account Details',
+            href: 'dashboard/account'
         },
         {
             icon: <DoorOpen />,
-            text: 'Logout'
+            text: 'Logout',
+            href: ""
         }
     ]
 
@@ -41,7 +48,7 @@ const user = useSelector((state) => state.auth.user);
                 <ul>
                     {
                         items.map((item, index) => (
-                            <li key={index}>{item.icon} <span className={toggled ? 'd-none' : 'd-inline'}>{item.text}</span></li>
+                           <Link href={item.href}><li key={index}>{item.icon} <span className={toggled ? 'd-none' : 'd-inline'}>{item.text}</span></li></Link>
                         ))
                     }
                 </ul>

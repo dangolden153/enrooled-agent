@@ -1,9 +1,11 @@
 import React from "react";
+import {useSelector} from "react-redux";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
 const Header = () => {
   const router = useRouter();
+  const user = useSelector((state) => state.auth.user);
   let pageName = "";
 
   switch (router.pathname) {

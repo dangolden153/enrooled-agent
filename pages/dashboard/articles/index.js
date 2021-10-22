@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from '../../../styles/Articles/AgentArticle.module.scss'
-
+import Link from 'next/link';
 const index = () => {
     return (
         <div className={styles.agentArticle}>
 
             <div className={styles.postArticle}>
                 <div className={styles.ask}><h2>Articles posted by you</h2></div>
-                <div className={styles.right}><button>Write New Articles</button></div>
+               <Link href="dashboard/articles/new"><div className={styles.right}><button>Write New Articles</button></div></Link>
             </div>
 
             <div className={styles.questions}>
