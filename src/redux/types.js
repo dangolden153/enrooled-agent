@@ -13,3 +13,8 @@ export const ALL_AGENTS = "ALL_AGENTS";
 export const TOP_AGENTS = "TOP_AGENTS";
 export const SEARCH_AGENT = "SEARCH_AGENTS";
 export const SINGLE_AGENT = "SINGLE_AGENT";
+
+//City
+export const ALL_CITIES = "ALL_CITIES";
+export const STATE_AGENT = "STATE_AGENT";
+export const CITY_AGENT = "CITY_AGENT"; 

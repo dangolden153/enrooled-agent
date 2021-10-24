@@ -1,13 +1,19 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/globals.scss";
+import "../styles/nprogress.scss";
 import PageLayout from "../components/layout/PageLayout";
 import DashboardLayout from "../components/layout/dashboard/DashboardLayout";
 import { wrapper } from "../src/redux/store";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { ToastProvider } from "react-toast-notifications";
-
+import { AnimatePresence } from 'framer-motion'
+import Router from "next/router";
+import nProgress from "nprogress";
+Router.events.on("routeChangeStart", nProgress.start);
+Router.events.on("routeChangeError", nProgress.done);
+Router.events.on("routeChangeComplete", nProgress.done);
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     typeof document !== undefined
@@ -91,7 +97,14 @@ function MyApp({ Component, pageProps }) {
       return (
         <ToastProvider>
           <PageLayout>
-            <Component {...pageProps} />
+            <AnimatePresence
+                exitBeforeEnter
+                initial={false}
+                onExitComplete={() => window.scrollTo(0, 0)}
+            >
+                <Component {...pageProps} />
+            </AnimatePresence>
+            
           </PageLayout>
         </ToastProvider>
       );

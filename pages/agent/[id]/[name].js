@@ -115,7 +115,7 @@ const index = () => {
                 </div>
                     :  
                    <div className={styles.not_claimed}>
-                  <Link href="">
+                  <Link href={`agent/claim-profile/${agentData?.id}/${agentData?.first_name}-${agentData?.last_name}`}>
                     <button>CLaim Listing</button>
                   </Link>
                 </div>

@@ -1,10 +1,12 @@
-import { ALL_AGENTS, TOP_AGENTS, SEARCH_AGENT, SINGLE_AGENT } from "../../types";
+import { ALL_AGENTS, TOP_AGENTS, SEARCH_AGENT, CITY_AGENT, STATE_AGENT, SINGLE_AGENT } from "../../types";
 
 const initState = {
   error: null,
   agents: [],
   topAgents: [],
   searchAgents: [],
+  cityAgents: [],
+  stateAgents: [],
   singleAgent: {},
   agent: {},
   page: 1,
@@ -33,6 +35,16 @@ export function getAgents(state = initState, action) {
       return {
         ...state,
         searchAgents: payload,
+      };
+    case CITY_AGENT:
+      return {
+        ...state,
+        cityAgents: payload,
+      };
+    case STATE_AGENT:
+      return {
+        ...state,
+        stateAgents: payload,
       };
 
     case SINGLE_AGENT:
