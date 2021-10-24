@@ -3,7 +3,7 @@ $primary-color: #0F1F73;
 .newsAndArticles {
     margin-top: 5rem;
     margin-bottom: 5rem;
-
+ 
     h1,
     h2,
     h3,
@@ -18,8 +18,7 @@ $primary-color: #0F1F73;
     }
 
     .header {
-        padding-left: 7.5%;
-        padding-right: 7.5%;
+        
 
         h1 {
             font-size: 2.2rem;
@@ -31,5 +30,103 @@ $primary-color: #0F1F73;
         margin-bottom: 1.5rem;
         opacity: 0.5;
         color: black !important;
+    }
+
+    .dev{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        padding:0 14px 14px 14px;
+        margin-bottom: 23px;
+        button{
+            margin-left: 0 !important;
+            color: #000;
+            border: 1px solid #000;
+            width: 120px;
+            &:focus{
+                outline: none !important;
+            border-color: #fff !important;
+            box-shadow: none !important;
+            }
+        }
+        &:hover{
+            background-color: #e1efff;
+            button{
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+
+    .buttn{
+        margin-top: 10px;
+        text-align: right;
+        button{
+            background-color: #01105b;
+            color: #fff;
+            width: 250px;
+            &:hover{
+                color: #01105b;
+                background-color: #fff;
+                border: 1px solid #01105b;
+                width: 270px;
+            }
+            &:focus{
+                outline: none !important;
+                border-color: #fff !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+    .buttn2{
+        margin-top: 10px;
+        text-align: center;
+        button{
+            background-color: #01105b;
+            color: #fff;
+            width: 160px;
+            &:hover{
+                color: #01105b;
+                background-color: #fff;
+                border: 1px solid #01105b;
+                width: 180px;
+            }
+            &:focus{
+                outline: none !important;
+                border-color: #fff !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    .cardArticle{
+        border: none !important;
+        box-shadow: none !important;
+        padding: 10px;
+        margin-bottom: 1rem;
+        p{
+            font-weight: bold;
+            width: 250px;
+            margin-top: 23px;
+        }
+        button{
+            margin-left: 0 !important;
+            color: #000;
+            border: 1px solid #000;
+            width: 120px;
+            &:focus{
+                outline: none !important;
+            border-color: #fff !important;
+            box-shadow: none !important;
+            }
+        }
+        &:hover{
+            background-color: #e1efff;
+            button{
+                background-color: #000;
+                color: #fff;
+            }
+        }
     }
 }
