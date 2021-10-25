@@ -18,3 +18,10 @@ export const SINGLE_AGENT = "SINGLE_AGENT";
 export const ALL_CITIES = "ALL_CITIES";
 export const STATE_AGENT = "STATE_AGENT";
 export const CITY_AGENT = "CITY_AGENT"; 
+
+//Blog
+export const ALL_ARTICLES = "ALL_ARTICLES";
+export const SINGLE_ARTICLE = "SINGLE_ARTICLE";
+//Comment
+export const COMMENT_ON_ARTICLE = "COMMENT_ON_ARTICLE";
+export const GET_ALL_COMMENTS = "GET_ALL_COMMENTS";
