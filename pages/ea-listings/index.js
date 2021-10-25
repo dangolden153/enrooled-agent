@@ -33,9 +33,9 @@ const index = () => {
       if (router.isReady) handleGetAllAgents();
     }, [router]);
 
-    // if (isLoading) {
-    //   return <p>Loading</p>;
-    // }
+    if (isLoading) {
+      return <p>Loading</p>;
+    }
   return (
     <div>
       {/* Banner */}

@@ -23,12 +23,13 @@
         box-sizing: border-box;
         border-radius: 5px;
     }
-    button{
-        background: #01105B;
-        border-radius: 5px;
-        .buttonTitle{
-            font-size: 18px;
-            color: #FFFFFF;
-        }
-    }
+}
+.reset_btn{
+    background: #01105B;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: bold;
+    
 }
