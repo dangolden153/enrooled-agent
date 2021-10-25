@@ -20,7 +20,7 @@ const Search = () => {
  const [pagination, setPagination] = useState({
     data: searchData,
     offset: 0,
-    numberPerPage: 10,
+    numberPerPage: 5,
     pageCount: 0,
     currentData: []
   });
@@ -44,7 +44,7 @@ const Search = () => {
     const offset = selected * pagination.numberPerPage
     setPagination({ ...pagination, offset })
   }
-  console.log("paginated Data",searchData);
+  console.log("paginated Data", searchData);
 
 
 
@@ -66,7 +66,7 @@ const Search = () => {
                   <h1 id={styles.enrol}>Enrolled Agent</h1>
                   <p>
                     Showing search results for{" "}
-                    <span style={{ fontWeight: "700" }}>{router.query?.lName}</span>
+                    <span style={{ fontWeight: "700" }}>{router.query?.lname ?? router.query?.data}</span>
                   </p>
                 </Col>
                 <Col>
@@ -136,7 +136,7 @@ const Search = () => {
             ))
           ) : (
             <p style={{ textAlign: "center" }}>
-              Sorry, we couldn't find any results for {router.query?.lName}
+              Sorry, we couldn't find any results for {router.query?.lname ?? router.query?.data}
             </p>
           )}
 

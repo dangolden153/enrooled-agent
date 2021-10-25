@@ -53,6 +53,11 @@ const Footer = () => {
                       Free Enrolled Agent Listings
                     </Link>
                   </li>
+                  <li className="footer-link">
+                    <Link href="/pricing">
+                      EA Pricing
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className="col-">
