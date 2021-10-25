@@ -23,12 +23,14 @@ library.add(fab, faLinkedin);
 library.add(fab, faFacebook);
 library.add(fab, faTwitter);
 library.add(fab, faInstagram);
-
-const ClaimProfile = () => {
+import { getSession } from "next-auth/client";
+const ClaimProfile = ({ session }) => {
+  const { user } = session;
   const router = useRouter();
   const { addToast } = useToasts();
   const dispatch = useDispatch();
   const agentData = useSelector((state) => state.getAgents.singleAgent);
+  
   const [data, setData] = useState({
     job_role: "",
     company_size: "",
@@ -36,41 +38,41 @@ const ClaimProfile = () => {
     company_revenue: "",
     organization_type: "",
     annual_tax: "",
-    agent_id: agentData.id,
+    agent_id: "",
   });
-  const [isLoading, setLoading] = useState(true);
-
+  const [loading, setLoading] = useState(true);
   const handleGetAgent = async () => {
     const res = await dispatch(getSingleAgent(router.query));
     if (res) setLoading(false);
   };
-
+  
   useEffect(() => {
     if (router.isReady) handleGetAgent();
   }, [router]);
-
-  if (isLoading) {
+  
+  if (loading) {
     return <p>Loading</p>;
   }
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const {
-      job_role,
-      company_size,
-      company_name,
-      company_revenue,
-      organization_type,
-      annual_tax,
-      agent_id
-    } = data;
+    let formData = {
+      job_role: data.job_role,
+      company_size: data.company_size,
+      company_name: data.company_name,
+      company_revenue: data.company_revenue,
+      organization_type: data.organization_type,
+      annual_tax: data.annual_tax,
+      agent_id: agentData.id,
+    }
+    console.log("agent id",formData);
     try {
       setLoading(true);
-      let response = await claimAgentAccount(data);
+      let response = await claimAgentAccount(formData);
       if (response) {
         if (response.data) {
           addToast("Your claim request has been sent successfully!", {
@@ -169,7 +171,7 @@ const ClaimProfile = () => {
                 <span className="text-primary fw-bold">"Claim Listing"</span> to
                 get started.
               </p>
-
+              <form onSubmit={handleSubmit}>
               <div className={styles.form}>
                 <div className="row mt-3">
                   <div className="col-md-6">
@@ -279,7 +281,7 @@ const ClaimProfile = () => {
               </div>
 
               <div className="text-center mb-4">
-                <button className={`btn ${styles.btn3}`}>Claim Listing</button>
+                <button className={`btn ${styles.btn3}`} type="submit">Claim Listing</button>
               </div>
               <div className="text-center">
                 <input type="checkbox" />
@@ -289,6 +291,7 @@ const ClaimProfile = () => {
                   <span className="text-primary">privacy policy</span>{" "}
                 </span>
               </div>
+              </form>
             </div>
           </div>
         </div>
@@ -296,5 +299,19 @@ const ClaimProfile = () => {
     </div>
   );
 };
-
+export const getServerSideProps = async (context) => {
+  const session = await getSession(context);
+  const path = context.params.id.name;
+  if (!session) {
+    return {
+      redirect: {
+        destination: `/auth/login`,
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: { session },
+  };
+};
 export default ClaimProfile;

@@ -25,10 +25,10 @@ const TopRated = () => {
                 key={index}
                 image={avatar}
                 name={
-                  agent && agent.first_name +"," + agent.last_name
+                  agent && agent.first_name + "" + agent.last_name
                 }
                 location={
-                  agent && agent.city + "," + agent.state
+                  agent && agent.city + "," + ""+agent.state
                 }
                 numStars={agent.rating ?? 0}
                 profileLink={`agent/${agent.id}/${agent.first_name}-${agent.last_name}`}
