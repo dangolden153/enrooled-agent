@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../../styles/Articles/NewArticle.module.scss";
-
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 const index = () => {
   return (
     <div className={styles.new}>
