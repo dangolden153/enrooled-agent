@@ -20,8 +20,13 @@ export const STATE_AGENT = "STATE_AGENT";
 export const CITY_AGENT = "CITY_AGENT"; 
 
 //Blog
-export const ALL_ARTICLES = "ALL_ARTICLES";
+export const ALL_ARTICLES = "ALL_ARTICLES"
+export const CREATE_ARTICLE = "CREATE_ARTICLE"
 export const SINGLE_ARTICLE = "SINGLE_ARTICLE";
+
+//Blog Category
+export const GET_ALL_CATEGORIES = "GET_ALL_CATEGORIES";
+
 //Comment
 export const COMMENT_ON_ARTICLE = "COMMENT_ON_ARTICLE";
 export const GET_ALL_COMMENTS = "GET_ALL_COMMENTS";

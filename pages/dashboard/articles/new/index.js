@@ -1,7 +1,44 @@
-import React from "react";
+import React,{useEffect} from "react";
 import styles from "../../../../styles/Articles/NewArticle.module.scss";
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
-const index = () => {
+import {getAllCategories} from '../../../../src/redux/actions/article/category';
+import { createArticle } from "../../../../src/redux/actions/article/articles";
+const index = props => {
+    // Get Categories from redux
+    // const categories = useSelector(store => store.categories.categories, shallowEqual);
+    // console.log("cat",categories);
+    const dispatch = useDispatch();
+    // const body = useRef("");
+
+    // Fetch Categories on mount
+    useEffect(() => {
+      dispatch(getAllCategories());
+    }, [dispatch]);
+
+    // Categories select options
+    // const catOptions = categories?.map((cat, i) => <option key={`opt-${i}`} value={cat.id}>{cat.name}</option>);
+
+    // Description field update
+    const handleEditorChange = content => {
+      body.current = content;
+    }
+
+  /* Submit New Article */
+  const handleSubmit = e =>  {
+    e.preventDefault();
+    e.stopPropagation();
+    const form = e.currentTarget;
+
+    if (body.current?.length < 30){
+      alert("Article Body Content is too short or empty");
+    }
+    else if (form.checkValidity()) {
+      const formData = new FormData(form);
+      formData.append("body", body.current);
+      dispatch(addArticle(formData));
+      props.history.push("/admin/articles/");
+    }
+  }
   return (
     <div className={styles.new}>
       <div>
@@ -35,9 +72,7 @@ const index = () => {
             </label>
             <select className="form-select" aria-label="Default select example">
               <option selected>Select Article Category </option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              {/* {catOptions} */}
             </select>
           </div>
           <div className="w-75">
