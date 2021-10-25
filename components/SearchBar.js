@@ -14,7 +14,7 @@ const SearchBar = () => {
   };
 
   const handleSearch = () => {
-    router.push(`/agents/search?data=${searchData?.address}&lName=${searchData?.lname}`);
+    router.push(`/agents/search?data=${searchData?.address}&lname=${searchData?.lname ?? null}`);
   };
 
   return (

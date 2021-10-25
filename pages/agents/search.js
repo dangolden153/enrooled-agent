@@ -11,16 +11,20 @@ import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { searchAgent } from "../../src/redux/actions/agent";
 import avatar from "../../public/images/avatar.png";
-
+import ReactPaginate from 'react-paginate';
 const Search = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const searchData = useSelector((state) => state.getAgents.searchAgents);
   const [isLoading, setLoading] = useState(true);
-
-  console.log(searchData);
-
-  const handleSearch = async () => {
+ const [pagination, setPagination] = useState({
+    data: searchData,
+    offset: 0,
+    numberPerPage: 10,
+    pageCount: 0,
+    currentData: []
+  });
+    const handleSearch = async () => {
     const res = await dispatch(searchAgent(router.query));
     if (res) setLoading(false);
   };
@@ -28,6 +32,21 @@ const Search = () => {
   useEffect(() => {
     if (router.isReady) handleSearch();
   }, [router]);
+  useEffect(() => {
+    setPagination((prevState) => ({
+      ...prevState,
+      pageCount: prevState.data?.length / prevState.numberPerPage,
+      currentData: prevState.data?.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
+    }))
+  }, [pagination.numberPerPage, pagination.offset])
+  const handlePageClick = event => {
+    const selected = event.selected;
+    const offset = selected * pagination.numberPerPage
+    setPagination({ ...pagination, offset })
+  }
+  console.log("paginated Data",searchData);
+
+
 
   return (
     <div className={styles.agentList}>
@@ -59,7 +78,7 @@ const Search = () => {
           <hr className={styles.line} />
 
           {searchData.length > 0 ? (
-            searchData.map((el, id) => (
+            pagination.currentData && pagination.currentData.map((el, id) => (
               <>
                 <div className={styles.agents}>
                   <Container>
@@ -130,8 +149,7 @@ const Search = () => {
                   </div>
                 </Col>
                 <Col>
-                  <div className={styles.range}>
-                    {/* <h1>Work in Progress....</h1> */}
+                  {/* <div className={styles.range}>
                     <div className={styles.sliderA}>
                       <span>&#60;</span>
                     </div>
@@ -142,7 +160,18 @@ const Search = () => {
                     <div className={styles.sliderB}>
                       <span>&#62;</span>
                     </div>
-                  </div>
+                  </div> */}
+                        <ReactPaginate
+                      previousLabel={'previous'}
+                      nextLabel={'next'}
+                      breakLabel={'...'}
+                      pageCount={pagination.pageCount}
+                      marginPagesDisplayed={2}
+                      pageRangeDisplayed={5}
+                      onPageChange={handlePageClick}
+                      containerClassName={'pagination'}
+                      activeClassName={'active'}
+      />
                 </Col>
               </Row>
             </Container>

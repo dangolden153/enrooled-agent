@@ -64,7 +64,7 @@ const index = () => {
           <Pagination
             className="pagination-bar"
             currentPage={currentPage}
-            totalCount={data.length}
+            totalCount={agents.length}
             pageSize={PageSize}
             onPageChange={(page) => setCurrentPage(page)}
           />
