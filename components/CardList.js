@@ -3,6 +3,7 @@ import React from 'react'
 const CardList = ({ children }) => {
 
     let groupBy3 = (data) => {
+        console.log("data lenght",data);
         let result = []
         for (let i = 0; i < data.length; i += 3) result.push(data.slice(i, i + 3))
         return result
