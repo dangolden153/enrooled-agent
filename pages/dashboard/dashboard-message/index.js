@@ -21,7 +21,7 @@ const index = () => {
             </p>
 
             <div className={styles.reply}>
-            <p id={styles.replyP1}>reply</p>
+            <p id={styles.replyP1}>reply</p> 
             <p id={styles.replyP2}>  | Mark as read</p></div>
 
           </div>
