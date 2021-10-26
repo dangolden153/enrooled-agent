@@ -23,7 +23,7 @@ export const CITY_AGENT = "CITY_AGENT";
 export const ALL_ARTICLES = "ALL_ARTICLES"
 export const CREATE_ARTICLE = "CREATE_ARTICLE"
 export const SINGLE_ARTICLE = "SINGLE_ARTICLE";
-
+export const ALL_AGENT_ARTICLES = "ALL_AGENT_ARTICLES";
 //Blog Category
 export const GET_ALL_CATEGORIES = "GET_ALL_CATEGORIES";
 

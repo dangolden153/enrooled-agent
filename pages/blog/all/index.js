@@ -1,12 +1,45 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
+import {useSelector, useDispatch} from "react-redux";
+import {useRouter} from "next/router";
 import Card from "../../../components/Card";
-
+import {getAllArticles} from "../../../src/redux/actions/blog";
 import Dollar from "../../../public/images/dollar-bill.png";
 import Techie from "../../../public/images/techie.png";
 import Image from "next/image";
 import styles from "../../../styles/blog/NewsAndArticles.module.scss";
-
+import ReactPaginate from 'react-paginate';
 const index = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const articles = useSelector((state) => state.articles.articles);
+  const [loading, setLoading] = useState(false);
+   const [pagination, setPagination] = useState({
+    data: articles,
+    offset: 0,
+    numberPerPage: 8,
+    pageCount: 0,
+    currentData: []
+  });
+  const handleArticlesLoad = async () => {
+    const res = await dispatch(getAllArticles());
+    if (res) setLoading(false);
+  };
+  useEffect(() => {
+    if (router.isReady) handleArticlesLoad();
+  setTimeout(() => {
+    setPagination((prevState) => ({
+      ...prevState,
+      pageCount: prevState.data.length / prevState.numberPerPage,
+      currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
+      }))
+  }, 5000);
+  },[router, pagination.numberPerPage, pagination.offset]);
+  const handlePageClick = event => {
+    const selected = event.selected;
+    const offset = selected * pagination.numberPerPage
+    setPagination({ ...pagination, offset })
+  }
+ console.log("pa",pagination.currentData);
   return (
     <div className={`container ${styles.newsAndArticles}`}>
       <div className={`${styles.header} d-flex flex-column`}>
@@ -37,27 +70,9 @@ const index = () => {
         >
           <div className="card-body">
             <div className={styles.newdev2}>
-              <div className={styles.dev}>
-                <div className={styles.tech}>
-                  <Image
-                    height={160}
-                    width={190}
-                    src={Techie}
-                    alt="A developer"
-                  />
-                </div>
-                <div className={`ms-3 ${styles.devText}`}>
-                  <p id={styles.p3}>
-                    <b>Lorem Ipsum is simply dummy text of the printin.</b>
-                  </p>
-                  <div className="">
-                    <button className="btn">
-                      <b>Load news</b>
-                    </button>
-                  </div>
-                </div>
-              </div>
 
+          {pagination.currentData && pagination.currentData.map((article, index) => {
+            return (
               <div className={styles.dev}>
                 <div className={styles.tech}>
                   <Image
@@ -69,7 +84,7 @@ const index = () => {
                 </div>
                 <div className={`ms-3 ${styles.devText}`}>
                   <p id={styles.p3}>
-                    <b>Lorem Ipsum is simply dummy text of the printin.</b>
+                    <b>{article?.title}</b>
                   </p>
                   <div className="">
                     <button className="btn">
@@ -78,29 +93,20 @@ const index = () => {
                   </div>
                 </div>
               </div>
-
-              <div className={styles.dev}>
-                <div className={styles.tech}>
-                  <Image
-                    height={160}
-                    width={190}
-                    src={Techie}
-                    alt="A developer"
-                  />
-                </div>
-                <div className={`ms-3 ${styles.devText}`}>
-                  <p id={styles.p3}>
-                    <b>Lorem Ipsum is simply dummy text of the printin.</b>
-                  </p>
-                  <div className="">
-                    <button className="btn">
-                      <b>Load news</b>
-                    </button>
-                  </div>
-                </div>
-              </div>
+            )
+          })}
               <div className={styles.buttn}>
-                <button className="btn">Load all news</button>
+                    <ReactPaginate
+                      previousLabel={'previous'}
+                      nextLabel={'next'}
+                      breakLabel={'...'}
+                      pageCount={pagination.pageCount}
+                      marginPagesDisplayed={2}
+                      pageRangeDisplayed={5}
+                      onPageChange={handlePageClick}
+                      containerClassName={'pagination'}
+                      activeClassName={'active'}
+      />
               </div>
             </div>
           </div>
@@ -122,52 +128,33 @@ const index = () => {
             <div className="card-body">
               <h4>Recent Articles</h4>
               <div className="row">
-                <div className="col-md-6">
+                {pagination.currentData && pagination.currentData.map((article, index) => {
+                return (
+                <div className="col-md-6" key={index}>
                   <Card className={styles.cardArticle}>
                     <div className="article-image">
                       <Image src={Techie} width="300" height="200" />
                     </div>
                     <div className="card-article-body">
-                      <p>Lorem Ipsum is simply dummy text of the printin. </p>
-                      <button className="btn "> Load More </button>
+                      <p>{article?.title}</p>
+                      <button className="btn "> Read </button>
                     </div>
                   </Card>
                 </div>
-                <div className="col-md-6">
-                  <Card className={styles.cardArticle}>
-                    <div className="article-image">
-                      <Image src={Techie} width="300" height="200" />
-                    </div>
-                    <div className="card-article-body">
-                      <p>Lorem Ipsum is simply dummy text of the printin. </p>
-                      <button className="btn "> Load More </button>
-                    </div>
-                  </Card>
-                </div>
-                <div className="col-md-6">
-                  <Card className={styles.cardArticle}>
-                    <div className="article-image">
-                      <Image src={Techie} width="300" height="200" />
-                    </div>
-                    <div className="card-article-body">
-                      <p>Lorem Ipsum is simply dummy text of the printin. </p>
-                      <button className="btn "> Load More </button>
-                    </div>
-                  </Card>
-                </div>
-                <div className="col-md-6">
-                  <Card className={styles.cardArticle}>
-                    <div className="article-image">
-                      <Image src={Techie} width="300" height="200" />
-                    </div>
-                    <div className="">
-                      <p>Lorem Ipsum is simply dummy text of the printin. </p>
-                      <button className="btn "> Load More </button>
-                    </div>
-                  </Card>
-                </div>
+                  )
+                })}
                 <div className={`${styles.buttn} text-start mt-3`}>
-                  <button className="btn">Load all news</button>
+                  <ReactPaginate
+                      previousLabel={'previous'}
+                      nextLabel={'next'}
+                      breakLabel={'...'}
+                      pageCount={pagination.pageCount}
+                      marginPagesDisplayed={2}
+                      pageRangeDisplayed={5}
+                      onPageChange={handlePageClick}
+                      containerClassName={'pagination'}
+                      activeClassName={'active'}
+      />
                 </div>
               </div>
             </div>
@@ -181,7 +168,8 @@ const index = () => {
           >
             <div className="card-body">
               <h4 className="">Advertisement</h4>
-              <Card className={styles.cardArticle}>
+              <p>No Adverts</p>
+              {/* <Card className={styles.cardArticle}>
                 <div className="article-image">
                   <Image src={Techie} />
                 </div>
@@ -199,7 +187,7 @@ const index = () => {
               </Card>
               <div className={`${styles.buttn2} text-start mt-3`}>
                 <button className="btn">View More</button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
