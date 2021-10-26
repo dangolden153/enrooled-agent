@@ -8,17 +8,18 @@ import AgentLastSection from "../../components/StartSection";
 import SelectCountry from "../../components/SelectCountry";
 import Techman from "../../public/images/right-agent.png";
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, connect, useSelector } from "react-redux";
 import { searchAgent } from "../../src/redux/actions/agent";
+import { selectAgents } from "../../src/redux/reducers/agent";
 import avatar from "../../public/images/avatar.png";
 import ReactPaginate from 'react-paginate';
-const Search = () => {
+const Search = (props) => {
   const router = useRouter();
   const dispatch = useDispatch();
-  const searchData = useSelector((state) => state.getAgents.searchAgents);
+  //const searchData = useSelector((state) => state.getAgents.searchAgents);
   const [isLoading, setLoading] = useState(true);
  const [pagination, setPagination] = useState({
-    data: searchData,
+    data: props.agents,
     offset: 0,
     numberPerPage: 10,
     pageCount: 0,
@@ -27,30 +28,33 @@ const Search = () => {
     const handleSearch = async () => {
     const res = await dispatch(searchAgent(router.query));
     if (res) setLoading(false);
-    
+      setPagination({
+        data: res,
+        offset: 0,
+        numberPerPage: 10,
+        pageCount: res.length / pagination.numberPerPage,
+        currentData: res.slice(0, 10)
+      });
   };
+  useEffect(() => {
+  if (router.isReady) handleSearch();
+  },[router]);
 
   useEffect(() => {
-    if (router.isReady) handleSearch();
-    setTimeout(() => {
     setPagination((prevState) => ({
       ...prevState,
       pageCount: prevState.data.length / prevState.numberPerPage,
-      currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
-      }))
-  }, 7000);
-        
-  }, [router, pagination.numberPerPage, pagination.offset]);
+      currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage),
+      }))   
+  }, [pagination.numberPerPage, pagination.offset]);
 
 
   const handlePageClick = event => {
     const selected = event.selected;
     const offset = selected * pagination.numberPerPage
+    console.log("offset",pagination.currentData);
     setPagination({ ...pagination, offset })
   }
-  console.log("paginated Data", pagination.currentData);
-
-
 
   return (
     <div className={styles.agentList}>
@@ -81,7 +85,7 @@ const Search = () => {
           </div>
           <hr className={styles.line} />
 
-          {searchData.length > 0 ? (
+          {props.agents.length > 0 ? (
             pagination.currentData && pagination.currentData.map((el, id) => (
               <>
                 <div className={styles.agents}>
@@ -165,17 +169,16 @@ const Search = () => {
                       <span>&#62;</span>
                     </div>
                   </div> */}
-                        <ReactPaginate
+                      <ReactPaginate
                       previousLabel={'previous'}
                       nextLabel={'next'}
                       breakLabel={'...'}
-                      pageCount={pagination.pageCount}
-                      marginPagesDisplayed={2}
+                      //pageCount={pagination.pageCount}
+                      marginPagesDisplayed={5}
                       pageRangeDisplayed={5}
                       onPageChange={handlePageClick}
                       containerClassName={'pagination'}
-                      activeClassName={'active'}
-      />
+                      activeClassName={'active'}/>
                 </Col>
               </Row>
             </Container>
@@ -189,5 +192,7 @@ const Search = () => {
     </div>
   );
 };
-
-export default Search;
+const mapStateToProps = (state) => ({
+  agents: selectAgents(state)
+});
+export default connect(mapStateToProps)(Search);

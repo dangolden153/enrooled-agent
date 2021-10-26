@@ -58,3 +58,4 @@ export function getAgents(state = initState, action) {
     }
   }
 }
+export const selectAgents = (state) => state.getAgents.searchAgents;
