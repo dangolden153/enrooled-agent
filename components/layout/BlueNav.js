@@ -2,7 +2,9 @@ import React from 'react'
 import { Envelope, Telephone } from 'react-bootstrap-icons'
 import Link from 'next/link'
 import {useSelector} from "react-redux";
+
 const BlueNav = () => {
+
     const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
     return (
         <div className='row nav blue-nav justify-content-between'>
@@ -30,5 +32,4 @@ const BlueNav = () => {
         </div>
     )
 }
-
 export default BlueNav
