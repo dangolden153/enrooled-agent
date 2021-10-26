@@ -20,31 +20,35 @@ const Search = () => {
  const [pagination, setPagination] = useState({
     data: searchData,
     offset: 0,
-    numberPerPage: 5,
+    numberPerPage: 10,
     pageCount: 0,
     currentData: []
   });
     const handleSearch = async () => {
     const res = await dispatch(searchAgent(router.query));
     if (res) setLoading(false);
+    
   };
 
   useEffect(() => {
     if (router.isReady) handleSearch();
-  }, [router]);
-  useEffect(() => {
+    setTimeout(() => {
     setPagination((prevState) => ({
       ...prevState,
-      pageCount: prevState.data?.length / prevState.numberPerPage,
-      currentData: prevState.data?.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
-    }))
-  }, [pagination.numberPerPage, pagination.offset])
+      pageCount: data.length / prevState.numberPerPage,
+      currentData: data.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
+      }))
+  }, 7000);
+        
+  }, [router, pagination.numberPerPage, pagination.offset]);
+
+
   const handlePageClick = event => {
     const selected = event.selected;
     const offset = selected * pagination.numberPerPage
     setPagination({ ...pagination, offset })
   }
-  console.log("paginated Data", searchData);
+  console.log("paginated Data", pagination.currentData);
 
 
 
