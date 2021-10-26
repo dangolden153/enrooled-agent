@@ -35,8 +35,8 @@ const Search = () => {
     setTimeout(() => {
     setPagination((prevState) => ({
       ...prevState,
-      pageCount: data.length / prevState.numberPerPage,
-      currentData: data.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
+      pageCount: prevState.data.length / prevState.numberPerPage,
+      currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
       }))
   }, 7000);
         
@@ -70,7 +70,7 @@ const Search = () => {
                   <h1 id={styles.enrol}>Enrolled Agent</h1>
                   <p>
                     Showing search results for{" "}
-                    <span style={{ fontWeight: "700" }}>{router.query?.lname ?? router.query?.data}</span>
+                    <span style={{ fontWeight: "700" }}>{router.query?.data}</span>
                   </p>
                 </Col>
                 <Col>
@@ -140,7 +140,7 @@ const Search = () => {
             ))
           ) : (
             <p style={{ textAlign: "center" }}>
-              Sorry, we couldn't find any results for {router.query?.lname ?? router.query?.data}
+              Sorry, we couldn't find any results for {router.query?.data}
             </p>
           )}
 
