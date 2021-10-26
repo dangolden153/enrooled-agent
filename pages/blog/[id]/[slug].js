@@ -65,15 +65,15 @@ const index = () => {
             <Container>
                 <Row>
                     <div className={styles.texts}>
-                      {articleData?.body}
+                      
                     </div>
                 </Row>
             </Container>
 
-            <div><ArticleText /></div>
+            <div><ArticleText articleBody={articleData} /></div>
 
-            <Container>
-                {/* <Row> */}
+            {/* <Container>
+             
                     <div className={styles.comments}>
                         <h1 id={styles.coment}>Comments</h1>
                     </div>
@@ -83,13 +83,13 @@ const index = () => {
                             <Image src={Lady} alt="A laughing lady" />
                         </div>
 
-                        {/* <div className={styles.smith}> */}
+                     
                         <div className={styles.fornia}>
                             <h6><b>Andrew Smith</b></h6>
                             <p>California</p>
                         </div>
                     </div>
-                    {/* </div> */}
+                 
                     <div className={styles.andrew}>
                     <div id={styles.p}><p><u>Where does it come from?</u></p></div>
                     </div>
@@ -99,22 +99,22 @@ const index = () => {
                             <Image src={Lady} alt="A laughing lady" />
                         </div>
 
-                        {/* <div className={styles.smith}> */}
+                        
                         <div className={styles.fornia}>
                             <h6><b>Andrew Smith</b></h6>
                             <p>California</p>
                         </div>
                     </div>
-                    {/* </div> */}
+                
                     <div className={styles.andrew}>
                     <div id={styles.p2}><p><u>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
                         piece of classical Latin literature from 45 BC</u></p></div>
                 </div>
-                {/* </Row> */}
-            </Container>
-
+          
+            </Container> */}
+{/* 
             <Container>
-                {/* <Row> */}
+             
                 <div className={styles.andrew}>
                     <div>
                         <input type="text" name="text" className={styles.box}></input>
@@ -124,8 +124,8 @@ const index = () => {
                         <button type="submit">Comment</button>
                     </div>
                     
-                {/* </Row> */}
-            </Container>
+             
+            </Container> */}
             <hr className={styles.boundry} />
 
             <div className={styles.latest}>

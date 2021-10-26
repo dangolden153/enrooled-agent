@@ -22,9 +22,9 @@ export const getSingleArticle =
       console.log("single article", res.data.data);
       dispatch({
         type: SINGLE_ARTICLE,
-        payload: res.data.data,
+        payload: res.data.data.[0],
       });
-      return res.data.data;
+      return res.data.data.[0];
     } catch (error) {
       console.log("error", error);
       return error;

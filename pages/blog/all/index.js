@@ -1,42 +1,57 @@
 import React,{useState, useEffect} from "react";
-import {useSelector, useDispatch} from "react-redux";
+import {useSelector, useDispatch, connect} from "react-redux";
 import {useRouter} from "next/router";
 import Card from "../../../components/Card";
 import {getAllArticles} from "../../../src/redux/actions/blog";
+import {selectArticles} from "../../../src/redux/reducers/blog";
 import Dollar from "../../../public/images/dollar-bill.png";
 import Techie from "../../../public/images/techie.png";
 import Image from "next/image";
 import styles from "../../../styles/blog/NewsAndArticles.module.scss";
+import Link from "next/link";
 import ReactPaginate from 'react-paginate';
-const index = () => {
+const index = (props) => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const articles = useSelector((state) => state.articles.articles);
+  //const articles = useSelector((state) => state.articles.articles);
   const [loading, setLoading] = useState(false);
    const [pagination, setPagination] = useState({
-    data: articles,
+    data: props.articles,
     offset: 0,
-    numberPerPage: 8,
+    numberPerPage: 10,
     pageCount: 0,
     currentData: []
   });
+  console.log("ar",props.articles);
   const handleArticlesLoad = async () => {
     const res = await dispatch(getAllArticles());
+    console.log("res",res);
     if (res) setLoading(false);
+      setPagination({
+        data: res,
+        offset: 0,
+        numberPerPage: 10,
+        pageCount: res.length / pagination.numberPerPage,
+        currentData: res.slice(0, 10)
+      });
   };
   useEffect(() => {
-    if (router.isReady) handleArticlesLoad();
-  setTimeout(() => {
+  if (router.isReady) handleArticlesLoad();
+  },[router]);
+
+  useEffect(() => {
     setPagination((prevState) => ({
       ...prevState,
       pageCount: prevState.data.length / prevState.numberPerPage,
-      currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage)
-      }))
-  }, 5000);
-  },[router, pagination.numberPerPage, pagination.offset]);
+      currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage),
+      }))   
+  }, [pagination.numberPerPage, pagination.offset]);
+
+
   const handlePageClick = event => {
     const selected = event.selected;
     const offset = selected * pagination.numberPerPage
+    console.log("offset",pagination.currentData);
     setPagination({ ...pagination, offset })
   }
  console.log("pa",pagination.currentData);
@@ -137,7 +152,7 @@ const index = () => {
                     </div>
                     <div className="card-article-body">
                       <p>{article?.title}</p>
-                      <button className="btn "> Read </button>
+                      <Link href={`/blog/${article.id}/${article.slug}`}><button className="btn "> Read </button></Link>
                     </div>
                   </Card>
                 </div>
@@ -195,5 +210,7 @@ const index = () => {
     </div>
   );
 };
-
-export default index;
+const mapStateToProps = (state) => ({
+  articles: selectArticles(state)
+});
+export default connect(mapStateToProps)(index);

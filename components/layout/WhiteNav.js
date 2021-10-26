@@ -90,11 +90,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <a className="nav-link">Ask an EA</a>
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink href="/pricing">
                 <a className="nav-link">Pricing</a>
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink href="/blog/all">
                 <a className="nav-link">News & Articles</a>

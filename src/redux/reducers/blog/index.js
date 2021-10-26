@@ -29,3 +29,4 @@ export function articles(state = initState, action) {
     }
   }
 }
+export const selectArticles = (state) => state.articles.articles;

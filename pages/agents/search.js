@@ -7,7 +7,7 @@ import Background from "../../public/images/banners/ea-listing.png";
 import AgentLastSection from "../../components/StartSection";
 import SelectCountry from "../../components/SelectCountry";
 import Techman from "../../public/images/right-agent.png";
-import { useRouter } from "next/router";
+import { useRouter } from "next/router"; 
 import { useDispatch, connect, useSelector } from "react-redux";
 import { searchAgent } from "../../src/redux/actions/agent";
 import { selectAgents } from "../../src/redux/reducers/agent";
