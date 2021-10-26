@@ -15,10 +15,10 @@ export const getAllArticles = () => async (dispatch) => {
 };
 
 export const getSingleArticle =
-  ({ id, name }) =>
+  ({ id, slug }) =>
   async (dispatch) => {
     try {
-      const res = await axiosWithoutAuth.get(`/articles/${id}/${name}`);
+      const res = await axiosWithoutAuth.get(`/articles/${id}/${slug}`);
       console.log("single article", res.data.data);
       dispatch({
         type: SINGLE_ARTICLE,
