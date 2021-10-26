@@ -20,10 +20,10 @@ const BlueNav = () => {
                 </Link>
                 : 
                 <>
-                <Link href='auth/register'>
+                <Link href='/auth/register'>
                     <button className='btn btn-primary'>Sign Up</button>
                 </Link>
-                <Link href='auth/login'>
+                <Link href='/auth/login'>
                     <button className='btn btn-outline-primary'>Login</button>
                 </Link> 
                 </>
