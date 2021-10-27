@@ -23,7 +23,10 @@ axiosInstance.interceptors.request.use(
     const session = await getSession();
     console.log("session", session);
     if (!session) {
-      window.location.replace(`${window.location.origin}/`);
+      if (typeof window !== "undefined") {
+        // browser code
+        window.location.replace(`${window.location.origin}/`);
+      }
     }
 
     request.headers["Authorization"] = `Bearer ${session?.accessToken}`;

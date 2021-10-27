@@ -26,7 +26,7 @@ library.add(fab, faInstagram);
 const index = () => {
   const router = useRouter();
   const dispatch = useDispatch();
-  const agentData = useSelector((state) => state.getAgents.singleAgent);
+  const agentData = useSelector((state) => state.getAgents.singleAgent.data);
   const [isLoading, setLoading] = useState(true);
 
   const handleGetAgent = async () => {
@@ -152,15 +152,17 @@ const index = () => {
                 </div>
               </div>
               <p className={styles.expert}>
-                <b>Tax Professional</b>
+                <b>Enrolled Agent</b>
               </p>
               <div>
                 <p id={styles.rank}>Ratings</p>
                 <p className={styles.star}>
-                  8.7 <span className={styles.stars}>&#9733;</span>{" "}
-                  <span className={styles.stars}>&#9733;</span>
-                  <span className={styles.stars}>&#9733;</span>{" "}
-                  <span className={styles.stars}>&#9733;</span>
+                  {agentData?.review ?? "0"}
+                  <span className={styles.stars}>&#9734;</span>{" "}
+                  <span className={styles.stars}>&#9734;</span>
+                  <span className={styles.stars}>&#9734;</span>{" "}
+                  <span className={styles.stars}>&#9734;</span>
+                  <span className={styles.stars}>&#9734;</span>
                 </p>
               </div>
             </div>
@@ -204,7 +206,8 @@ const index = () => {
                   Sort by: <b>Rating</b>
                 </p>
               </div>
-              <div className={styles.word}>
+              <p>No Reviews Yet</p>
+              {/* <div className={styles.word}>
                 <div>
                   <p>Nyla Word</p>
                   <p className={styles.rate}>
@@ -226,7 +229,7 @@ const index = () => {
 
               <div className={styles.seeAll}>
                 <p>See all reviews</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

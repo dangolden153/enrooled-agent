@@ -1,10 +1,10 @@
-import { axiosInstance } from "../../../../utils/axiosInstance";
+import { axiosWithoutAuth } from "../../../../utils/axiosInstance";
 import {CREATE_ARTICLE } from "../../../types";
 
 
 export const createArticle = (data) => async (dispatch) => {
   try {
-    const res = await axiosInstance.post("/articles/create", data);
+    const res = await axiosWithoutAuth.post("/articles/create", data);
     console.log("res", res);
     dispatch({
       type: CREATE_ARTICLE,

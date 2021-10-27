@@ -1,0 +1,21 @@
+.wrapper {
+
+    .formWrapper {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+
+        button {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+        span {
+            color: #1C2B74;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}

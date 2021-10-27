@@ -24,26 +24,25 @@ const index = (props) => {
   });
   console.log("ar",props.articles);
   const handleArticlesLoad = async () => {
-    const res = await dispatch(getAllArticles());
-    console.log("res",res);
-    if (res) setLoading(false);
-      setPagination({
-        data: res,
-        offset: 0,
-        numberPerPage: 10,
-        pageCount: res.length / pagination.numberPerPage,
-        currentData: res.slice(0, 10)
-      });
+    const res = await dispatch(getAllArticles(router.query));
+     console.log("res",res);
+     if (res) setLoading(false);
+    //   setPagination({
+    //     data: res,
+    //     offset: 0,
+    //     numberPerPage: 10,
+    //     pageCount: res.length / pagination.numberPerPage,
+    //     currentData: res.slice(0, 10)
+    //   });
   };
   useEffect(() => {
   if (router.isReady) handleArticlesLoad();
   },[router]);
 
   useEffect(() => {
-    setPagination((prevState) => ({
-      ...prevState,
-      pageCount: prevState.data.length / prevState.numberPerPage,
-      currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage),
+    setPagination(() => ({
+      pageCount: pagination.data.length / pagination.numberPerPage,
+      currentData: pagination.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage),
       }))   
   }, [pagination.numberPerPage, pagination.offset]);
 
