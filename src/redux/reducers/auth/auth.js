@@ -1,6 +1,5 @@
 import { LOAD_USER, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, AUTH_ERROR } from "../../types";
 const initialState = {
-  //token: window.localStorage.getItem("token") ? window.localStorage.getItem("token") : null,
   token: null,
   loading: true,
   isAuthenticated: false,
