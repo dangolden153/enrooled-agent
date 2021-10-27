@@ -52,7 +52,7 @@ const index = (props) => {
     console.log("offset",pagination.currentData);
     setPagination({ ...pagination, offset })
   }
-    if (isLoading) {
+    if (loading) {
     return <div className="container text-center"> <Image
                               src={Spinner}
                               alt="Page Loading..."
