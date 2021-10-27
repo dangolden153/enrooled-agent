@@ -24,6 +24,20 @@
     }
 }
 
+.btn-secondary {
+    color: white;
+    background: $primary-color;
+    border-color: $primary-color;
+    font-weight: bold;
+    outline: none;
+
+    &:hover {
+        color: white;
+        background: $primary-color;
+        border-color: white;
+    }
+}
+
 .btn-outline {
     color: white;
     background: transparent;
