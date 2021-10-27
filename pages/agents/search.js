@@ -114,11 +114,14 @@ const Search = (props) => {
                         <div className={styles.dum}>
                           <div className={styles.ratings}>
                             <p id={styles.span}>
-                              <span>&#9733;</span> <span>&#9733;</span> <span>&#9733;</span>
+                              
+                              <span>&#9734;</span>
+                              <span>&#9734;</span>
+                              <span>&#9734;</span>
                               <span>&#9734;</span>
                               <span>&#9734;</span>
                             </p>
-                            <p>3 reviews</p>
+                            <p>{el.review ?? "0"} reviews</p>
                           </div>
                         </div>
                       </Col>
