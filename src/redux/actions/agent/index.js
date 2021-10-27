@@ -4,10 +4,10 @@ import { ALL_AGENTS, TOP_AGENTS, SEARCH_AGENT, CITY_AGENT, STATE_AGENT, SINGLE_A
 export const getAllAgents = () => async (dispatch) => {
   try {
     const res = await axiosWithoutAuth.get("/agents/index");
-    console.log("agents", res.data.data);
+    console.log("agents", res.data.data.data);
     dispatch({
       type: ALL_AGENTS,
-      payload: res.data.data,
+      payload: res.data.data.data,
     });
   } catch (error) {
     console.log("error", error);
