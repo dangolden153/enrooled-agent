@@ -4,9 +4,24 @@ import NavLink from "./NavLink";
 import logoImage from "../../public/logo.png";
 import Head from "next/head";
 import Script from "next/script";
+import { StickyContainer, Sticky } from 'react-sticky';
 const WhiteNav = () => {
   return (
-    <nav className="navbar white-nav navbar-expand-lg navbar-light">
+          <StickyContainer>
+        {/* Other elements can be in between `StickyContainer` and `Sticky`,
+        but certain styles can break the positioning logic used. */}
+        <Sticky>
+          {({
+            style,
+ 
+            // the following are also available but unused in this example
+            isSticky,
+            wasSticky,
+            distanceFromTop,
+            distanceFromBottom,
+            calculatedHeight
+          }) => (
+            <nav className="navbar white-nav navbar-expand-lg navbar-light" style={style}>
       <Head>
         {/* <Script strategy="lazyOnload">
           {`
@@ -161,6 +176,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </div>
     </nav>
+          )}
+        </Sticky>
+        {/* ... */}
+      
+   
+    </StickyContainer>
   );
 };
 

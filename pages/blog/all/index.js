@@ -9,11 +9,16 @@ import Techie from "../../../public/images/techie.png";
 import Image from "next/image";
 import styles from "../../../styles/blog/NewsAndArticles.module.scss";
 import Link from "next/link";
-import ReactPaginate from 'react-paginate';
+//import ReactPaginate from 'react-paginate';
+import dynamic from 'next/dynamic'
+const ReactPaginate = dynamic(
+  () => import ('react-paginate'),
+  { ssr: false }
+)
 const index = (props) => {
   const dispatch = useDispatch();
   const router = useRouter();
-  //const articles = useSelector((state) => state.articles.articles);
+  const articles = useSelector((state) => state.articles.articles);
   const [loading, setLoading] = useState(false);
    const [pagination, setPagination] = useState({
     data: props.articles,
@@ -22,27 +27,20 @@ const index = (props) => {
     pageCount: 0,
     currentData: []
   });
-  console.log("ar",props.articles);
   const handleArticlesLoad = async () => {
-    const res = await dispatch(getAllArticles(router.query));
+    const res = await dispatch(getAllArticles());
      console.log("res",res);
      if (res) setLoading(false);
-    //   setPagination({
-    //     data: res,
-    //     offset: 0,
-    //     numberPerPage: 10,
-    //     pageCount: res.length / pagination.numberPerPage,
-    //     currentData: res.slice(0, 10)
-    //   });
   };
   useEffect(() => {
   if (router.isReady) handleArticlesLoad();
   },[router]);
 
   useEffect(() => {
-    setPagination(() => ({
-      pageCount: pagination.data.length / pagination.numberPerPage,
-      currentData: pagination.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage),
+    setPagination((prevState) => ({
+      ...prevState,
+      pageCount: prevState.data.length / prevState.numberPerPage,
+      currentData: prevState.data.slice(pagination.offset, pagination.offset + pagination.numberPerPage),
       }))   
   }, [pagination.numberPerPage, pagination.offset]);
 
@@ -53,7 +51,6 @@ const index = (props) => {
     console.log("offset",pagination.currentData);
     setPagination({ ...pagination, offset })
   }
- console.log("pa",pagination.currentData);
   return (
     <div className={`container ${styles.newsAndArticles}`}>
       <div className={`${styles.header} d-flex flex-column`}>
@@ -85,30 +82,35 @@ const index = (props) => {
           <div className="card-body">
             <div className={styles.newdev2}>
 
-          {pagination.currentData && pagination.currentData.map((article, index) => {
-            return (
-              <div className={styles.dev}>
-                <div className={styles.tech}>
-                  <Image
-                    height={160}
-                    width={190}
-                    src={Techie}
-                    alt="A developer"
-                  />
-                </div>
-                <div className={`ms-3 ${styles.devText}`}>
-                  <p id={styles.p3}>
-                    <b>{article?.title}</b>
-                  </p>
-                  <div className="">
-                    <button className="btn">
-                      <b>Load news</b>
-                    </button>
+          {props.articles.length > 0 ? (
+            pagination.currentData && pagination.currentData.map((article, index) => {
+              return (
+                <div className={styles.dev}>
+                  <div className={styles.tech}>
+                    <Image
+                      height={160}
+                      width={190}
+                      src={Techie}
+                      alt="A developer"
+                    />
+                  </div>
+                  <div className={`ms-3 ${styles.devText}`}>
+                    <p id={styles.p3}>
+                      <b>{article?.title}</b>
+                    </p>
+                    <div className="">
+                      <button className="btn">
+                        <b>Load news</b>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })
+          ) : (
+            <p>No News</p>
+          )
+}
               <div className={styles.buttn}>
                     <ReactPaginate
                       previousLabel={'previous'}
@@ -142,7 +144,8 @@ const index = (props) => {
             <div className="card-body">
               <h4>Recent Articles</h4>
               <div className="row">
-                {pagination.currentData && pagination.currentData.map((article, index) => {
+                {props.articles.length > 0 ? (
+                   pagination.currentData && pagination.currentData.map((article, index) => {
                 return (
                 <div className="col-md-6" key={index}>
                   <Card className={styles.cardArticle}>
@@ -156,7 +159,11 @@ const index = (props) => {
                   </Card>
                 </div>
                   )
-                })}
+                })
+                ):(
+                  <p>No Latest News</p>
+                )
+               }
                 <div className={`${styles.buttn} text-start mt-3`}>
                   <ReactPaginate
                       previousLabel={'previous'}

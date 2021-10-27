@@ -7,12 +7,17 @@ import Background from "../../public/images/banners/ea-listing.png";
 import AgentLastSection from "../../components/StartSection";
 import SelectCountry from "../../components/SelectCountry";
 import Techman from "../../public/images/right-agent.png";
+import Spinner from "../../public/spinner.gif";
 import { useRouter } from "next/router"; 
 import { useDispatch, connect, useSelector } from "react-redux";
 import { searchAgent } from "../../src/redux/actions/agent";
 import { selectAgents } from "../../src/redux/reducers/agent";
 import avatar from "../../public/images/avatar.png";
-import ReactPaginate from 'react-paginate';
+import dynamic from 'next/dynamic'
+const ReactPaginate = dynamic(
+  () => import ('react-paginate'),
+  { ssr: false }
+)
 const Search = (props) => {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -64,7 +69,12 @@ const Search = (props) => {
       </Banner>
 
       {isLoading ? (
-        <p>page loading</p>
+        <div className="container text-center"> <Image
+                              src={Spinner}
+                              alt="Page Loading..."
+                              width="50px"
+                              height="50px"
+                            /></div>
       ) : (
         <>
           <div className={styles.enrolled}>
