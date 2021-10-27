@@ -8,6 +8,7 @@ import Dollar from "../../../public/images/dollar-bill.png";
 import Techie from "../../../public/images/techie.png";
 import Image from "next/image";
 import styles from "../../../styles/blog/NewsAndArticles.module.scss";
+import Spinner from "../../../public/spinner.gif";
 import Link from "next/link";
 //import ReactPaginate from 'react-paginate';
 import dynamic from 'next/dynamic'
@@ -50,6 +51,14 @@ const index = (props) => {
     const offset = selected * pagination.numberPerPage
     console.log("offset",pagination.currentData);
     setPagination({ ...pagination, offset })
+  }
+    if (isLoading) {
+    return <div className="container text-center"> <Image
+                              src={Spinner}
+                              alt="Page Loading..."
+                              width="50px"
+                              height="50px"
+                            /></div>;
   }
   return (
     <div className={`container ${styles.newsAndArticles}`}>
