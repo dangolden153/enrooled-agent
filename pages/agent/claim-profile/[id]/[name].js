@@ -81,7 +81,6 @@ const ClaimProfile = ({ session }) => {
           });
         }
         setLoading(false);
-        window.location.reload();
       }
     } catch (error) {
       setLoading(false);
