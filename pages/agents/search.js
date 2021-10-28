@@ -57,6 +57,7 @@ const Search = (props) => {
   const handlePageClick = event => {
     const selected = event.selected;
     const offset = selected * pagination.numberPerPage
+    window.scrollTo(0, 0);
     console.log("offset",pagination.currentData);
     setPagination({ ...pagination, offset })
   }
