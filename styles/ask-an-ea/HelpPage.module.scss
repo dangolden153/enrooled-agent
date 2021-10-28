@@ -1,0 +1,58 @@
+.helpPage{
+    margin-top: 40px;
+    margin-bottom: 45px;
+    .rightCard{
+        min-height: 800px;
+        p{
+            color: #000;
+            font-size: 16px;
+        }
+    }
+    .leftCard1{
+        padding-left:4rem !important;
+        margin-bottom: 13px;
+        
+        p{
+            color: #000;
+            font-size: 22px;
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        h4{
+            color: #000;
+            font-size: 28px;
+            opacity: 70%;
+        }
+    }
+    .leftCard2{
+        padding-left: 4rem !important;
+        p{
+            margin-top: 0px !important;
+            margin-bottom: 0px !important;
+            font-size: 22px;
+        }
+        h5{
+            font-size: 22px;
+            color: #000;
+        }
+
+    }
+
+
+    
+}
+
+@media (max-width: 800px) {
+    .helpPage{
+        margin-top: 5rem;
+        .leftCard1{
+            padding-left: 0 !important;
+    
+        }
+        .leftCard2{
+            padding: 0 !important;
+        }
+    }
+    
+}
+

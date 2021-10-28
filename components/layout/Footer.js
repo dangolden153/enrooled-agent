@@ -11,27 +11,43 @@ const Footer = () => {
         <div className="col-12">
           <div className="col-sm-12 footer-up d-lg-flex flex-row justify-content-between">
             <div className="col-sm-12 col-lg-6">
-              <Image
-                src={logoImage}
-                alt="pixs"
-                width="267"
-                height="40"
-                className=""
-              />
+              <div>
+                <Link href="/">
+                  <Image
+                    src={logoImage}
+                    alt="pixs"
+                    width="267"
+                    height="40"
+                    className="btn"
+                  />
+                </Link>
+              </div>
             </div>
             <div className="col-sm-12 col-lg-6 footer-btns">
-              <Link href="/auth/register"><button className="btn btn-secondary">Sign Up</button></Link>
-              <Link href="/auth/login"><button className="btn btn-outline">Login</button></Link>
+              <Link href="/auth/register">
+                <button className="btn btn-secondary">Sign Up</button>
+              </Link>
+              <Link href="/auth/login">
+                <button className="btn btn-outline">Login</button>
+              </Link>
             </div>
           </div>
           <hr />
           <div className="row footer-down d-flex justify-content-between">
             <div className="col-lg-2 socials">
               <div className="d-flex flex-row justify-content-between">
-                <Link href="https://www.facebook.com/EnrolledAgentdotcom"><Facebook size="25" /></Link>
-                <Link href="https://twitter.com/EAgentdotcom"><Twitter size="25" /></Link>
-                <Link href="https://www.linkedin.com/company/enrolledagent"><Linkedin size="25" /></Link>
-                <Link href="https://www.instagram.com/enrolledagentdotcom"><Instagram size="25" /></Link>
+                <Link href="https://www.facebook.com/EnrolledAgentdotcom">
+                  <Facebook size="25" />
+                </Link>
+                <Link href="https://twitter.com/EAgentdotcom">
+                  <Twitter size="25" />
+                </Link>
+                <Link href="https://www.linkedin.com/company/enrolledagent">
+                  <Linkedin size="25" />
+                </Link>
+                <Link href="https://www.instagram.com/enrolledagentdotcom">
+                  <Instagram size="25" />
+                </Link>
               </div>
             </div>
             <div className="d-lg-flex flex-row justify-content-center">
