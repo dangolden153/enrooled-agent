@@ -95,10 +95,17 @@ export default function LandingPage() {
           className={`${styles.stats} d-flex flex-column flex-lg-row text-center align-items-center justify-content-between justify-content-lg-center`}
         >
           <div className="col-lg-4">
+            <Image src={people} />
             <h1>60,000+</h1>
             <h6>Enrolled Agents listed and reviewed</h6>
           </div>
           <div className="col-lg-4">
+            <Image src={convenient} />
+            <h1>Convenient</h1>
+            <h6>Find an Enrolled Agent from the comfort of your home</h6>
+          </div>
+          <div className="col-lg-4">
+            <Image src={verified} />
             <h1>Verified</h1>
             <h6>All Enrolled Agents listed are verified</h6>
           </div>
