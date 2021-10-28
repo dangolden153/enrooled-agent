@@ -91,7 +91,7 @@ const Footer = () => {
                     <Link href="/terms">Terms of Use</Link>
                   </li>
                   <li className="footer-link">
-                    <Link href="/faq">FAQs</Link>
+                    <Link href="/">FAQs</Link>
                   </li>
                 </ul>
               </div>
