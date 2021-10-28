@@ -50,9 +50,9 @@ export const cityAgent =
       console.log("city agents", res.data.data);
       dispatch({
         type: CITY_AGENT,
-        payload: res.data.data,
+        payload: res.data.data.data,
       });
-      return res.data.data;
+      return res.data.data.data;
     } catch (error) {
       console.log("error", error);
       return error;
