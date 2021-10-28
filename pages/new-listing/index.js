@@ -380,11 +380,12 @@ const index = () => {
           <button
             type="button"
             style={{
-              backgroundColor: "#0d6efd",
+              backgroundColor: "#01105b",
               color: "#fff",
               marginLeft: "0px",
             }}
             className="btn mt-5 "
+            disabled={!data.first_name}
           >
             Create Free Profile
           </button>

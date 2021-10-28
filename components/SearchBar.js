@@ -14,7 +14,11 @@ const SearchBar = () => {
   };
 
   const handleSearch = () => {
-    router.push(`/agents/search?data=${searchData?.address}&lname=${searchData?.lname ? searchData?.lname : null}`);
+    router.push(
+      `/agents/search?data=${searchData?.address}&lname=${
+        searchData?.lname ? searchData?.lname : null
+      }`
+    );
   };
 
   return (
@@ -22,11 +26,23 @@ const SearchBar = () => {
       <input
         type="text"
         name="address"
+        value={searchData.address}
         placeholder="Enter Zipcode, City Or State"
         onChange={handleChange}
       />
-      <input type="text" name="lname" placeholder="Last Name" onChange={handleChange} />
-      <button type="submit" className="search-bar-btn" onClick={handleSearch}>
+      <input
+        type="text"
+        name="lname"
+        value={searchData.lname}
+        placeholder="Last Name"
+        onChange={handleChange}
+      />
+      <button
+        type="submit"
+        disabled={!searchData.lname}
+        className="search-bar-btn"
+        onClick={handleSearch}
+      >
         Find
       </button>
     </div>

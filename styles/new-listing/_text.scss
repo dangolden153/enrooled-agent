@@ -27,4 +27,11 @@
     .terms{
         margin-top: 100px;
     }
+    button:focus{
+        
+            outline: none !important;
+            border-color: #fff !important;
+            box-shadow: none !important;
+        
+    }
 }

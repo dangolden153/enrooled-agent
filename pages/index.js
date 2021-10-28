@@ -50,7 +50,11 @@ export default function LandingPage() {
     } catch (error) {
       setLoading(false);
       addToast(
-        `${error.response.msg ? error.response.msg : "An error occured. Please try again."}`,
+        `${
+          error.response.msg
+            ? error.response.msg
+            : "An error occured. Please try again."
+        }`,
         {
           appearance: "error",
           autoDismiss: true,
@@ -61,56 +65,63 @@ export default function LandingPage() {
   return (
     <>
       <Head>
-            <link rel="icon" href="/favicon.ico" />
-            <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-            <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
-            <meta charset="UTF-8" />
-            <meta name="google" content="notranslate" />
-            <meta httpEquiv="Content-Language" content="en" />
-            <meta name="description" 
-            content="Find a tax professional for your tax requirements. 
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <meta name="google" content="notranslate" />
+        <meta httpEquiv="Content-Language" content="en" />
+        <meta
+          name="description"
+          content="Find a tax professional for your tax requirements. 
              Enrolled Agent has a list of verified tax practitioners. 
-             Search from the lists of irs enrolled agent ." />
-            <meta name="keywords"
-                content="consulting,finance,advisor,consultant,business,service,insurance,agency" />
-            <meta name="Enrolled Agent" content="Enrolled Agent" />
+             Search from the lists of irs enrolled agent ."
+        />
+        <meta
+          name="keywords"
+          content="consulting,finance,advisor,consultant,business,service,insurance,agency"
+        />
+        <meta name="Enrolled Agent" content="Enrolled Agent" />
 
-            <title>Enrolled Agent Lookup | Find Tax Preparer |  IRS Enrolled Agent Search</title>
-        </Head>
-    <div className={`col-12 justify-content-between ${styles.landingPage}`}>
-      <Banner search background={banner1}>
-        <h1 className="banner-title">Find Your Next IRS Enrolled Agent</h1>
-        <h6 className="banner-extra">
-          Browse through our directory of over 60,000 professionals and engage them for free
-        </h6>
-      </Banner>
+        <title>
+          Enrolled Agent Lookup | Find Tax Preparer | IRS Enrolled Agent Search
+        </title>
+      </Head>
+      <div className={`col-12 justify-content-between ${styles.landingPage}`}>
+        <Banner search background={banner1}>
+          <h1 className="banner-title">Find Your Next IRS Enrolled Agent</h1>
+          <h6 className="banner-extra">
+            Browse through our directory of over 60,000 professionals and engage
+            them for free
+          </h6>
+        </Banner>
 
-      <div
-        className={`${styles.stats} d-flex flex-column flex-lg-row text-center align-items-center justify-content-between justify-content-lg-center`}
-      >
-        <div className="col-lg-4">
-          <h1>60,000+</h1>
-          <h6>Enrolled Agents listed and reviewed</h6>
+        <div
+          className={`${styles.stats} d-flex flex-column flex-lg-row text-center align-items-center justify-content-between justify-content-lg-center`}
+        >
+          <div className="col-lg-4">
+            <h1>60,000+</h1>
+            <h6>Enrolled Agents listed and reviewed</h6>
+          </div>
+          <div className="col-lg-4">
+            <h1>Convenient</h1>
+            <h6>Find an Enrolled Agent from the comfort of your home</h6>
+          </div>
+          <div className="col-lg-4">
+            <h1>Verified</h1>
+            <h6>All Enrolled Agents listed are verified</h6>
+          </div>
         </div>
-        <div className="col-lg-4">
-          <h1>Convenient</h1>
-          <h6>Find an Enrolled Agent from the comfort of your home</h6>
-        </div>
-        <div className="col-lg-4">
-          <h1>Verified</h1>
-          <h6>All Enrolled Agents listed are verified</h6>
-        </div>
-      </div>
 
-      <TopRated />
+        <TopRated />
 
-      <div
-        className={`${styles.taxResources} d-flex flex-column align-items-center justify-content-center`}
-      >
-        <h1>Tax Resources</h1>
-        {/* <video src=""></video> */}
-        <TaxVideo />
-        {/* <div className="d-flex flex-row w-100 justify-content-center">
+        <div
+          className={`${styles.taxResources} d-flex flex-column align-items-center justify-content-center`}
+        >
+          <h1>Tax Resources</h1>
+          {/* <video src=""></video> */}
+          <TaxVideo />
+          {/* <div className="d-flex flex-row w-100 justify-content-center">
           <VideoCard big="true" />
         </div>
         <div className="d-flex flex-row w-100 justify-content-between">
@@ -130,42 +141,42 @@ export default function LandingPage() {
         <button type="button" className="btn-common">
           Load more videos <ChevronDown />
         </button> */}
-      </div>
+        </div>
 
-      <SearchSection />
+        <SearchSection />
 
-      <StartSection image={start1} />
+        <StartSection image={start1} />
 
-      <MostRequested />
+        <MostRequested />
 
-      <RequestCallback />
+        <RequestCallback />
 
-      <div
-        className={`${styles.mailingList} d-flex flex-column align-items-center justify-content-center`}
-      >
-        <h1>Get the latest update</h1>
-        <h6>Subscribe to our mailing list.</h6>
-        <div className="d-flex flex-row justify-content-center">
-          <form
-            className={`${styles.subscriberForm} d-flex flex-row w-100 justify-content-between`}
-            onSubmit={handleMailListSubmit}
-          >
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={data.email}
-              onChange={handleChange}
-              disabled={loading ? true : false}
-              required
-            />
-            <button type="submit" className="btn">
-              Subscribe
-            </button>
-          </form>
+        <div
+          className={`${styles.mailingList} d-flex flex-column align-items-center justify-content-center`}
+        >
+          <h1>Get the latest update</h1>
+          <h6>Subscribe to our mailing list.</h6>
+          <div className="d-flex flex-row justify-content-center">
+            <form
+              className={`${styles.subscriberForm} d-flex flex-row w-100 justify-content-between`}
+              onSubmit={handleMailListSubmit}
+            >
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={data.email}
+                onChange={handleChange}
+                disabled={loading ? true : false}
+                required
+              />
+              <button type="submit" disabled={!data.email} className="btn">
+                Subscribe
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 }
