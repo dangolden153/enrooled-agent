@@ -8,7 +8,7 @@ import { wrapper } from "../src/redux/store";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { ToastProvider } from "react-toast-notifications";
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from "framer-motion";
 import Router from "next/router";
 import nProgress from "nprogress";
 Router.events.on("routeChangeStart", nProgress.start);
@@ -42,6 +42,12 @@ function MyApp({ Component, pageProps }) {
         </ToastProvider>
       );
     case "/auth/reset-password/success":
+      return (
+        <ToastProvider>
+          <Component {...pageProps} />
+        </ToastProvider>
+      );
+    case "/auth/register/success":
       return (
         <ToastProvider>
           <Component {...pageProps} />
@@ -98,13 +104,12 @@ function MyApp({ Component, pageProps }) {
         <ToastProvider>
           <PageLayout>
             <AnimatePresence
-                exitBeforeEnter
-                initial={false}
-                onExitComplete={() => window.scrollTo(0, 0)}
+              exitBeforeEnter
+              initial={false}
+              onExitComplete={() => window.scrollTo(0, 0)}
             >
-                <Component {...pageProps} />
+              <Component {...pageProps} />
             </AnimatePresence>
-            
           </PageLayout>
         </ToastProvider>
       );

@@ -30,7 +30,7 @@ const ClaimProfile = ({ session }) => {
   const { addToast } = useToasts();
   const dispatch = useDispatch();
   const agentData = useSelector((state) => state.getAgents.singleAgent);
-  
+
   const [data, setData] = useState({
     job_role: "",
     company_size: "",
@@ -45,15 +45,15 @@ const ClaimProfile = ({ session }) => {
     const res = await dispatch(getSingleAgent(router.query));
     if (res) setLoading(false);
   };
-  
+
   useEffect(() => {
     if (router.isReady) handleGetAgent();
   }, [router]);
-  
+
   if (loading) {
     return <p>Loading</p>;
   }
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
@@ -68,8 +68,8 @@ const ClaimProfile = ({ session }) => {
       organization_type: data.organization_type,
       annual_tax: data.annual_tax,
       agent_id: agentData.id,
-    }
-    console.log("agent id",formData);
+    };
+    console.log("agent id", formData);
     try {
       setLoading(true);
       let response = await claimAgentAccount(formData);
@@ -93,7 +93,7 @@ const ClaimProfile = ({ session }) => {
         {
           appearance: "error",
           autoDismiss: true,
-        },
+        }
       );
     }
   };
@@ -172,125 +172,133 @@ const ClaimProfile = ({ session }) => {
                 get started.
               </p>
               <form onSubmit={handleSubmit}>
-              <div className={styles.form}>
-                <div className="row mt-3">
-                  <div className="col-md-6">
-                    <label required className="form-control-label  ">
-                      Job Role<span className="text-danger">*</span>
-                    </label>
-                    <input type="text" className="form-control" 
+                <div className={styles.form}>
+                  <div className="row mt-3">
+                    <div className="col-md-6">
+                      <label required className="form-control-label  ">
+                        Job Role<span className="text-danger">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control"
                         name="job_role"
                         value={data.job_role}
                         onChange={handleChange}
                         disabled={loading ? true : false}
                         required
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label className="form-control-label ">
-                      Company Name<span className="text-danger">*</span>
-                    </label>
-                    <input
-                      required
-                      type="text"
-                      className="form-control"
-                      name="company_name"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-control-label ">
+                        Company Name<span className="text-danger">*</span>
+                      </label>
+                      <input
+                        required
+                        type="text"
+                        className="form-control"
+                        name="company_name"
                         value={data.company_name}
                         onChange={handleChange}
                         disabled={loading ? true : false}
                         required
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <label className="form-control-label ">
-                      Company Size<span className="text-danger">*</span>
-                    </label>
-                    <select
-                      className="form-select"
-                      aria-label="Default select example"
-                       name="company_size"
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-control-label ">
+                        Company Size<span className="text-danger">*</span>
+                      </label>
+                      <select
+                        className="form-select"
+                        aria-label="Default select example"
+                        name="company_size"
                         value={data.company_size}
                         onChange={handleChange}
                         disabled={loading ? true : false}
                         required
-                    >
-                      <option selected>Company Size</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                  </div>
-                  <div className="col-md-6">
-                    <label className="form-control-label ">
-                      Organization Type<span className="text-danger">*</span>
-                    </label>
-                    <select
-                      className="form-select"
-                      aria-label="Default select example"
+                      >
+                        <option selected>Company Size</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-control-label ">
+                        Organization Type<span className="text-danger">*</span>
+                      </label>
+                      <select
+                        className="form-select"
+                        aria-label="Default select example"
                         name="organization_type"
                         value={data.organization_type}
                         onChange={handleChange}
                         disabled={loading ? true : false}
                         required
-                    >
-                      <option selected>Organization Type</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                  </div>
-                  <div className="col-md-6">
-                    <label className="form-control-label ">
-                      Company Revenue<span className="text-danger">*</span>
-                    </label>
-                    <select
-                      className="form-select"
-                      aria-label="Default select example"
+                      >
+                        <option selected>Organization Type</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-control-label ">
+                        Company Revenue<span className="text-danger">*</span>
+                      </label>
+                      <select
+                        className="form-select"
+                        aria-label="Default select example"
                         name="company_revenue"
                         value={data.company_revenue}
                         onChange={handleChange}
                         disabled={loading ? true : false}
                         required
-                    >
-                      <option selected>Company Revenue</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                  </div>
-                  <div className="col-md-6">
-                    <label className="form-control-label ">
-                      Annual Tax Returns<span className="text-danger">*</span>
-                    </label>
-                    <select
-                      className="form-select"
-                      aria-label="Default select example"
+                      >
+                        <option selected>Company Revenue</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div className="col-md-6">
+                      <label className="form-control-label ">
+                        Annual Tax Returns<span className="text-danger">*</span>
+                      </label>
+                      <select
+                        className="form-select"
+                        aria-label="Default select example"
                         name="annual_tax"
                         value={data.annual_tax}
                         onChange={handleChange}
                         disabled={loading ? true : false}
                         required
-                    >
-                      <option selected>Annual Tax Returns</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
+                      >
+                        <option selected>Annual Tax Returns</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="text-center mb-4">
-                <button className={`btn ${styles.btn3}`} type="submit">Claim Listing</button>
-              </div>
-              <div className="text-center">
-                <input type="checkbox" />
-                <span className="ms-3">
-                  I agree to the{" "}
-                  <span className="text-primary">terms of use</span> and{" "}
-                  <span className="text-primary">privacy policy</span>{" "}
-                </span>
-              </div>
+                <div className="text-center mb-4">
+                  <button
+                    disabled={!data.company_name}
+                    className={`btn ${styles.btn3}`}
+                    type="submit"
+                  >
+                    Claim Listing
+                  </button>
+                </div>
+                <div className="text-center">
+                  <input type="checkbox" />
+                  <span className="ms-3">
+                    I agree to the{" "}
+                    <span className="text-primary">terms of use</span> and{" "}
+                    <span className="text-primary">privacy policy</span>{" "}
+                  </span>
+                </div>
               </form>
             </div>
           </div>
