@@ -37,6 +37,7 @@
     "react-query": "^3.28.0",
     "react-redux": "^7.2.5",
     "react-select": "^5.1.0",
+    "react-sticky": "^6.0.3",
     "react-toast-notifications": "^2.5.1",
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0",

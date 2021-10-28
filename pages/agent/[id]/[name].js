@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { getSingleAgent } from "../../../src/redux/actions/agent";
 import avatar from "../../../public/images/avatar.png";
+import Spinner from "../../../public/spinner.gif";
 import {
   fab,
   faFacebook,
@@ -39,7 +40,12 @@ const index = () => {
   }, [router]);
 
   if (isLoading) {
-    return <p>Loading</p>;
+    return <div className="container text-center"> <Image
+                              src={Spinner}
+                              alt="Page Loading..."
+                              width="50px"
+                              height="50px"
+                            /></div>;
   }
 
   return (
