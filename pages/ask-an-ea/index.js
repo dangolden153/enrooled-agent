@@ -5,13 +5,19 @@ import Dummy from "../../public/images/card-man.png";
 import data from "../../components/PostList.json";
 import Collapse from "react-bootstrap/Collapse";
 // import { Container } from 'react-bootstrap';
-
+import Background from "../../public/images/banners/ea-listing.png";
+import Banner from "../../components/Banner";
 const index = () => {
   const [readMore, setReadMore] = useState(false);
 
   const linkName = readMore ? "Less << " : "More >> ";
 
   return (
+    <>
+          <Banner background={Background} search={false}>
+        <h1 className="banner-title">Ask An EA</h1>
+        <h6 className="banner-extra">View all Tax Questions & Answers</h6>
+      </Banner>
     <div className={styles.helpPage}>
       <div className="row container-fluid">
         {/* QUESTION CARD */}
@@ -278,6 +284,7 @@ const index = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
