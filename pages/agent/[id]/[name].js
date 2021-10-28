@@ -212,6 +212,11 @@ const index = () => {
                   Sort by: <b>Rating</b>
                 </p>
               </div>
+                  <div className={styles.not_claimed}>
+                  <Link href={`/agent/review/${agentData?.id}/${agentData?.first_name}-${agentData?.last_name}`}>
+                    <button>Review Profile</button>
+                  </Link>
+                </div>
               <p>No Reviews Yet</p>
               {/* <div className={styles.word}>
                 <div>

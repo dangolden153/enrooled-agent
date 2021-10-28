@@ -91,7 +91,7 @@ const Review = ({ session }) => {
       let response = await reviewAgent(formData);
       if (response) {
         if (response.data) {
-          addToast("Your claim request has been sent successfully!", {
+          addToast("Your review has been sent successfully!", {
             appearance: "success",
             autoDismiss: true,
           });
@@ -264,7 +264,7 @@ const Review = ({ session }) => {
 
                 <div className="text-center mb-4">
                   <button
-                    disabled={!data.company_name}
+                    disabled={!data}
                     className={`btn ${styles.btn3}`}
                     type="submit"
                   >
