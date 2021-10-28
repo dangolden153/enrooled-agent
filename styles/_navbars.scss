@@ -131,6 +131,12 @@
     }
 }
 
+.navbar-sticky {
+    position: fixed;
+    width: 100% !important;
+    margin-top: -6rem;
+}
+
 .dashboard-nav {
     padding-left: 8%;
     padding-right: 10%;

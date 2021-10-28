@@ -15,7 +15,7 @@ library.add(fab, faGoogle);
 library.add(fab, faFacebook);
 library.add(fab, faTwitter);
 
-const Login = () => {
+const Login = () => { 
   const { addToast } = useToasts();
   const router = useRouter();
   const inputField = {

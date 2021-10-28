@@ -9,14 +9,16 @@ import start1 from "../public/images/start-section1.png";
 import styles from "../styles/LandingPage.module.scss";
 import Banner from "../components/Banner";
 import TopRated from "../components/TopRated";
-import VideoCard from "../components/VideoCard";
-import { ChevronDown } from "react-bootstrap-icons";
 import SearchSection from "../components/SearchSection";
 import StartSection from "../components/StartSection";
 import MostRequested from "../components/MostRequested";
 import RequestCallback from "../components/RequestCallback";
 import TaxVideo from "../widgets/TaxVideo";
 import Head from "next/head";
+import Image from "next/image";
+import people from "../public/images/people.png"
+import convenient from "../public/images/convenient.png"
+import verified from "../public/images/verified.png"
 export default function LandingPage() {
   const { addToast } = useToasts();
   const dispatch = useDispatch();
@@ -71,28 +73,21 @@ export default function LandingPage() {
         <meta charset="UTF-8" />
         <meta name="google" content="notranslate" />
         <meta httpEquiv="Content-Language" content="en" />
-        <meta
-          name="description"
+        <meta name="description"
           content="Find a tax professional for your tax requirements. 
              Enrolled Agent has a list of verified tax practitioners. 
-             Search from the lists of irs enrolled agent ."
-        />
-        <meta
-          name="keywords"
-          content="consulting,finance,advisor,consultant,business,service,insurance,agency"
-        />
+             Search from the lists of irs enrolled agent ." />
+        <meta name="keywords"
+          content="consulting,finance,advisor,consultant,business,service,insurance,agency" />
         <meta name="Enrolled Agent" content="Enrolled Agent" />
 
-        <title>
-          Enrolled Agent Lookup | Find Tax Preparer | IRS Enrolled Agent Search
-        </title>
+        <title>Enrolled Agent Lookup | Find Tax Preparer |  IRS Enrolled Agent Search</title>
       </Head>
       <div className={`col-12 justify-content-between ${styles.landingPage}`}>
         <Banner search background={banner1}>
           <h1 className="banner-title">Find Your Next IRS Enrolled Agent</h1>
           <h6 className="banner-extra">
-            Browse through our directory of over 60,000 professionals and engage
-            them for free
+            Browse through our directory of over 60,000 professionals and engage them for free
           </h6>
         </Banner>
 
@@ -102,10 +97,6 @@ export default function LandingPage() {
           <div className="col-lg-4">
             <h1>60,000+</h1>
             <h6>Enrolled Agents listed and reviewed</h6>
-          </div>
-          <div className="col-lg-4">
-            <h1>Convenient</h1>
-            <h6>Find an Enrolled Agent from the comfort of your home</h6>
           </div>
           <div className="col-lg-4">
             <h1>Verified</h1>
