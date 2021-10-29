@@ -12,11 +12,14 @@
 
     .banner-title {
         font-weight: bolder;
-        font-size: 350%;
+        font-size: 300%;
+        text-align: center !important;
     }
 
     .banner-extra {
-        font-size: large;
+        font-size: 2rem;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif !important;
     }
 
     @media only screen and (max-width: 500px) {

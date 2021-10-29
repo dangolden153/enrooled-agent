@@ -10,6 +10,10 @@
     background: $primary-color;
     color: white;
 
+    * {
+        font-family: 'Roboto', sans-serif !important;
+    }
+
     h5 {
         font-size: 0.9rem;
         font-weight: bold;
@@ -40,10 +44,15 @@
 .white-nav {
     padding-left: 4%;
     padding-right: 6%;
-    z-index: 1;
+    z-index: 1000;
     background: white;
     color: $primary-color;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+
+    * {
+        font-family: 'Roboto', sans-serif !important;
+        font-weight: bolder;
+    }
 
     .navbar-toggler-icon {
         color: $primary-color;
@@ -84,6 +93,7 @@
             margin-bottom: 0.4rem;
             font-size: 0.9rem;
             transition: margin-left 1s;
+            font-weight: normal;
         }
 
         .dropdown-item.active {
