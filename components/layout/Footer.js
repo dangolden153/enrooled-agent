@@ -51,7 +51,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="d-lg-flex flex-row justify-content-center">
-              <div className="col-6">
+              <div className="d-lg-flex col-4 justify-content-center">
                 <ul className="footer-link-list">
                   <li className="footer-link">
                     <Link href="/find-agent">
@@ -76,7 +76,7 @@ const Footer = () => {
                   </li> */}
                 </ul>
               </div>
-              <div className="col-">
+              <div className="d-lg-flex col-4 justify-content-center">
                 <ul className="footer-link-list">
                   <li className="footer-link">
                     <Link href="/about">About Us</Link>
@@ -91,7 +91,7 @@ const Footer = () => {
                     <Link href="/terms">Terms of Use</Link>
                   </li>
                   <li className="footer-link">
-                    <Link href="/faq">FAQs</Link>
+                    <Link href="/faq">Frequently Asked Questions</Link>
                   </li>
                 </ul>
               </div>

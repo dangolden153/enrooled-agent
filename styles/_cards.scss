@@ -18,7 +18,7 @@
     .card-top-rated {
         padding-left: 7rem;
         padding-right: 7rem;
-
+        width: 370px !important;
         span {
             font-size: 0.8rem !important;
         }
@@ -36,6 +36,10 @@
     justify-content: center;
     width: 400px;
     height: 100%;
+    
+    * {
+        font-family: 'Roboto' !important;
+    }
 
     button {
         transition: width 1s;
@@ -52,14 +56,14 @@
         button {
             background: white;
             color: $primary-color;
-            font-weight: bolder;
+            font-weight: bolder !important;
         }
     }
 
     h2 {
         margin-top: 1rem;
         color: black;
-        font-weight: bold;
+        font-weight: 900 !important;
     }
 
     span {

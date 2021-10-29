@@ -11,7 +11,7 @@
 .top-rated {
     padding-top: 5%;
     padding-bottom: 5%;
-    background: #F7F8FF;
+    background: white;
     color: $primary-color;
 
     span {
@@ -19,6 +19,7 @@
         font-weight: bold;
         font-size: 1.1rem;
         margin-bottom: 1%;
+        font-family: 'Roboto', sans-serif !important;
     }
 
     .card-list {
@@ -133,18 +134,19 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 12.5%;
-    background: white;
+    background: #F6F8FF;
     color: $primary-color;
 
     .section-body {
         margin-top: 1.5rem;
         font-size: 1.1rem;
         color: $secondary-color;
+        font-family: 'Roboto', sans-serif !important;
     }
 }
 
 .search-section {
-    background: #F6F8FF;
+    background: white;
 
     .search-btn {
         font-size: 1rem;
@@ -165,6 +167,7 @@
         padding-left: 15%;
         padding-right: 15%;
         background: rgba(1, 16, 91, 0.8);
+        font-family: 'Roboto', sans-serif !important;
     }
 
     .mr-footer {
@@ -227,6 +230,9 @@
         width: 30%;
         color: black;
         text-align: center;
+        font-weight: 300;
+        font-size: 1.1rem !important;
+        font-family: 'Roboto', sans-serif !important;
     }
 }
 
