@@ -76,15 +76,14 @@ const index = () => {
             </Container>
 
             <Container>
-                {/* <Row> */}
+        
                 <div className={styles.andrew}>
-                    <div>
-                        <input type="text" name="text" className={styles.box}></input>
-                    </div>
+                    <div><textarea className={styles.box} /></div>
                     </div>
                     <div className={styles.buttn}>
                         <button type="submit">Comment</button>
                     </div>
+                   
                     
                 {/* </Row> */}
             </Container>
