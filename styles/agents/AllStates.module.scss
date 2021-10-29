@@ -168,3 +168,31 @@
     padding-left: 20px !important;
     padding-right: 20px !important;
 }
+
+@media only screen and (max-width: 768px) {
+    .agents {
+        width: 1100px;
+        position: relative;
+        left: -270px;
+        flex-wrap: wrap;
+        // background-color: brown;
+    }  
+    .dum {
+        position: relative;
+        left: 30px;
+        width: 150px;
+       flex-wrap: wrap;
+    }
+    .dummy {
+        flex-wrap: wrap;
+}
+    .ratings {
+        // position: relative;
+        left: 10px;
+    }
+    .line {
+        width: 1000px;
+        position: relative;
+        left: -210px;
+    }
+}
