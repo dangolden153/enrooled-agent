@@ -4,24 +4,19 @@
 .top {
     display: flex;
     width: 100%;
-    // position: static;
-    // background-color: #a00847;
-    padding-top: 17px;
-    padding-bottom: 20px;
+    /* background-color: #a00847; */
+    padding-top: 35px;
+    padding-bottom: 30px;
     justify-content: space-between;
 }
 .left {
     width: 333px;
-    background-color: #fff;
+    background-color: white;
     margin-left: 70px;
-    // height: 270px;
-    position: fixed;
-    // bottom: 0;
-    // right: 0;
+    height: 274px;
 }
 .info {
-    background-color: #fff;
-    padding: 10px;
+    background-color: white;
 }
 .personal {
     color: hsla(230, 98%, 18%, 1);
@@ -38,39 +33,15 @@
     padding-left: 10px;
     padding-bottom: 10px;
 }
-.claim_button {
-    display: flex;
-    justify-content: center;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin: 20px;
-}
-.claimed button{
+.butt button{
     width: 106px;
     height: 43px;
     border-radius: 5px;
     background: white;
     font-size: 18px;
 }
-.not_claimed button{
-    width: 168px;
-    height: 43px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background: hsla(230, 98%, 18%, 1);
-    color: white;
-}
-.butt button{
-    width: 98px;
-    height: 43px;
-    border-radius: 5px;
-    background: white;
-    font-size: 18px;
-}
 .buton button{
-    width: 158px;
+    width: 168px;
     height: 43px;
     font-size: 18px;
     border: none;
@@ -81,41 +52,40 @@
 .socialIcons {
     display: flex;
     color: hsla(230, 98%, 18%, 1);
-    // padding-right: 10px;
-    // padding-left: 10px;
-    margin-bottom: 10px;
-}
-#jane {
-    font-size: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 #icon {
     width: 33px;
     /* height: 32.57px; */
-    padding-left: 20px;
+    padding-left: 10px;
     padding-bottom: 10px;
     background: none;
 }
  .rightDiv { 
     width: 850px;
-    position: relative;
-    right: 170px;
+    /* background-color: brown; */
     margin: 0 auto;
 }
 .right {
     background: white;
+    width: 841px;
     margin: 0 auto;
-    padding: 3%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
     margin-bottom: 20px;
+    height: 265px;
     border-radius: 10px;
 }
 .expert {
     color: hsla(210, 96%, 70%, 1);
     font-size: 18px;
 }
-#agent_name {
-    font-size: 40px;
+#jane {
+    font-size: 24px;
 }
-#agent_status {
+#doe {
     font-size: 16px;
     color: rgb(145, 143, 143);
     padding-left: 12px;
@@ -147,11 +117,6 @@
 #dates {
     color: rgb(145, 143, 143);
     font-size: 16px;
-}#doe {
-    font-size: 16px;
-    color: rgb(145, 143, 143);
-    padding-left: 10px;
-    margin-top: 5px;
 }
 .claim {
     display: flex;
@@ -162,32 +127,7 @@
 }
 .detail {
     display: flex;
-    height:2px;
-} 
-#dropdown {
-    font-weight: lighter;
-    font-size: 20px;
-    color: rgb(18, 18, 116);
-}
-.drops {
-    border: none;
-    // background-color: cadetblue;
-}
-#option1 {
-    font-weight: lighter;
-    font-size: 20px;
-    color: rgb(67, 67, 68);
-}
-.selected {
-    background-color: rgb(60, 195, 219);
-    display: flex;
-}
-.userIcon {
-    background-color: brown;
-}
-#detailC {
-   background-color: rgb(18, 18, 116);
-   color: white;
+    height: 2px;
 }
 .rate {
     display: flex;
@@ -208,13 +148,10 @@
 #detailA {
     color: hsla(230, 98%, 18%, 1);
     font-size: 18px;
-    font-weight: bolder;
-    cursor: pointer;
 }
 #detailB {
     color: rgb(145, 143, 143);
     font-size: 18px;
-    font-weight: bolder;
     padding-left: 12px;
 }
 #reviewed {
@@ -222,6 +159,7 @@
     font-size: 18px;
 }
 .enroledDetail {
+    width: 690px;
     font-size: 18px;
     color: hsla(0, 0%, 38%, 1);
 }
@@ -247,7 +185,7 @@
 }
 .border {
     width: 489px;
-    border: 2px solid hsla(0, 0%, 60%, 1);
+    border: 1px solid hsla(0, 0%, 60%, 1);
    margin: 0 auto;
    margin-top: 15px;
    margin-bottom: 15px;
@@ -258,78 +196,28 @@
     color: hsla(0, 0%, 38%, 1);
     font-family: Reem Kufi;
 }
-@media only screen and (max-width: 768px) {
-    .viewAgent {
-        width: 100%;
-    }
-    .top {
-        flex-wrap: wrap;
-        width: 100%;
-        padding-top: 17px;
-        padding-bottom: 20px;
-    }
-    .left {
-        width: 50%;
-        margin: 0 auto;
-        // position: fixed;
-        // margin-left: -70px;
-    }      
-    .rightDiv, .bottomDiv { 
-        width: 600px;
-        position: relative;
-        left: 3px;
-        top: 5px;
-        // margin: 0 auto;
-    }
-    .topleft {
-        flex-wrap: wrap;
-        width: 40%;
-    }
-    #line hr{
-        width: 562px;
-        border: 3px solid hsla(0, 0%, 92%, 1)
-    }
-    .btn button{
-        width: 120px;
-        height: 33px;
-        font-size: 14px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    .enroledDetail, #dates {
-        font-size: 14px;
-    }
-    #jane {
-        font-size: 22px;
-    }
-    .expert, #detailA, #detailB {
-        font-size: 16px;
-    }
-    .stars, .seeAll {
-        font-size: 20px;
-    }
-    .star {
-        font-size: 18px;
-    }
-    .p3 {
-        width: 550px;
-        font-size: 14px;
-    }
-    .butt button{
-        width: 90px;
-        height: 36px;;
-        font-size: 16px;
-    }
-    .buton button{
-        width: 148px;
-        height: 36px;
-        font-size: 16px;
-    }
-    .client {
-        width: 80%;
-    }
-    .word {
-        width: 30%;
-        flex-wrap: wrap;
-    }
+.claim_button {
+    display: flex;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
 }
+.claimed button{
+    width: 106px;
+    height: 43px;
+    border-radius: 5px;
+    background: white;
+    font-size: 18px;
+}
+.not_claimed button{
+    width: 168px;
+    height: 43px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: hsla(230, 98%, 18%, 1);
+    color: white;
+}
+

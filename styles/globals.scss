@@ -9,7 +9,7 @@
 @import './contact/contact';
 @import './recent-articles/recent-article';
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 html,
@@ -18,6 +18,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: 'DM Serif Display',-apple-system, serif;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -39,4 +40,8 @@ cursor: pointer;
 
 * {
   box-sizing: border-box;
+}
+
+input, textarea {
+  font-family: 'Roboto', sans-serif !important;
 }

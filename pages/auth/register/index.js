@@ -161,7 +161,7 @@ const Register = () => {
           <div className={styles.reset}>
             <div className={styles.passtext}>
               <p>Do you have an account?</p>
-              <Link href="/Register">
+              <Link href="/auth/login">
                 <a id={styles.set}>Login to your account</a>
               </Link>
             </div>

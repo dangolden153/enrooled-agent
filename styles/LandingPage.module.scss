@@ -7,8 +7,15 @@
         padding-left: 10%;
         padding-right: 10%;
         padding-bottom: 5%;
-        background: white;
+        background: #F6F8FF;
         color: $primary-color;
+
+        h6 {
+            font-family: 'Roboto', sans-serif !important;
+            color: black;
+            font-weight: 400;
+            font-size: 1.3rem !important;
+        }
     }
 
     .taxResources {
@@ -16,7 +23,7 @@
         padding-left: 10%;
         padding-right: 10%;
         padding-bottom: 5%;
-        background: white;
+        background: #F6F8FF;
         color: $primary-color;
     }
 
@@ -27,6 +34,11 @@
         padding-left: 20%;
         background: #F6F8FF;
         color: $primary-color;
+
+        h6 {
+            font-weight: 400 !important;
+            font-family: 'Roboto', sans-serif !important;
+        }
 
         .subscriberForm {
             margin-top: 3%;

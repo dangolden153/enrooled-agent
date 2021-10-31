@@ -53,10 +53,9 @@ export default function LandingPage() {
     } catch (error) {
       setLoading(false);
       addToast(
-        `${
-          error.response.msg
-            ? error.response.msg
-            : "An error occured. Please try again."
+        `${error.response.msg
+          ? error.response.msg
+          : "An error occured. Please try again."
         }`,
         {
           appearance: "error",
@@ -92,30 +91,34 @@ export default function LandingPage() {
       </Head>
       <div className={`col-12 justify-content-between ${styles.landingPage}`}>
         <Banner search background={banner1}>
-          <h1 className="banner-title">Find Your Next IRS Enrolled Agent</h1>
+          <h1 className="banner-title">Enrolled Agents are America’s Tax experts</h1>
           <h6 className="banner-extra">
+<<<<<<< HEAD
             Browse through our directory of over 60,000 professionals and engage
             them for free
+=======
+            Find your next IRS Enrolled Agent today
+>>>>>>> 6cc8790e877dbd2a03202b339bab9a5b22bb1235
           </h6>
         </Banner>
 
         <div
           className={`${styles.stats} d-flex flex-column flex-lg-row text-center align-items-center justify-content-between justify-content-lg-center`}
         >
-          <div className="col-lg-4">
+          <div className="col-lg-4 mt-3 mb-3">
             <Image src={people} />
             <h1>60,000+</h1>
-            <h6>Enrolled Agents listed and reviewed</h6>
+            <h6>Enrolled Agents working hard to get the biggest refund for you!</h6>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 mt-3 mb-3">
             <Image src={convenient} />
             <h1>Convenient</h1>
-            <h6>Find an Enrolled Agent from the comfort of your home</h6>
+            <h6>Tax Pros for every schedule from the comfort of your home</h6>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-4 mt-3 mb-3">
             <Image src={verified} />
             <h1>Verified</h1>
-            <h6>All Enrolled Agents listed are verified</h6>
+            <h6>100% certainty starts here <br /> All Enrolled Agents listed are verified</h6>
           </div>
         </div>
 
