@@ -5,7 +5,12 @@ import { useRouter } from "next/router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab, faFacebook, faGoogle, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  fab,
+  faFacebook,
+  faGoogle,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import styles from "../../../styles/auth/Register.module.scss";
 import { checkEmpty } from "../../../src/utils/checkEmptyObj";
 import Link from "next/link";
@@ -61,10 +66,13 @@ const Register = () => {
         });
         router.push("/auth/login");
       } else {
-        addToast(res?.response?.data?.msg || "An error occured trying to login.", {
-          appearance: "error",
-          autoDismiss: true,
-        });
+        addToast(
+          res?.response?.data?.msg || "An error occured trying to login.",
+          {
+            appearance: "error",
+            autoDismiss: true,
+          }
+        );
       }
     }
   };
@@ -73,14 +81,17 @@ const Register = () => {
       <div className={styles.signUp}>
         <h1 className={styles.acc}>Create an Account</h1>
         <p>
-          <b>Would you like to advertise your practice on our platform for free?</b>
+          <b>
+            Would you like to advertise your practice on our platform for free?
+          </b>
         </p>
         <p className={styles.signP}>
-          Would you like to advertise your practice on our platform for free? Secure your spot in
-          the nation's largest directory of licensed and verified Tax Preparers. Creating an account
-          gives you the ability to claim your listing; update your contact details, etc. You also
-          get to access free tools that will aid you expand your practice, stay in compliance, and
-          build your online reputation.
+          Would you like to advertise your practice on our platform for free?
+          Secure your spot in the nation's largest directory of licensed and
+          verified Tax Preparers. Creating an account gives you the ability to
+          claim your listing; update your contact details, etc. You also get to
+          access free tools that will aid you expand your practice, stay in
+          compliance, and build your online reputation.
         </p>
       </div>
       <div className={styles.register}>
@@ -173,14 +184,18 @@ const Register = () => {
 
             <div className={styles.facebook}>
               <button>
-                <FontAwesomeIcon icon={["fab", "facebook-f"]} id={styles.icon} />
+                <FontAwesomeIcon
+                  icon={["fab", "facebook-f"]}
+                  id={styles.icon}
+                />
                 Sign up with Facebook
               </button>
             </div>
 
             <div className={styles.twitter}>
               <button>
-                <FontAwesomeIcon icon={["fab", "twitter"]} id={styles.icon} /> Sign up with Twitter
+                <FontAwesomeIcon icon={["fab", "twitter"]} id={styles.icon} />{" "}
+                Sign up with Twitter
               </button>
             </div>
           </div>

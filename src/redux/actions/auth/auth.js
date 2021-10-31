@@ -1,5 +1,11 @@
 import { axiosWithoutAuth } from "../../../utils/axiosInstance";
-import { LOAD_USER, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, AUTH_ERROR } from "../../types";
+import {
+  LOAD_USER,
+  LOGIN_SUCCESS,
+  LOGIN_FAIL,
+  LOGOUT,
+  AUTH_ERROR,
+} from "../../types";
 
 export const login = (email, password) => async (dispatch) => {
   const body = JSON.stringify({ email, password });

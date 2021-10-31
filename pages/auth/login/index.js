@@ -7,15 +7,28 @@ import saveSession from "../../../hooks/saveSession";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab, faFacebook, faGoogle, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {
+  fab,
+  faFacebook,
+  faGoogle,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 import styles from "../../../styles/auth/Login.module.scss";
 import Link from "next/link";
+import { getSession, providers, signIn } from "next-auth/client";
+import Router from "next/router";
 
 library.add(fab, faGoogle);
 library.add(fab, faFacebook);
 library.add(fab, faTwitter);
 
-const Login = () => { 
+const Login = ({ providers, session }) => {
+  console.log(providers, session);
+  useEffect(() => {
+    if (session) {
+      return Router.push("/dashboard");
+    }
+  }, [session]);
   const { addToast } = useToasts();
   const router = useRouter();
   const inputField = {
@@ -44,13 +57,17 @@ const Login = () => {
         await saveSession(res.data, res.data.access_token);
         router.push("/dashboard");
       } else {
-        addToast(res?.response?.data?.msg || "An error occured trying to login.", {
-          appearance: "error",
-          autoDismiss: true,
-        });
+        addToast(
+          res?.response?.data?.msg || "An error occured trying to login.",
+          {
+            appearance: "error",
+            autoDismiss: true,
+          }
+        );
       }
     }
   };
+
   return (
     <div className={`container`}>
       <div className={styles.login}>
@@ -102,22 +119,26 @@ const Login = () => {
 
           <div className={styles.socials}>
             <div className={styles.google}>
-              <button>
+              <button onClick={() => signIn(providers.google.id)}>
                 <FontAwesomeIcon icon={["fab", "google"]} id={styles.icon} />
-                Login with Google
+                Login with {providers.google.name}
               </button>
             </div>
 
             <div className={styles.facebook}>
-              <button>
-                <FontAwesomeIcon icon={["fab", "facebook-f"]} id={styles.icon} />
-                Login with Facebook
+              <button onClick={() => signIn(providers.facebook.id)}>
+                <FontAwesomeIcon
+                  icon={["fab", "facebook-f"]}
+                  id={styles.icon}
+                />
+                Login with {providers.facebook.name}
               </button>
             </div>
 
             <div className={styles.twitter}>
               <button>
-                <FontAwesomeIcon icon={["fab", "twitter"]} id={styles.icon} /> Login with Twitter
+                <FontAwesomeIcon icon={["fab", "twitter"]} id={styles.icon} />{" "}
+                Login with Twitter
               </button>
             </div>
           </div>
@@ -125,6 +146,13 @@ const Login = () => {
       </div>
     </div>
   );
+};
+
+Login.getInitialProps = async (context) => {
+  return {
+    providers: await providers(context),
+    session: await getSession(context),
+  };
 };
 
 export default Login;

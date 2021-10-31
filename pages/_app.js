@@ -14,6 +14,8 @@ import nProgress from "nprogress";
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
 Router.events.on("routeChangeComplete", nProgress.done);
+import { Provider } from "next-auth/client";
+
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     typeof document !== undefined
@@ -22,6 +24,8 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   const router = useRouter();
+  const state = true;
+
   switch (router.pathname) {
     case "/auth/login":
       return (
@@ -101,17 +105,19 @@ function MyApp({ Component, pageProps }) {
       );
     default:
       return (
-        <ToastProvider>
-          <PageLayout>
-            <AnimatePresence
-              exitBeforeEnter
-              initial={false}
-              onExitComplete={() => window.scrollTo(0, 0)}
-            >
-              <Component {...pageProps} />
-            </AnimatePresence>
-          </PageLayout>
-        </ToastProvider>
+        <Provider>
+          <ToastProvider>
+            <PageLayout>
+              <AnimatePresence
+                exitBeforeEnter
+                initial={false}
+                onExitComplete={() => window.scrollTo(0, 0)}
+              >
+                <Component {...pageProps} />
+              </AnimatePresence>
+            </PageLayout>
+          </ToastProvider>
+        </Provider>
       );
   }
 }
